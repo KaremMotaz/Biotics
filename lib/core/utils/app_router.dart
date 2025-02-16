@@ -1,19 +1,21 @@
 import 'package:biocode/features/home/presentation/views/home_view.dart';
-import 'package:biocode/features/home/presentation/views/profile_view.dart';
-import 'package:flutter/material.dart';
+import 'package:biocode/features/splash/presentation/views/splash_view.dart';
+import 'package:go_router/go_router.dart';
 
-class AppRouter {
-  Route? generateRoute(RouteSettings settings) {
-    switch (settings.name) {
-      case "/":
-        return MaterialPageRoute(
-          builder: (_) => HomeView(),
-        );
-      case "ProfileView":
-        return MaterialPageRoute(
-          builder: (_) => ProfileView(),
-        );
-    }
-    return null;
-  }
+abstract class AppRouter {
+  static const kSplashView = '/';
+  static const kHomeView = '/homeView';
+
+  static final router = GoRouter(
+    routes: [
+      GoRoute(
+        path: kSplashView,
+        builder: (context, state) => const SplashView(),
+      ),
+      GoRoute(
+        path: kHomeView,
+        builder: (context, state) => const HomeView(),
+      ),
+    ],
+  );
 }
