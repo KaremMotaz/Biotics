@@ -9,6 +9,13 @@ class OnboardingViewBody extends StatelessWidget {
   const OnboardingViewBody({super.key});
 
   @override
+/*************  ✨ Codeium Command ⭐  *************/
+/// Builds the onboarding view body containing a scrollable column
+/// with the app logo, teacher image, descriptive text, and a button
+/// to begin learning. Applies vertical and horizontal padding for
+/// layout spacing.
+
+/******  650b1630-d5a6-443d-aa2a-26884634c95e  *******/
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
