@@ -1,10 +1,9 @@
 import 'package:biocode/core/theming/colors.dart';
 import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'core/routing/app_router.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 class BioticsApp extends StatelessWidget {
   const BioticsApp({super.key});
@@ -17,9 +16,8 @@ class BioticsApp extends StatelessWidget {
       child: MaterialApp.router(
         title: "Biotics App",
         theme: ThemeData(
-          primaryColor: ColorsManager.mainBlue,
-          scaffoldBackgroundColor: Colors.white
-        ),
+            primaryColor: ColorsManager.mainBlue,
+            scaffoldBackgroundColor: Colors.white),
         routerConfig: AppRouter.router,
         debugShowCheckedModeBanner: false,
         locale: Locale("en"),
