@@ -1,3 +1,4 @@
+import 'package:biocode/core/theming/styles.dart';
 import 'package:biocode/features/auth/presentation/views/widgets/signin_view_body.dart';
 import 'package:flutter/material.dart';
 
@@ -6,8 +7,18 @@ class SignInView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SigninViewBody(),
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          title: Text(
+            "Login",
+            style: TextStyles.font20BlackBold,
+          ),
+          centerTitle: true,
+        ),
+        body: SigninViewBody(),
+      ),
     );
   }
 }

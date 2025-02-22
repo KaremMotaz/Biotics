@@ -9,6 +9,11 @@ abstract class TextStyles {
     fontWeight: FontWeightHelper.bold,
     color: Colors.black,
   );
+  static TextStyle font20BlackBold = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: Colors.black,
+  );
   static TextStyle font30BlueBold = TextStyle(
     fontSize: 30.sp,
     fontWeight: FontWeightHelper.bold,
