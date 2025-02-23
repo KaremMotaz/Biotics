@@ -13,7 +13,7 @@ class AppTextFormField extends StatelessWidget {
     required this.hintText,
     this.suffixIcon,
     this.backgroundColor,
-    this.obscureText,
+    this.isObscureText,
     this.textStyle,
     required this.validator,
   });
@@ -24,7 +24,7 @@ class AppTextFormField extends StatelessWidget {
   final String? hintText;
   final Widget? suffixIcon;
   final Color? backgroundColor;
-  final bool? obscureText;
+  final bool? isObscureText;
   final TextStyle? textStyle;
   final Function(String?) validator;
 
@@ -50,13 +50,13 @@ class AppTextFormField extends StatelessWidget {
         focusedErrorBorder: buildOutLineInputBorder(
           borderColor: Colors.red,
         ),
-        hintStyle: TextStyles.font14LightGrayRegular,
+        hintStyle: TextStyles.font14GrayRegular,
         hintText: hintText,
         suffixIcon: suffixIcon,
         fillColor: backgroundColor ?? ColorsManager.moreLightGray,
         filled: true,
       ),
-      obscureText: obscureText ?? false,
+      obscureText: isObscureText ?? false,
       style: textStyle ?? TextStyles.font14DarkBlueMedium,
       validator: (value) {
         return validator(value);
