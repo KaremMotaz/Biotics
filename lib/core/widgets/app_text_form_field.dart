@@ -1,0 +1,76 @@
+import 'package:biocode/core/theming/colors.dart';
+import 'package:biocode/core/theming/styles.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+class AppTextFormField extends StatelessWidget {
+  const AppTextFormField({
+    super.key,
+    this.controller,
+    this.contentPadding,
+    this.focusedBorder,
+    this.enabledBorder,
+    required this.hintText,
+    this.suffixIcon,
+    this.backgroundColor,
+    this.obscureText,
+    this.textStyle,
+    required this.validator,
+  });
+  final TextEditingController? controller;
+  final EdgeInsetsGeometry? contentPadding;
+  final InputBorder? focusedBorder;
+  final InputBorder? enabledBorder;
+  final String? hintText;
+  final Widget? suffixIcon;
+  final Color? backgroundColor;
+  final bool? obscureText;
+  final TextStyle? textStyle;
+  final Function(String?) validator;
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      controller: controller,
+      decoration: InputDecoration(
+        isDense: true,
+        contentPadding: contentPadding ??
+            EdgeInsets.symmetric(horizontal: 20.w, vertical: 18.h),
+        focusedBorder: focusedBorder ??
+            buildOutLineInputBorder(
+              borderColor: ColorsManager.mainBlue,
+            ),
+        enabledBorder: enabledBorder ??
+            buildOutLineInputBorder(
+              borderColor: ColorsManager.lighterGray,
+            ),
+        errorBorder: buildOutLineInputBorder(
+          borderColor: Colors.red,
+        ),
+        focusedErrorBorder: buildOutLineInputBorder(
+          borderColor: Colors.red,
+        ),
+        hintStyle: TextStyles.font14LightGrayRegular,
+        hintText: hintText,
+        suffixIcon: suffixIcon,
+        fillColor: backgroundColor ?? ColorsManager.moreLightGray,
+        filled: true,
+      ),
+      obscureText: obscureText ?? false,
+      style: textStyle ?? TextStyles.font14DarkBlueMedium,
+      validator: (value) {
+        return validator(value);
+      },
+    );
+  }
+}
+
+OutlineInputBorder buildOutLineInputBorder({required Color borderColor}) {
+  return OutlineInputBorder(
+    borderSide: BorderSide(
+      color: borderColor,
+      width: 1.3,
+    ),
+    borderRadius: BorderRadius.circular(16),
+  );
+}
