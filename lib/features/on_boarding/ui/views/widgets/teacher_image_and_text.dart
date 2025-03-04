@@ -1,4 +1,5 @@
 import 'package:biocode/core/theming/assets_data.dart';
+import 'package:biocode/core/theming/colors.dart';
 import 'package:biocode/core/theming/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -33,8 +34,10 @@ class TeacherImageAndText extends StatelessWidget {
           bottom: 0,
           child: Text(
             "Explore The\n Wonders Of Biology",
-            style:
-                TextStyles.font30BlueBold.copyWith(fontWeight: FontWeight.w900),
+            style: TextStyles.bold30.copyWith(
+              color: ColorsManager.mainBlue,
+              fontWeight: FontWeight.w900,
+            ),
             textAlign: TextAlign.center,
           ),
         )

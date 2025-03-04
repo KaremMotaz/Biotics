@@ -41,7 +41,9 @@ class SocialLoginButton extends StatelessWidget {
         title: Text(
           title,
           textAlign: TextAlign.center,
-          style: TextStyles.font15greySemiBold,
+          style: TextStyles.semiBold15.copyWith(
+            color: Color.fromARGB(255, 110, 108, 108),
+          ),
         ),
         leading: SvgPicture.asset(imageLink),
       ),

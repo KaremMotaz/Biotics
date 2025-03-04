@@ -24,7 +24,9 @@ class BioLogoAndName extends StatelessWidget {
         SizedBox(width: 10.w),
         Text(
           'Biotics',
-          style: TextStyles.font26BlackBold,
+          style: TextStyles.bold26.copyWith(
+            color: Colors.black,
+          ),
         ),
       ],
     );

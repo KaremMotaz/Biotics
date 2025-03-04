@@ -50,14 +50,19 @@ class AppTextFormField extends StatelessWidget {
         focusedErrorBorder: buildOutLineInputBorder(
           borderColor: Colors.red,
         ),
-        hintStyle: TextStyles.font14GrayRegular,
+        hintStyle: TextStyles.regular14.copyWith(
+          color: ColorsManager.gray,
+        ),
         hintText: hintText,
         suffixIcon: suffixIcon,
         fillColor: backgroundColor ?? ColorsManager.moreLightGray,
         filled: true,
       ),
       obscureText: isObscureText ?? false,
-      style: textStyle ?? TextStyles.font14DarkBlueMedium,
+      style: textStyle ??
+          TextStyles.medium14.copyWith(
+            color: ColorsManager.darkBlue,
+          ),
       validator: (value) {
         return validator(value);
       },

@@ -1,4 +1,5 @@
 import 'package:biocode/core/routing/routes.dart';
+import 'package:biocode/core/theming/colors.dart';
 import 'package:biocode/core/theming/styles.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,9 @@ class DontHaveAnAccount extends StatelessWidget {
         children: [
           TextSpan(
             text: "Don't have an account?",
-            style: TextStyles.font16GrayMedium,
+            style: TextStyles.medium16.copyWith(
+              color: ColorsManager.gray,
+            ),
           ),
           TextSpan(
             text: " ",
@@ -26,7 +29,9 @@ class DontHaveAnAccount extends StatelessWidget {
                 GoRouter.of(context).push(Routes.signUpView);
               },
             text: "Sign up",
-            style: TextStyles.font16BlueMedium,
+            style: TextStyles.medium16.copyWith(
+              color: ColorsManager.mainBlue,
+            ),
           ),
         ],
       ),

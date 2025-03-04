@@ -13,7 +13,9 @@ class SignUpView extends StatelessWidget {
           backgroundColor: Colors.white,
           title: Text(
             "Sign up",
-            style: TextStyles.font20BlackBold,
+            style: TextStyles.bold20.copyWith(
+              color: Colors.black,
+            ),
           ),
           centerTitle: true,
         ),

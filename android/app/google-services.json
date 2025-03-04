@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "803309783192",
+    "project_id": "bio-app-99e34",
+    "storage_bucket": "bio-app-99e34.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803309783192:android:c287a3e48bae0b29b6e8ed",
+        "android_client_info": {
+          "package_name": "com.example.biocode"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGLuIi05xqesVcuI8wctLm90qKaitYsjw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

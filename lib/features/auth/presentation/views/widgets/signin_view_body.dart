@@ -1,5 +1,6 @@
 import 'package:biocode/core/helpers/spacing.dart';
 import 'package:biocode/core/theming/assets_data.dart';
+import 'package:biocode/core/theming/colors.dart';
 import 'package:biocode/core/theming/styles.dart';
 import 'package:biocode/core/widgets/app_text_button.dart';
 import 'package:biocode/features/auth/presentation/views/widgets/dont_have_an_account.dart';
@@ -22,12 +23,16 @@ class SigninViewBody extends StatelessWidget {
           children: [
             Text(
               "Welcome back",
-              style: TextStyles.font24BlueBold,
+              style: TextStyles.bold24.copyWith(
+                color: ColorsManager.mainBlue,
+              ),
             ),
             verticalSpace(8),
             Text(
               "We're excited to have you back, can't wait to see what you've been up to since you last logged in.",
-              style: TextStyles.font14GrayRegular,
+              style: TextStyles.regular14.copyWith(
+                color: ColorsManager.gray,
+              ),
             ),
             verticalSpace(36),
             Column(
@@ -37,13 +42,17 @@ class SigninViewBody extends StatelessWidget {
                   alignment: AlignmentDirectional.centerEnd,
                   child: Text(
                     "Forgot Password?",
-                    style: TextStyles.font13BlueRegular,
+                    style: TextStyles.regular13.copyWith(
+                      color: ColorsManager.mainBlue,
+                    ),
                   ),
                 ),
                 verticalSpace(25),
                 AppTextButton(
                   buttonText: "Sign in",
-                  textStyle: TextStyles.font16WhiteSemiBold,
+                  textStyle: TextStyles.semiBold16.copyWith(
+                    color: Colors.white,
+                  ),
                   onPressed: () {},
                 ),
                 verticalSpace(25.h),

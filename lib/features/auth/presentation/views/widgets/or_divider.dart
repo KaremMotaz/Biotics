@@ -18,7 +18,9 @@ class OrDivider extends StatelessWidget {
         horizontalSpace(10),
         Text(
           "Or",
-          style: TextStyles.font14GrayRegular,
+          style: TextStyles.regular14.copyWith(
+            color: ColorsManager.gray,
+          ),
         ),
         horizontalSpace(10),
         Expanded(

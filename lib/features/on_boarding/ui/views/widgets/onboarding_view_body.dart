@@ -1,5 +1,6 @@
 import 'package:biocode/core/helpers/spacing.dart';
 import 'package:biocode/core/routing/routes.dart';
+import 'package:biocode/core/theming/colors.dart';
 import 'package:biocode/core/theming/styles.dart';
 import 'package:biocode/core/widgets/app_text_button.dart';
 import 'package:biocode/features/on_boarding/ui/views/widgets/bio_logo_and_name.dart';
@@ -28,13 +29,17 @@ class OnboardingViewBody extends StatelessWidget {
                 children: [
                   Text(
                     "Learn everything from cells to ecosystems\n with Biotics",
-                    style: TextStyles.font16GrayMedium,
+                    style: TextStyles.medium16.copyWith(
+                      color: ColorsManager.gray,
+                    ),
                     textAlign: TextAlign.center,
                   ),
                   verticalSpace(20.h),
                   AppTextButton(
                     buttonText: "Begin Learning",
-                    textStyle: TextStyles.font16WhiteSemiBold,
+                    textStyle: TextStyles.semiBold16.copyWith(
+                      color: Colors.white,
+                    ),
                     onPressed: () {
                       GoRouter.of(context).push(Routes.signInView);
                     },

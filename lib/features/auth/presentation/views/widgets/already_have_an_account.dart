@@ -1,4 +1,5 @@
 import 'package:biocode/core/routing/routes.dart';
+import 'package:biocode/core/theming/colors.dart';
 import 'package:biocode/core/theming/styles.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -10,26 +11,30 @@ class AlreadyHaveAnAccount extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text.rich(
-        textAlign: TextAlign.center,
-        TextSpan(
-          children: [
-            TextSpan(
-              text: "Already have an account?",
-              style: TextStyles.font16GrayMedium,
+      textAlign: TextAlign.center,
+      TextSpan(
+        children: [
+          TextSpan(
+            text: "Already have an account?",
+            style: TextStyles.medium16.copyWith(
+              color: ColorsManager.gray,
             ),
-            TextSpan(
-              text: " ",
+          ),
+          TextSpan(
+            text: " ",
+          ),
+          TextSpan(
+            recognizer: TapGestureRecognizer()
+              ..onTap = () {
+                GoRouter.of(context).push(Routes.signInView);
+              },
+            text: "Sign in",
+            style: TextStyles.medium16.copyWith(
+              color: ColorsManager.mainBlue,
             ),
-            TextSpan(
-              recognizer: TapGestureRecognizer()
-                ..onTap = () {
-                  GoRouter.of(context).push(Routes.signInView);
-                },
-              text: "Sign in",
-              style: TextStyles.font16BlueMedium,
-            ),
-          ],
-        ),
-      );
+          ),
+        ],
+      ),
+    );
   }
 }
