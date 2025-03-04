@@ -12,7 +12,7 @@ class SignInView extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.white,
           title: Text(
-            "Login",
+            "Sign in",
             style: TextStyles.font20BlackBold,
           ),
           centerTitle: true,

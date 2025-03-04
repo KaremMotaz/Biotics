@@ -34,6 +34,7 @@ flutter:
   assets:
     - assets/images/
     - assets/svgs/
+    - assets/svgs/social_media_icons/
 
   fonts:
     - family: Cairo

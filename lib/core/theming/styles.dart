@@ -8,6 +8,185 @@ abstract class TextStyles {
     fontSize: 26.sp,
     fontWeight: FontWeightHelper.bold,
     color: Colors.black,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   );
   static TextStyle font20BlackBold = TextStyle(
     fontSize: 20.sp,
@@ -45,6 +224,16 @@ abstract class TextStyles {
     fontSize: 16.sp,
     fontWeight: FontWeightHelper.medium,
     color: ColorsManager.gray,
+  );
+  static TextStyle font15greySemiBold = TextStyle(
+    fontSize: 15.sp,
+    fontWeight: FontWeightHelper.semiBold,
+    color: const Color.fromARGB(255, 110, 108, 108),
+  );
+  static TextStyle font16BlueMedium = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.semiBold,
+    color: ColorsManager.mainBlue,
   );
   static TextStyle font14GrayRegular = TextStyle(
     fontSize: 14.sp,
