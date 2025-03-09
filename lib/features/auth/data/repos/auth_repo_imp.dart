@@ -34,7 +34,7 @@ class AuthRepoImp extends AuthRepo {
   }
 
   @override
-  Future<Either<Failure, UserEntity>> signinWithGoogle() {
+  Future<Either<Failure, UserEntity>> signinWithGoogle() async {
     throw UnimplementedError();
   }
 
