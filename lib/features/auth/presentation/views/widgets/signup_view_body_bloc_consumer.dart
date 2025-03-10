@@ -1,4 +1,5 @@
 import 'package:biocode/core/helpers/build_error_bar.dart';
+import 'package:biocode/core/routing/routes.dart';
 import 'package:biocode/features/auth/presentation/manager/signup_cubit/signup_cubit.dart';
 import 'package:biocode/features/auth/presentation/views/widgets/signup_view_body.dart';
 import 'package:flutter/widgets.dart';
@@ -11,10 +12,10 @@ class SignupViewBodyBlocConsumer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer(
+    return BlocConsumer<SignupCubit, SignupState>(
       listener: (context, state) {
         if (state is SignupSuccessState) {
-          GoRouter.of(context).pop();
+          GoRouter.of(context).pushReplacement(Routes.homeView);
         }
         if (state is SignupFailureState) {
           showBar(context, state.message);

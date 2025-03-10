@@ -3,11 +3,13 @@ import 'package:biocode/core/theming/assets_data.dart';
 import 'package:biocode/core/theming/colors.dart';
 import 'package:biocode/core/theming/styles.dart';
 import 'package:biocode/core/widgets/app_text_button.dart';
+import 'package:biocode/features/auth/presentation/manager/signin_cubit/signin_cubit.dart';
 import 'package:biocode/features/auth/presentation/views/widgets/dont_have_an_account.dart';
 import 'package:biocode/features/auth/presentation/views/widgets/sign_in_form.dart';
 import 'package:biocode/features/auth/presentation/views/widgets/or_divider.dart';
 import 'package:biocode/features/auth/presentation/views/widgets/social_login_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SigninViewBody extends StatelessWidget {
@@ -53,7 +55,9 @@ class SigninViewBody extends StatelessWidget {
                   textStyle: TextStyles.semiBold16.copyWith(
                     color: Colors.white,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    context.read<SigninCubit>().signinWithEmailAndPassword();
+                  },
                 ),
                 verticalSpace(25.h),
                 DontHaveAnAccount(),

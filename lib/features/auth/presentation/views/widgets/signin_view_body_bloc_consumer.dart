@@ -12,7 +12,7 @@ class SigninViewBodyBlocConsumer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer(
+    return BlocConsumer<SigninCubit,SigninState>(
       listener: (context, state) {
         if (state is SigninSuccessState) {
           GoRouter.of(context).push(Routes.homeView);
