@@ -26,7 +26,7 @@ class DontHaveAnAccount extends StatelessWidget {
           TextSpan(
             recognizer: TapGestureRecognizer()
               ..onTap = () {
-                GoRouter.of(context).push(Routes.signUpView);
+                GoRouter.of(context).pushReplacement(Routes.signUpView);
               },
             text: "Sign up",
             style: TextStyles.medium16.copyWith(

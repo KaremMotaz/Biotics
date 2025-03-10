@@ -26,7 +26,7 @@ class AlreadyHaveAnAccount extends StatelessWidget {
           TextSpan(
             recognizer: TapGestureRecognizer()
               ..onTap = () {
-                GoRouter.of(context).push(Routes.signInView);
+                GoRouter.of(context).pushReplacement(Routes.signInView);
               },
             text: "Sign in",
             style: TextStyles.medium16.copyWith(

@@ -15,7 +15,7 @@ class SignupViewBodyBlocConsumer extends StatelessWidget {
     return BlocConsumer<SignupCubit, SignupState>(
       listener: (context, state) {
         if (state is SignupSuccessState) {
-          GoRouter.of(context).pushReplacement(Routes.homeView);
+          GoRouter.of(context).pushReplacement(Routes.fillProfileView);
         }
         if (state is SignupFailureState) {
           showBar(context, state.message);

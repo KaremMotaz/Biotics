@@ -1,4 +1,7 @@
 import 'package:biocode/core/routing/routes.dart';
+import 'package:biocode/features/auth/presentation/views/fill_profile_view.dart';
+import 'package:biocode/features/auth/presentation/views/forgot_password_view.dart';
+import 'package:biocode/features/auth/presentation/views/otp_verification_view.dart';
 import 'package:biocode/features/auth/presentation/views/signin_view.dart';
 import 'package:biocode/features/auth/presentation/views/signup_view.dart';
 import 'package:biocode/features/home/ui/views/home_view.dart';
@@ -19,6 +22,18 @@ abstract class AppRouter {
       GoRoute(
         path: Routes.signUpView,
         builder: (context, state) => const SignUpView(),
+      ),
+      GoRoute(
+        path: Routes.fillProfileView,
+        builder: (context, state) => const FillProfileView(),
+      ),
+      GoRoute(
+        path: Routes.forgotPasswordView,
+        builder: (context, state) => const ForgotPasswordView(),
+      ),
+      GoRoute(
+        path: Routes.oTPVerificationView,
+        builder: (context, state) => const OTPVerificationView(),
       ),
       GoRoute(
         path: Routes.homeView,
