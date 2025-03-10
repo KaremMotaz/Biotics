@@ -4,7 +4,7 @@ import 'package:biocode/core/theming/colors.dart';
 import 'package:biocode/core/theming/styles.dart';
 import 'package:biocode/core/widgets/app_text_button.dart';
 import 'package:biocode/features/auth/presentation/views/widgets/dont_have_an_account.dart';
-import 'package:biocode/features/auth/presentation/views/widgets/email_and_password.dart';
+import 'package:biocode/features/auth/presentation/views/widgets/sign_in_form.dart';
 import 'package:biocode/features/auth/presentation/views/widgets/or_divider.dart';
 import 'package:biocode/features/auth/presentation/views/widgets/social_login_button.dart';
 import 'package:flutter/material.dart';
@@ -37,7 +37,7 @@ class SigninViewBody extends StatelessWidget {
             verticalSpace(36),
             Column(
               children: [
-                const EmailAndPassword(),
+                const SignInForm(),
                 Align(
                   alignment: AlignmentDirectional.centerEnd,
                   child: Text(

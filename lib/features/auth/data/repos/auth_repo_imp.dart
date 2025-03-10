@@ -29,8 +29,19 @@ class AuthRepoImp extends AuthRepo {
 
   @override
   Future<Either<Failure, UserEntity>> signinWithEmailAndPassword(
-      {required String email, required String password}) {
-    throw UnimplementedError();
+      {required String email, required String password}) async {
+    User? user;
+    try {
+      user = await firebaseAuthService.signInWithEmailAndPassword(
+          email: email, password: password);
+
+      return right(
+          UserEntity(email: email, password: password, uid: user!.uid));
+    } catch (e) {
+      return left(
+        ServerFailure(message: "There was an error, please try again later"),
+      );
+    }
   }
 
   @override
