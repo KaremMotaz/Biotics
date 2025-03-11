@@ -25,4 +25,8 @@ class SignupCubit extends Cubit<SignupState> {
       emit(SignupSuccessState(userEntity: userEntity));
     });
   }
+    void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+  }
 }

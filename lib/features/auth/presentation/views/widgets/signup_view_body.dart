@@ -43,7 +43,7 @@ class SignupViewBody extends StatelessWidget {
                 color: Colors.white,
               ),
               onPressed: () {
-                context.read<SignupCubit>().signupWithEmailAndPassword();
+                validateThenSignup(context);
               },
             ),
             verticalSpace(25.h),
@@ -55,5 +55,12 @@ class SignupViewBody extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void validateThenSignup(BuildContext context) {
+    final signupCubit = context.read<SignupCubit>();
+    if (signupCubit.formKey.currentState!.validate()) {
+      signupCubit.signupWithEmailAndPassword();
+    }
   }
 }

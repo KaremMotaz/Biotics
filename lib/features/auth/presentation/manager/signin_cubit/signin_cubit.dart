@@ -6,7 +6,7 @@ part 'signin_state.dart';
 
 class SigninCubit extends Cubit<SigninState> {
   SigninCubit(this.authRepo) : super(SigninInitialState());
-  
+
   final AuthRepo authRepo;
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
@@ -23,6 +23,11 @@ class SigninCubit extends Cubit<SigninState> {
     }, (userEntity) {
       emit(SigninSuccessState(userEntity: userEntity));
     });
+  }
+
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
   }
 
   Future<void> signinWithGoogle() async {

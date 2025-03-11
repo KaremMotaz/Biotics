@@ -56,7 +56,7 @@ class SigninViewBody extends StatelessWidget {
                     color: Colors.white,
                   ),
                   onPressed: () {
-                    context.read<SigninCubit>().signinWithEmailAndPassword();
+                    validateThenSignin(context);
                   },
                 ),
                 verticalSpace(25.h),
@@ -67,13 +67,17 @@ class SigninViewBody extends StatelessWidget {
                 SocialLoginButton(
                   title: 'Sign in with google',
                   imageLink: AssetsData.googleIcon,
-                  onPressed: () {},
+                  onPressed: () {
+                    context.read<SigninCubit>().signinWithGoogle();
+                  },
                 ),
                 verticalSpace(15.h),
                 SocialLoginButton(
                   title: 'Sign in with facebook',
                   imageLink: AssetsData.faceBookIcon,
-                  onPressed: () {},
+                  onPressed: () {
+                    context.read<SigninCubit>().signinWithFacebook();
+                  },
                 ),
               ],
             ),
@@ -81,5 +85,12 @@ class SigninViewBody extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void validateThenSignin(BuildContext context) {
+    final signinCubit = context.read<SigninCubit>();
+    if (signinCubit.formKey.currentState!.validate()) {
+      signinCubit.signinWithEmailAndPassword();
+    }
   }
 }
