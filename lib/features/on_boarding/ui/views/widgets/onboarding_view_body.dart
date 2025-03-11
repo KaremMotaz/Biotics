@@ -19,9 +19,9 @@ class OnboardingViewBody extends StatelessWidget {
         padding: EdgeInsets.symmetric(vertical: 30.h),
         child: Column(
           children: [
-            BioLogoAndName(),
+            const BioLogoAndName(),
             verticalSpace(30.h),
-            TeacherImageAndText(),
+            const TeacherImageAndText(),
             verticalSpace(10.h),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 30.h),

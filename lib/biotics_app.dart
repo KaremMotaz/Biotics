@@ -26,8 +26,8 @@ class BioticsApp extends StatelessWidget {
             ),
             routerConfig: AppRouter.router,
             debugShowCheckedModeBanner: false,
-            locale: Locale("en"),
-            localizationsDelegates: [
+            locale: const Locale("en"),
+            localizationsDelegates: const [
               S.delegate,
               GlobalMaterialLocalizations.delegate,
               GlobalWidgetsLocalizations.delegate,

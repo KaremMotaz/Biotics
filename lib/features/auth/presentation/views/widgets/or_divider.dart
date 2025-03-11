@@ -10,7 +10,7 @@ class OrDivider extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(
+        const Expanded(
           child: Divider(
             color: ColorsManager.lightGray,
           ),
@@ -23,7 +23,7 @@ class OrDivider extends StatelessWidget {
           ),
         ),
         horizontalSpace(10),
-        Expanded(
+        const Expanded(
           child: Divider(
             color: ColorsManager.lightGray,
           ),

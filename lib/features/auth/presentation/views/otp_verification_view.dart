@@ -6,6 +6,6 @@ class OTPVerificationView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OTPVerificationViewBody();
+    return const OTPVerificationViewBody();
   }
 }

@@ -24,7 +24,7 @@ class SigninViewBodyBlocConsumer extends StatelessWidget {
       builder: (context, state) {
         return ModalProgressHUD(
           inAsyncCall: state is SigninLoadingState ? true : false,
-          child: SigninViewBody(),
+          child: const SigninViewBody(),
         );
       },
     );

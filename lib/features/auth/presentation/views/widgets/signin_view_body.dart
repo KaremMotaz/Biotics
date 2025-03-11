@@ -60,9 +60,9 @@ class SigninViewBody extends StatelessWidget {
                   },
                 ),
                 verticalSpace(25.h),
-                DontHaveAnAccount(),
+                const DontHaveAnAccount(),
                 verticalSpace(25.h),
-                OrDivider(),
+                const OrDivider(),
                 verticalSpace(20.h),
                 SocialLoginButton(
                   title: 'Sign in with google',

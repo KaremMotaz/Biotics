@@ -20,7 +20,7 @@ class AlreadyHaveAnAccount extends StatelessWidget {
               color: ColorsManager.gray,
             ),
           ),
-          TextSpan(
+          const TextSpan(
             text: " ",
           ),
           TextSpan(

@@ -1,7 +1,9 @@
 import 'package:biocode/core/helpers/app_regex.dart';
 import 'package:biocode/core/helpers/spacing.dart';
+import 'package:biocode/core/theming/styles.dart';
 import 'package:biocode/core/widgets/app_text_form_field.dart';
 import 'package:biocode/features/auth/presentation/manager/signup_cubit/signup_cubit.dart';
+import 'package:biocode/features/auth/presentation/views/widgets/password_validations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -14,10 +16,10 @@ class SignUpForm extends StatefulWidget {
 
 class _SignUpFormState extends State<SignUpForm> {
   bool isPasswordObscureText = true;
-  
+
   // validation booleans
-  bool hasLowercase = false;
-  bool hasUppercase = false;
+  bool hasLowerCase = false;
+  bool hasUpperCase = false;
   bool hasSpecialCharacters = false;
   bool hasNumber = false;
   bool hasMinLength = false;
@@ -76,6 +78,21 @@ class _SignUpFormState extends State<SignUpForm> {
             },
           ),
           verticalSpace(24),
+          Align(
+            alignment: AlignmentDirectional.centerStart,
+            child: Text(
+              "Password must contain the following :",
+              style: TextStyles.regular14,
+            ),
+          ),
+          verticalSpace(10),
+          PasswordValidations(
+            hasLowerCase: hasLowerCase,
+            hasUpperCase: hasUpperCase,
+            hasSpecialCharacters: hasSpecialCharacters,
+            hasNumber: hasNumber,
+            hasMinLength: hasMinLength,
+          ),
         ],
       ),
     );
@@ -90,8 +107,8 @@ class _SignUpFormState extends State<SignUpForm> {
   void setupPasswordControllerListener() {
     passwordController.addListener(() {
       setState(() {
-        hasLowercase = AppRegex.hasLowerCase(passwordController.text);
-        hasUppercase = AppRegex.hasUpperCase(passwordController.text);
+        hasLowerCase = AppRegex.hasLowerCase(passwordController.text);
+        hasUpperCase = AppRegex.hasUpperCase(passwordController.text);
         hasSpecialCharacters =
             AppRegex.hasSpecialCharacter(passwordController.text);
         hasNumber = AppRegex.hasNumber(passwordController.text);

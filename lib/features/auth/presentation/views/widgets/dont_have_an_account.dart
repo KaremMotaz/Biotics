@@ -20,7 +20,7 @@ class DontHaveAnAccount extends StatelessWidget {
               color: ColorsManager.gray,
             ),
           ),
-          TextSpan(
+          const TextSpan(
             text: " ",
           ),
           TextSpan(

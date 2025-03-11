@@ -18,7 +18,7 @@ class SignUpView extends StatelessWidget {
         ),
         child: Scaffold(
           appBar: buildAppBar(title: "Sign up"),
-          body: SignupViewBodyBlocConsumer(),
+          body: const SignupViewBodyBlocConsumer(),
         ),
       ),
     );

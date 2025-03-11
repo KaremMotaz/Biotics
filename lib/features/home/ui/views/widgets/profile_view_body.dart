@@ -11,7 +11,7 @@ class ProfileViewBody extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               gradient: LinearGradient(
                 colors: [
                   ColorsManager.mainBlue,
@@ -26,7 +26,7 @@ class ProfileViewBody extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: ColorsManager.mainBlue,
                     borderRadius: BorderRadius.only(
                       bottomRight: Radius.circular(45),
@@ -34,7 +34,7 @@ class ProfileViewBody extends StatelessWidget {
                   ),
                   child: Column(
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
@@ -42,7 +42,7 @@ class ProfileViewBody extends StatelessWidget {
                         children: [
                           IconButton(
                             onPressed: () {},
-                            icon: Icon(
+                            icon: const Icon(
                               Icons.settings,
                               color: Colors.white,
                             ),
@@ -53,27 +53,27 @@ class ProfileViewBody extends StatelessWidget {
                         width: 100,
                         height: 100,
                         decoration: BoxDecoration(
-                          color: Color(0xff7a85ad),
+                          color: const Color(0xff7a85ad),
                           borderRadius: BorderRadius.circular(30),
                           border: Border.all(color: Colors.white, width: 2),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Text(
                         S.of(context).userName,
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 20,
                           fontFamily: "Roboto",
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
-                      Text(
+                      const Text(
                         "KarimMotaz@gmail.com",
                         style: TextStyle(
                           color: Colors.white,
@@ -82,7 +82,7 @@ class ProfileViewBody extends StatelessWidget {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 40,
                       ),
                     ],
@@ -91,7 +91,7 @@ class ProfileViewBody extends StatelessWidget {
                 Container(
                   width: double.infinity,
                   height: 500,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: ColorsManager.mainBlue,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(45),
@@ -100,7 +100,7 @@ class ProfileViewBody extends StatelessWidget {
                   ),
                   child: Row(children: [
                     Padding(
-                      padding: EdgeInsetsDirectional.only(end: 4),
+                      padding: const EdgeInsetsDirectional.only(end: 4),
                       child: Text(S.of(context).hello)),
                     Text(S.of(context).name),
                   ],),
