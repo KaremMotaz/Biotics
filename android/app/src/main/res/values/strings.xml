@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Biotics</string>
+  <string name="facebook_app_id">658913149975897</string>
+  <string name="fb_login_protocol_scheme">fbaa9a01878147b7a569c50cf82f40c0f6</string>
+  <string name="facebook_client_token">f0b193ff3d185b26de8b54bed13fa357</string>
+</resources>

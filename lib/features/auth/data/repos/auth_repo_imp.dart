@@ -56,7 +56,6 @@ class AuthRepoImp extends AuthRepo {
 
       return right(userEntity);
     } catch (e) {
-      log(e.toString());
       return left(
         ServerFailure(
             message: "There was an error, please try again later : $e"),
@@ -73,6 +72,7 @@ class AuthRepoImp extends AuthRepo {
 
       return right(userEntity);
     } catch (e) {
+      log(e.toString());
       return left(
         ServerFailure(message: "There was an error, please try again later"),
       );
