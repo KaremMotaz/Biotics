@@ -1,4 +1,5 @@
-import 'package:biocode/core/manager/cubit/change_font_cubit.dart';
+import 'package:biocode/core/manager/change_font_cubit/change_font_cubit.dart';
+import 'package:biocode/core/manager/theme_cubit/theme_cubit.dart';
 import 'package:biocode/core/theming/theme_data_dark.dart';
 import 'package:biocode/core/theming/theme_data_light.dart';
 import 'package:biocode/generated/l10n.dart';
@@ -16,23 +17,39 @@ class BioticsApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: const Size(375, 812),
       minTextAdapt: true,
-      child: BlocBuilder<ChangeFontCubit, String>(
-        builder: (context, fontFamily) {
-          return MaterialApp.router(
-            title: "Biotics App",
-            theme: getThemeDataDark(fontFamily: fontFamily),
-            routerConfig: AppRouter.router,
-            debugShowCheckedModeBanner: false,
-            locale: const Locale("en"),
-            localizationsDelegates: const [
-              S.delegate,
-              GlobalMaterialLocalizations.delegate,
-              GlobalWidgetsLocalizations.delegate,
-              GlobalCupertinoLocalizations.delegate,
-            ],
-            supportedLocales: S.delegate.supportedLocales,
-          );
-        },
+      child: MultiBlocProvider(
+        providers: [
+          BlocProvider(
+            create: (_) => ChangeFontCubit(),
+          ),
+          BlocProvider(
+            create: (_) => ThemeCubit(),
+          ),
+        ],
+        child: BlocBuilder<ThemeCubit, ThemeMode>(
+          builder: (context, themeMode) {
+            return BlocBuilder<ChangeFontCubit, String>(
+              builder: (context, fontFamily) {
+                return MaterialApp.router(
+                  title: "Biotics App",
+                  theme: getThemeDataLight(fontFamily: fontFamily),
+                  darkTheme: getThemeDataDark(fontFamily: fontFamily),
+                  themeMode: themeMode,
+                  routerConfig: AppRouter.router,
+                  debugShowCheckedModeBanner: false,
+                  locale: const Locale("en"),
+                  localizationsDelegates: const [
+                    S.delegate,
+                    GlobalMaterialLocalizations.delegate,
+                    GlobalWidgetsLocalizations.delegate,
+                    GlobalCupertinoLocalizations.delegate,
+                  ],
+                  supportedLocales: S.delegate.supportedLocales,
+                );
+              },
+            );
+          },
+        ),
       ),
     );
   }

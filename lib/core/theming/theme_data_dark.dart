@@ -6,6 +6,10 @@ ThemeData getThemeDataDark({required String fontFamily}) {
     primaryColor: AppColors.mainBlue,
     scaffoldBackgroundColor: AppColors.darkModeGray,
     fontFamily: fontFamily,
+    iconTheme: const IconThemeData(color: AppColors.lightGray),
+    listTileTheme: const ListTileThemeData(
+      textColor: AppColors.lightGray,
+    ),
     colorScheme: const ColorScheme.dark(
       onPrimary: AppColors.darkModeGray, // Dark mode alternative for white
     ),

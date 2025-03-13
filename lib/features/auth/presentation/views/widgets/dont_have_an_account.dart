@@ -14,12 +14,7 @@ class DontHaveAnAccount extends StatelessWidget {
       textAlign: TextAlign.center,
       TextSpan(
         children: [
-          TextSpan(
-            text: "Don't have an account?",
-            style: TextStyles.medium16.copyWith(
-              color: AppColors.gray,
-            ),
-          ),
+          TextSpan(text: "Don't have an account? ", style: TextStyles.medium16),
           const TextSpan(
             text: " ",
           ),

@@ -6,6 +6,12 @@ ThemeData getThemeDataLight({required String fontFamily}) {
     primaryColor: AppColors.mainBlue,
     scaffoldBackgroundColor: Colors.white,
     fontFamily: fontFamily,
+    iconTheme: const IconThemeData(
+      color: AppColors.gray,
+    ),
+      listTileTheme: const ListTileThemeData(
+      textColor: AppColors.gray,
+    ),
     textTheme: Typography.whiteCupertino.apply(
       bodyColor: AppColors.gray,
     ),
@@ -14,6 +20,10 @@ ThemeData getThemeDataLight({required String fontFamily}) {
     ),
     appBarTheme: const AppBarTheme(
       color: Colors.white,
+            iconTheme: IconThemeData(color: AppColors.gray),
+      titleTextStyle: TextStyle(
+        color: AppColors.gray,
+      ),
     ),
   );
 }
