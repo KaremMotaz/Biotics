@@ -1,5 +1,6 @@
 import 'package:biocode/core/manager/cubit/change_font_cubit.dart';
-import 'package:biocode/core/theming/colors.dart';
+import 'package:biocode/core/theming/theme_data_dark.dart';
+import 'package:biocode/core/theming/theme_data_light.dart';
 import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -19,11 +20,7 @@ class BioticsApp extends StatelessWidget {
         builder: (context, fontFamily) {
           return MaterialApp.router(
             title: "Biotics App",
-            theme: ThemeData(
-              primaryColor: ColorsManager.mainBlue,
-              scaffoldBackgroundColor: Colors.white,
-              fontFamily: fontFamily,
-            ),
+            theme: getThemeDataDark(fontFamily: fontFamily),
             routerConfig: AppRouter.router,
             debugShowCheckedModeBanner: false,
             locale: const Locale("en"),

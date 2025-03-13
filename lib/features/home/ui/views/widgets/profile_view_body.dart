@@ -1,4 +1,4 @@
-import 'package:biocode/core/theming/colors.dart';
+import 'package:biocode/core/theming/app_colors.dart';
 import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
@@ -14,10 +14,10 @@ class ProfileViewBody extends StatelessWidget {
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  ColorsManager.mainBlue,
-                  ColorsManager.mainBlue,
-                  ColorsManager.mainBlue,
-                  ColorsManager.mainBlue,
+                  AppColors.mainBlue,
+                  AppColors.mainBlue,
+                  AppColors.mainBlue,
+                  AppColors.mainBlue,
                 ],
                 stops: [0.0, 0.5, 0.5, 1.0],
               ),
@@ -27,7 +27,7 @@ class ProfileViewBody extends StatelessWidget {
               children: [
                 Container(
                   decoration: const BoxDecoration(
-                    color: ColorsManager.mainBlue,
+                    color: AppColors.mainBlue,
                     borderRadius: BorderRadius.only(
                       bottomRight: Radius.circular(45),
                     ),
@@ -92,18 +92,19 @@ class ProfileViewBody extends StatelessWidget {
                   width: double.infinity,
                   height: 500,
                   decoration: const BoxDecoration(
-                    color: ColorsManager.mainBlue,
+                    color: AppColors.mainBlue,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(45),
                     ),
-                    
                   ),
-                  child: Row(children: [
-                    Padding(
-                      padding: const EdgeInsetsDirectional.only(end: 4),
-                      child: Text(S.of(context).hello)),
-                    Text(S.of(context).name),
-                  ],),
+                  child: Row(
+                    children: [
+                      Padding(
+                          padding: const EdgeInsetsDirectional.only(end: 4),
+                          child: Text(S.of(context).hello)),
+                      Text(S.of(context).name),
+                    ],
+                  ),
                 ),
               ],
             ),

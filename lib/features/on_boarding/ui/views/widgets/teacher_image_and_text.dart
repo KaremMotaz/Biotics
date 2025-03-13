@@ -1,5 +1,5 @@
 import 'package:biocode/core/theming/assets_data.dart';
-import 'package:biocode/core/theming/colors.dart';
+import 'package:biocode/core/theming/app_colors.dart';
 import 'package:biocode/core/theming/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -15,8 +15,8 @@ class TeacherImageAndText extends StatelessWidget {
           foregroundDecoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Colors.white,
-                Colors.white.withAlpha(0),
+                Theme.of(context).colorScheme.onPrimary, // Dynamic color
+                Theme.of(context).colorScheme.onPrimary.withAlpha(0),
               ],
               begin: Alignment.bottomCenter,
               end: Alignment.topCenter,
@@ -35,7 +35,7 @@ class TeacherImageAndText extends StatelessWidget {
           child: Text(
             "Explore The\n Wonders Of Biology",
             style: TextStyles.bold30.copyWith(
-              color: ColorsManager.mainBlue,
+              color: AppColors.mainBlue,
               fontWeight: FontWeight.w900,
             ),
             textAlign: TextAlign.center,

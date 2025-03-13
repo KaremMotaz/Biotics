@@ -1,4 +1,4 @@
-import 'package:biocode/core/theming/colors.dart';
+import 'package:biocode/core/theming/app_colors.dart';
 import 'package:biocode/core/theming/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -38,11 +38,11 @@ class AppTextFormField extends StatelessWidget {
             EdgeInsets.symmetric(horizontal: 20.w, vertical: 18.h),
         focusedBorder: focusedBorder ??
             buildOutLineInputBorder(
-              borderColor: ColorsManager.mainBlue,
+              borderColor: AppColors.mainBlue,
             ),
         enabledBorder: enabledBorder ??
             buildOutLineInputBorder(
-              borderColor: ColorsManager.lighterGray,
+              borderColor: AppColors.lighterGray,
             ),
         errorBorder: buildOutLineInputBorder(
           borderColor: Colors.red,
@@ -50,19 +50,15 @@ class AppTextFormField extends StatelessWidget {
         focusedErrorBorder: buildOutLineInputBorder(
           borderColor: Colors.red,
         ),
-        hintStyle: TextStyles.regular14.copyWith(
-          color: ColorsManager.gray,
-        ),
+        hintStyle: TextStyles.regular14,
         hintText: hintText,
         suffixIcon: suffixIcon,
-        fillColor: backgroundColor ?? ColorsManager.moreLightGray,
+        fillColor: backgroundColor,
         filled: true,
       ),
       obscureText: isObscureText ?? false,
       style: textStyle ??
-          TextStyles.medium14.copyWith(
-            color: ColorsManager.darkBlue,
-          ),
+          TextStyles.medium14,
       validator: (value) {
         return validator(value);
       },

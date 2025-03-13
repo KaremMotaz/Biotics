@@ -1,6 +1,6 @@
 import 'package:biocode/core/helpers/spacing.dart';
 import 'package:biocode/core/theming/assets_data.dart';
-import 'package:biocode/core/theming/colors.dart';
+import 'package:biocode/core/theming/app_colors.dart';
 import 'package:biocode/core/theming/styles.dart';
 import 'package:biocode/core/widgets/app_text_button.dart';
 import 'package:biocode/features/auth/presentation/manager/signin_cubit/signin_cubit.dart';
@@ -26,14 +26,13 @@ class SigninViewBody extends StatelessWidget {
             Text(
               "Welcome back",
               style: TextStyles.bold24.copyWith(
-                color: ColorsManager.mainBlue,
+                color: AppColors.mainBlue,
               ),
             ),
             verticalSpace(8),
             Text(
               "We're excited to have you back, can't wait to see what you've been up to since you last logged in.",
               style: TextStyles.regular14.copyWith(
-                color: ColorsManager.gray,
               ),
             ),
             verticalSpace(36),
@@ -45,7 +44,7 @@ class SigninViewBody extends StatelessWidget {
                   child: Text(
                     "Forgot Password?",
                     style: TextStyles.regular13.copyWith(
-                      color: ColorsManager.mainBlue,
+                      color: AppColors.mainBlue,
                     ),
                   ),
                 ),

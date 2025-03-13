@@ -1,5 +1,5 @@
 import 'package:biocode/core/routing/routes.dart';
-import 'package:biocode/core/theming/colors.dart';
+import 'package:biocode/core/theming/app_colors.dart';
 import 'package:biocode/core/theming/styles.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +17,7 @@ class DontHaveAnAccount extends StatelessWidget {
           TextSpan(
             text: "Don't have an account?",
             style: TextStyles.medium16.copyWith(
-              color: ColorsManager.gray,
+              color: AppColors.gray,
             ),
           ),
           const TextSpan(
@@ -30,7 +30,7 @@ class DontHaveAnAccount extends StatelessWidget {
               },
             text: "Sign up",
             style: TextStyles.medium16.copyWith(
-              color: ColorsManager.mainBlue,
+              color: AppColors.mainBlue,
             ),
           ),
         ],

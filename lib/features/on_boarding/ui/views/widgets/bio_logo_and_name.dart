@@ -1,6 +1,6 @@
 import 'package:biocode/core/theming/assets_data.dart';
-import 'package:biocode/core/theming/colors.dart';
-import 'package:biocode/core/theming/styles.dart';
+import 'package:biocode/core/theming/app_colors.dart';
+import 'package:biocode/core/theming/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -15,18 +15,20 @@ class BioLogoAndName extends StatelessWidget {
       children: [
         SvgPicture.asset(
           AssetsData.bioticsLogo,
-          height: 40.h,
+          height: 28.h,
           colorFilter: const ColorFilter.mode(
-            ColorsManager.mainBlue,
+            AppColors.mainBlue,
             BlendMode.srcIn,
           ),
         ),
         SizedBox(width: 10.w),
         Text(
           'Biotics',
-          style: TextStyles.bold26.copyWith(
-            color: Colors.black,
+          style: Theme.of(context).textTheme.titleLarge?.copyWith(
+            fontWeight: FontWeightHelper.bold,
+            fontSize: 26,
           ),
+          
         ),
       ],
     );

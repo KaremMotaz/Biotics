@@ -1,5 +1,5 @@
 import 'package:biocode/core/helpers/spacing.dart';
-import 'package:biocode/core/theming/colors.dart';
+import 'package:biocode/core/theming/app_colors.dart';
 import 'package:biocode/core/theming/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -47,7 +47,7 @@ class PasswordValidations extends StatelessWidget {
         Text(
           text,
           style: TextStyles.regular14.copyWith(
-            color: hasValidated ? Colors.green : ColorsManager.gray,
+            color: hasValidated ? Colors.green : AppColors.gray,
           ),
         )
       ],

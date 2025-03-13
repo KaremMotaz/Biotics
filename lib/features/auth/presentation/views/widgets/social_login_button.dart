@@ -1,4 +1,4 @@
-import 'package:biocode/core/theming/colors.dart';
+import 'package:biocode/core/theming/app_colors.dart';
 import 'package:biocode/core/theming/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -21,7 +21,7 @@ class SocialLoginButton extends StatelessWidget {
       style: ButtonStyle(
         shape: WidgetStatePropertyAll<RoundedRectangleBorder>(
           RoundedRectangleBorder(
-            side: const BorderSide(color: ColorsManager.lightGray),
+            side: const BorderSide(color: AppColors.lightGray),
             borderRadius: BorderRadius.circular(16),
           ),
         ),

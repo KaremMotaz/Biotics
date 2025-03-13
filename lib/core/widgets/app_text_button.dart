@@ -1,4 +1,4 @@
-import 'package:biocode/core/theming/colors.dart';
+import 'package:biocode/core/theming/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -36,7 +36,7 @@ class AppTextButton extends StatelessWidget {
           ),
         ),
         backgroundColor: WidgetStatePropertyAll<Color>(
-          backgroundColor ?? ColorsManager.mainBlue,
+          backgroundColor ?? AppColors.mainBlue,
         ),
         padding: WidgetStatePropertyAll<EdgeInsets>(
           EdgeInsets.symmetric(

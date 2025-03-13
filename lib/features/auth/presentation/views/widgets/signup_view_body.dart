@@ -1,5 +1,5 @@
 import 'package:biocode/core/helpers/spacing.dart';
-import 'package:biocode/core/theming/colors.dart';
+import 'package:biocode/core/theming/app_colors.dart';
 import 'package:biocode/core/widgets/app_text_button.dart';
 import 'package:biocode/features/auth/presentation/manager/signup_cubit/signup_cubit.dart';
 import 'package:biocode/features/auth/presentation/views/widgets/already_have_an_account.dart';
@@ -24,14 +24,14 @@ class SignupViewBody extends StatelessWidget {
             Text(
               "Create Account",
               style: TextStyles.bold24.copyWith(
-                color: ColorsManager.mainBlue,
+                color: AppColors.mainBlue,
               ),
             ),
             verticalSpace(8),
             Text(
               "Sign up now and start exploring all that our app has to offer. We're excited to welcome you to our community!",
               style: TextStyles.regular14.copyWith(
-                color: ColorsManager.gray,
+              
               ),
             ),
             verticalSpace(36),

@@ -1,5 +1,5 @@
 import 'package:biocode/core/helpers/spacing.dart';
-import 'package:biocode/core/theming/colors.dart';
+import 'package:biocode/core/theming/app_colors.dart';
 import 'package:biocode/core/theming/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -12,20 +12,20 @@ class OrDivider extends StatelessWidget {
       children: [
         const Expanded(
           child: Divider(
-            color: ColorsManager.lightGray,
+            color: AppColors.lightGray,
           ),
         ),
         horizontalSpace(10),
         Text(
           "Or",
           style: TextStyles.regular14.copyWith(
-            color: ColorsManager.gray,
+            color: AppColors.gray,
           ),
         ),
         horizontalSpace(10),
         const Expanded(
           child: Divider(
-            color: ColorsManager.lightGray,
+            color: AppColors.lightGray,
           ),
         ),
       ],
