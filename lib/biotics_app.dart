@@ -1,4 +1,4 @@
-import 'package:biocode/core/manager/change_font_cubit/change_font_cubit.dart';
+import 'package:biocode/core/manager/cubit/language_cubit.dart';
 import 'package:biocode/core/manager/theme_cubit/theme_cubit.dart';
 import 'package:biocode/core/theming/theme_data_dark.dart';
 import 'package:biocode/core/theming/theme_data_light.dart';
@@ -20,16 +20,19 @@ class BioticsApp extends StatelessWidget {
       child: MultiBlocProvider(
         providers: [
           BlocProvider(
-            create: (_) => ChangeFontCubit(),
+            create: (_) => ThemeCubit(),
           ),
           BlocProvider(
-            create: (_) => ThemeCubit(),
+            create: (_) => LanguageCubit(),
           ),
         ],
         child: BlocBuilder<ThemeCubit, ThemeMode>(
           builder: (context, themeMode) {
-            return BlocBuilder<ChangeFontCubit, String>(
-              builder: (context, fontFamily) {
+            return BlocBuilder<LanguageCubit, Locale>(
+              builder: (context, locale) {
+                final fontFamily = context
+                    .read<ThemeCubit>()
+                    .getFontFamily(locale.languageCode);
                 return MaterialApp.router(
                   title: "Biotics App",
                   theme: getThemeDataLight(fontFamily: fontFamily),
@@ -37,7 +40,7 @@ class BioticsApp extends StatelessWidget {
                   themeMode: themeMode,
                   routerConfig: AppRouter.router,
                   debugShowCheckedModeBanner: false,
-                  locale: const Locale('ar'), // Default language
+                  locale: locale, // Default language
                   localizationsDelegates: const [
                     S.delegate,
                     GlobalMaterialLocalizations.delegate,

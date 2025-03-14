@@ -18,4 +18,8 @@ class ThemeCubit extends Cubit<ThemeMode> {
     final bool isDarkMode = await Prefs.getBool(kIsDarkMode) ?? false;
     emit(isDarkMode ? ThemeMode.dark : ThemeMode.light);
   }
+
+  String getFontFamily(String languageCode) {
+    return languageCode == "ar" ? "Cairo" : "Roboto";
+  }
 }
