@@ -8,6 +8,7 @@ import 'package:biocode/features/auth/presentation/views/widgets/dont_have_an_ac
 import 'package:biocode/features/auth/presentation/views/widgets/sign_in_form.dart';
 import 'package:biocode/features/auth/presentation/views/widgets/or_divider.dart';
 import 'package:biocode/features/auth/presentation/views/widgets/social_login_button.dart';
+import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -24,16 +25,15 @@ class SigninViewBody extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Welcome back",
+              S.of(context).welcome_back,
               style: TextStyles.bold24.copyWith(
                 color: AppColors.mainBlue,
               ),
             ),
             verticalSpace(8),
             Text(
-              "We're excited to have you back, can't wait to see what you've been up to since you last logged in.",
-              style: TextStyles.regular14.copyWith(
-              ),
+              S.of(context).welcome_back_message,
+              style: TextStyles.regular14.copyWith(),
             ),
             verticalSpace(36),
             Column(
@@ -42,7 +42,7 @@ class SigninViewBody extends StatelessWidget {
                 Align(
                   alignment: AlignmentDirectional.centerEnd,
                   child: Text(
-                    "Forgot Password?",
+                    S.of(context).forgot_password,
                     style: TextStyles.regular13.copyWith(
                       color: AppColors.mainBlue,
                     ),
@@ -50,7 +50,7 @@ class SigninViewBody extends StatelessWidget {
                 ),
                 verticalSpace(25),
                 AppTextButton(
-                  buttonText: "Sign in",
+                  buttonText: S.of(context).sign_in_button,
                   textStyle: TextStyles.semiBold16.copyWith(
                     color: Colors.white,
                   ),
@@ -64,7 +64,7 @@ class SigninViewBody extends StatelessWidget {
                 const OrDivider(),
                 verticalSpace(20.h),
                 SocialLoginButton(
-                  title: 'Sign in with google',
+                  title: S.of(context).sign_in_google,
                   imageLink: AssetsData.googleIcon,
                   onPressed: () {
                     context.read<SigninCubit>().signinWithGoogle();
@@ -72,7 +72,7 @@ class SigninViewBody extends StatelessWidget {
                 ),
                 verticalSpace(15.h),
                 SocialLoginButton(
-                  title: 'Sign in with facebook',
+                  title: S.of(context).sign_in_facebook,
                   imageLink: AssetsData.faceBookIcon,
                   onPressed: () {
                     context.read<SigninCubit>().signinWithFacebook();

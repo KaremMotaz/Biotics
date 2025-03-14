@@ -22,8 +22,84 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "hello": MessageLookupByLibrary.simpleMessage("مرحبا"),
-    "name": MessageLookupByLibrary.simpleMessage("كريم"),
-    "userName": MessageLookupByLibrary.simpleMessage("كريم معتز"),
+    "Sign_in_title": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "already_have_an_account": MessageLookupByLibrary.simpleMessage(
+      "هل لديك حساب بالفعل؟",
+    ),
+    "begin_learning": MessageLookupByLibrary.simpleMessage("ابدأ التعلم"),
+    "create_account": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
+    "create_account_button": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
+    "email_empty_error": MessageLookupByLibrary.simpleMessage(
+      "يرجى إدخال بريدك الإلكتروني",
+    ),
+    "email_hint": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+    "email_invalid_error": MessageLookupByLibrary.simpleMessage(
+      "يرجى إدخال بريد إلكتروني صحيح",
+    ),
+    "email_label": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+    "explore_biology": MessageLookupByLibrary.simpleMessage(
+      "استكشف\n عجائب علم الأحياء",
+    ),
+    "forgot_password": MessageLookupByLibrary.simpleMessage(
+      "نسيت كلمة المرور؟",
+    ),
+    "onboarding_title": MessageLookupByLibrary.simpleMessage(
+      "تعلم كل شيء من الخلايا إلى النظم البيئية\n مع Biotics",
+    ),
+    "password_empty_error": MessageLookupByLibrary.simpleMessage(
+      "يرجى إدخال كلمة المرور",
+    ),
+    "password_hint": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "password_invalid_error": MessageLookupByLibrary.simpleMessage(
+      "يرجى إدخال كلمة مرور صحيحة",
+    ),
+    "password_label": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "password_length": MessageLookupByLibrary.simpleMessage(
+      "يجب أن يحتوي على 8 أحرف على الأقل",
+    ),
+    "password_lowercase": MessageLookupByLibrary.simpleMessage(
+      "على الأقل حرف صغير واحد",
+    ),
+    "password_number": MessageLookupByLibrary.simpleMessage(
+      "على الأقل رقم واحد",
+    ),
+    "password_requirements": MessageLookupByLibrary.simpleMessage(
+      "يجب أن تحتوي كلمة المرور على ما يلي:",
+    ),
+    "password_special_characters": MessageLookupByLibrary.simpleMessage(
+      "على الأقل رمز خاص واحد",
+    ),
+    "password_uppercase": MessageLookupByLibrary.simpleMessage(
+      "على الأقل حرف كبير واحد",
+    ),
+    "please_enter_email": MessageLookupByLibrary.simpleMessage(
+      "يرجى إدخال بريدك الإلكتروني",
+    ),
+    "please_enter_password": MessageLookupByLibrary.simpleMessage(
+      "يرجى إدخال كلمة المرور",
+    ),
+    "please_enter_valid_email": MessageLookupByLibrary.simpleMessage(
+      "يرجى إدخال بريد إلكتروني صالح",
+    ),
+    "please_enter_valid_password": MessageLookupByLibrary.simpleMessage(
+      "يرجى إدخال كلمة مرور صالحة",
+    ),
+    "sign_in": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "sign_in_button": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
+    "sign_in_facebook": MessageLookupByLibrary.simpleMessage(
+      "تسجيل الدخول باستخدام فيسبوك",
+    ),
+    "sign_in_google": MessageLookupByLibrary.simpleMessage(
+      "تسجيل الدخول باستخدام جوجل",
+    ),
+    "signup_description": MessageLookupByLibrary.simpleMessage(
+      "قم بالتسجيل الآن وابدأ في استكشاف كل ما يقدمه تطبيقنا. نحن متحمسون للترحيب بك في مجتمعنا!",
+    ),
+    "signup_prompt": MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
+    "signup_title": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
+    "welcome_back": MessageLookupByLibrary.simpleMessage("مرحبًا بعودتك"),
+    "welcome_back_message": MessageLookupByLibrary.simpleMessage(
+      "نحن متحمسون لعودتك، لا يمكننا الانتظار لمعرفة ما كنت تفعله منذ آخر تسجيل دخول لك.",
+    ),
   };
 }

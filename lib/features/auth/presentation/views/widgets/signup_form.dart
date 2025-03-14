@@ -4,6 +4,7 @@ import 'package:biocode/core/theming/styles.dart';
 import 'package:biocode/core/widgets/app_text_form_field.dart';
 import 'package:biocode/features/auth/presentation/manager/signup_cubit/signup_cubit.dart';
 import 'package:biocode/features/auth/presentation/views/widgets/password_validations.dart';
+import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -40,13 +41,13 @@ class _SignUpFormState extends State<SignUpForm> {
       child: Column(
         children: [
           AppTextFormField(
-            hintText: 'Email',
+            hintText: S.of(context).email_hint,
             validator: (value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter your email';
+                return S.of(context).email_empty_error;
               }
               if (!AppRegex.isEmailValid(value)) {
-                return 'Please enter a valid email';
+                return S.of(context).email_invalid_error;
               }
               return null;
             },
@@ -54,7 +55,7 @@ class _SignUpFormState extends State<SignUpForm> {
           ),
           verticalSpace(18),
           AppTextFormField(
-            hintText: 'Password',
+            hintText: S.of(context).password_hint,
             isObscureText: isPasswordObscureText,
             controller: context.read<SignupCubit>().passwordController,
             suffixIcon: IconButton(
@@ -69,10 +70,10 @@ class _SignUpFormState extends State<SignUpForm> {
             ),
             validator: (value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter your password';
+                return S.of(context).password_empty_error;
               }
               if (!AppRegex.isPasswordValid(value)) {
-                return 'Please enter a valid password';
+                return S.of(context).password_invalid_error;
               }
               return null;
             },
@@ -81,7 +82,7 @@ class _SignUpFormState extends State<SignUpForm> {
           Align(
             alignment: AlignmentDirectional.centerStart,
             child: Text(
-              "Password must contain the following :",
+            S.of(context).password_requirements,
               style: TextStyles.regular14,
             ),
           ),

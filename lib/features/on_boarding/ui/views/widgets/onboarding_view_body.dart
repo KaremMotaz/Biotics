@@ -4,6 +4,7 @@ import 'package:biocode/core/theming/styles.dart';
 import 'package:biocode/core/widgets/app_text_button.dart';
 import 'package:biocode/features/on_boarding/ui/views/widgets/bio_logo_and_name.dart';
 import 'package:biocode/features/on_boarding/ui/views/widgets/teacher_image_and_text.dart';
+import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
@@ -27,13 +28,13 @@ class OnboardingViewBody extends StatelessWidget {
               child: Column(
                 children: [
                   Text(
-                    "Learn everything from cells to ecosystems\n with Biotics",
+                    S.of(context).onboarding_title,
                     style: TextStyles.medium16,
                     textAlign: TextAlign.center,
                   ),
                   verticalSpace(20.h),
                   AppTextButton(
-                    buttonText: "Begin Learning",
+                    buttonText: S.of(context).begin_learning,
                     textStyle: TextStyles.semiBold16.copyWith(
                       color: Colors.white,
                     ),

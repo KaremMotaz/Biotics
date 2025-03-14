@@ -11,6 +11,7 @@ class BioLogoAndName extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      textDirection: TextDirection.ltr,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         SvgPicture.asset(
@@ -25,10 +26,9 @@ class BioLogoAndName extends StatelessWidget {
         Text(
           'Biotics',
           style: Theme.of(context).textTheme.titleLarge?.copyWith(
-            fontWeight: FontWeightHelper.bold,
-            fontSize: 26,
-          ),
-          
+                fontWeight: FontWeightHelper.bold,
+                fontSize: 26,
+              ),
         ),
       ],
     );

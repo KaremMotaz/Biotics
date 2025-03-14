@@ -22,8 +22,86 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "hello": MessageLookupByLibrary.simpleMessage("Hello"),
-    "name": MessageLookupByLibrary.simpleMessage("Karim"),
-    "userName": MessageLookupByLibrary.simpleMessage("Karim Motaz"),
+    "Sign_in_title": MessageLookupByLibrary.simpleMessage("Sign in"),
+    "already_have_an_account": MessageLookupByLibrary.simpleMessage(
+      "Already have an account?",
+    ),
+    "begin_learning": MessageLookupByLibrary.simpleMessage("Begin Learning"),
+    "create_account": MessageLookupByLibrary.simpleMessage("Create Account"),
+    "create_account_button": MessageLookupByLibrary.simpleMessage(
+      "Create Account",
+    ),
+    "email_empty_error": MessageLookupByLibrary.simpleMessage(
+      "Please enter your email",
+    ),
+    "email_hint": MessageLookupByLibrary.simpleMessage("Email"),
+    "email_invalid_error": MessageLookupByLibrary.simpleMessage(
+      "Please enter a valid email",
+    ),
+    "email_label": MessageLookupByLibrary.simpleMessage("Email"),
+    "explore_biology": MessageLookupByLibrary.simpleMessage(
+      "Explore The\n Wonders Of Biology",
+    ),
+    "forgot_password": MessageLookupByLibrary.simpleMessage("Forgot Password?"),
+    "onboarding_title": MessageLookupByLibrary.simpleMessage(
+      "Learn everything from cells to ecosystems\n with Biotics",
+    ),
+    "password_empty_error": MessageLookupByLibrary.simpleMessage(
+      "Please enter your password",
+    ),
+    "password_hint": MessageLookupByLibrary.simpleMessage("Password"),
+    "password_invalid_error": MessageLookupByLibrary.simpleMessage(
+      "Please enter a valid password",
+    ),
+    "password_label": MessageLookupByLibrary.simpleMessage("Password"),
+    "password_length": MessageLookupByLibrary.simpleMessage(
+      "At least 8 characters long",
+    ),
+    "password_lowercase": MessageLookupByLibrary.simpleMessage(
+      "At least 1 lowercase letter",
+    ),
+    "password_number": MessageLookupByLibrary.simpleMessage(
+      "At least 1 number",
+    ),
+    "password_requirements": MessageLookupByLibrary.simpleMessage(
+      "Password must contain the following :",
+    ),
+    "password_special_characters": MessageLookupByLibrary.simpleMessage(
+      "At least 1 special character",
+    ),
+    "password_uppercase": MessageLookupByLibrary.simpleMessage(
+      "At least 1 uppercase letter",
+    ),
+    "please_enter_email": MessageLookupByLibrary.simpleMessage(
+      "Please enter your email",
+    ),
+    "please_enter_password": MessageLookupByLibrary.simpleMessage(
+      "Please enter your password",
+    ),
+    "please_enter_valid_email": MessageLookupByLibrary.simpleMessage(
+      "Please enter a valid email",
+    ),
+    "please_enter_valid_password": MessageLookupByLibrary.simpleMessage(
+      "Please enter a valid password",
+    ),
+    "sign_in": MessageLookupByLibrary.simpleMessage("Sign in"),
+    "sign_in_button": MessageLookupByLibrary.simpleMessage("Sign in"),
+    "sign_in_facebook": MessageLookupByLibrary.simpleMessage(
+      "Sign in with Facebook",
+    ),
+    "sign_in_google": MessageLookupByLibrary.simpleMessage(
+      "Sign in with Google",
+    ),
+    "signup_description": MessageLookupByLibrary.simpleMessage(
+      "Sign up now and start exploring all that our app has to offer. We\'re excited to welcome you to our community!",
+    ),
+    "signup_prompt": MessageLookupByLibrary.simpleMessage(
+      "Don\'t have an account?",
+    ),
+    "signup_title": MessageLookupByLibrary.simpleMessage("Sign Up"),
+    "welcome_back": MessageLookupByLibrary.simpleMessage("Welcome back"),
+    "welcome_back_message": MessageLookupByLibrary.simpleMessage(
+      "We\'re excited to have you back, can\'t wait to see what you\'ve been up to since you last logged in.",
+    ),
   };
 }

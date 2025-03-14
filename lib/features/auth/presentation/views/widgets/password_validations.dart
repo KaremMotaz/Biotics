@@ -1,5 +1,6 @@
 import 'package:biocode/core/helpers/spacing.dart';
 import 'package:biocode/core/theming/styles.dart';
+import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class PasswordValidations extends StatelessWidget {
@@ -20,16 +21,16 @@ class PasswordValidations extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        buildValidationRow('At least 1 lowercase letter', hasLowerCase),
+        buildValidationRow(S.of(context).password_lowercase, hasLowerCase),
         verticalSpace(4),
-        buildValidationRow('At least 1 uppercase letter', hasUpperCase),
+        buildValidationRow(S.of(context).password_uppercase, hasUpperCase),
         verticalSpace(4),
         buildValidationRow(
-            'At least 1 special character', hasSpecialCharacters),
+            S.of(context).password_special_characters, hasSpecialCharacters),
         verticalSpace(4),
-        buildValidationRow('At least 1 number', hasNumber),
+        buildValidationRow(S.of(context).password_number, hasNumber),
         verticalSpace(4),
-        buildValidationRow('At least 8 characters long', hasMinLength),
+        buildValidationRow(S.of(context).password_length, hasMinLength),
       ],
     );
   }
@@ -39,7 +40,7 @@ class PasswordValidations extends StatelessWidget {
       children: [
         Icon(
           Icons.check_circle,
-          color:  hasValidated ? Colors.green : null,
+          color: hasValidated ? Colors.green : null,
           size: 16,
         ),
         horizontalSpace(5),

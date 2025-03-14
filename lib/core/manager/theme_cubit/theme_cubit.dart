@@ -5,16 +5,16 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ThemeCubit extends Cubit<ThemeMode> {
   ThemeCubit() : super(ThemeMode.light) {
-    _loadTheme();
+    _init();
   }
-  void toggleTheme() async {
+  Future<void> toggleTheme() async {
     final newTheme =
         state == ThemeMode.light ? ThemeMode.dark : ThemeMode.light;
     await Prefs.setBool(kIsDarkMode, newTheme == ThemeMode.dark);
     emit(newTheme);
   }
 
-  void _loadTheme() async {
+  Future<void> _init() async {
     final bool isDarkMode = await Prefs.getBool(kIsDarkMode) ?? false;
     emit(isDarkMode ? ThemeMode.dark : ThemeMode.light);
   }

@@ -3,6 +3,7 @@ import 'package:biocode/core/widgets/custom_app_bar.dart';
 import 'package:biocode/features/auth/domain/auth_repo.dart';
 import 'package:biocode/features/auth/presentation/manager/signin_cubit/signin_cubit.dart';
 import 'package:biocode/features/auth/presentation/views/widgets/signin_view_body_bloc_consumer.dart';
+import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -17,7 +18,7 @@ class SignInView extends StatelessWidget {
           getIt.get<AuthRepo>(),
         ),
         child: Scaffold(
-          appBar: buildAppBar(title: "Sign in"),
+          appBar: buildAppBar(title: S.of(context).Sign_in_title),
           body: const SigninViewBodyBlocConsumer(),
         ),
       ),

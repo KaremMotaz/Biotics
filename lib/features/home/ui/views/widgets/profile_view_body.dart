@@ -1,5 +1,4 @@
 import 'package:biocode/core/theming/app_colors.dart';
-import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class ProfileViewBody extends StatelessWidget {
@@ -61,9 +60,9 @@ class ProfileViewBody extends StatelessWidget {
                       const SizedBox(
                         height: 10,
                       ),
-                      Text(
-                        S.of(context).userName,
-                        style: const TextStyle(
+                      const Text(
+                        "Karim Motaz",
+                        style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
                           fontFamily: "Roboto",
@@ -97,12 +96,12 @@ class ProfileViewBody extends StatelessWidget {
                       topLeft: Radius.circular(45),
                     ),
                   ),
-                  child: Row(
+                  child: const Row(
                     children: [
                       Padding(
-                          padding: const EdgeInsetsDirectional.only(end: 4),
-                          child: Text(S.of(context).hello)),
-                      Text(S.of(context).name),
+                          padding: EdgeInsetsDirectional.only(end: 4),
+                          child: Text("hj")),
+                      Text("sd"),
                     ],
                   ),
                 ),

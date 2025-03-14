@@ -2,6 +2,7 @@ import 'package:biocode/core/helpers/app_regex.dart';
 import 'package:biocode/core/helpers/spacing.dart';
 import 'package:biocode/core/widgets/app_text_form_field.dart';
 import 'package:biocode/features/auth/presentation/manager/signin_cubit/signin_cubit.dart';
+import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -38,21 +39,21 @@ class _SignInFormState extends State<SignInForm> {
       child: Column(
         children: [
           AppTextFormField(
-            hintText: 'Email',
+            hintText: S.of(context).email_label,
             controller: context.read<SigninCubit>().emailController,
             validator: (value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter your email';
+                return S.of(context).please_enter_email;
               }
               if (!AppRegex.isEmailValid(value)) {
-                return 'Please enter a valid email';
+                return S.of(context).please_enter_valid_email;
               }
               return null;
             },
           ),
           verticalSpace(18),
           AppTextFormField(
-            hintText: 'Password',
+            hintText: S.of(context).password_label,
             isObscureText: isPasswordObscureText,
             controller: context.read<SigninCubit>().passwordController,
             suffixIcon: IconButton(
@@ -67,10 +68,10 @@ class _SignInFormState extends State<SignInForm> {
             ),
             validator: (value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter your password';
+                return S.of(context).please_enter_password;
               }
               if (!AppRegex.isPasswordValid(value)) {
-                return 'Please enter a valid password';
+                return S.of(context).please_enter_valid_password;
               }
               return null;
             },

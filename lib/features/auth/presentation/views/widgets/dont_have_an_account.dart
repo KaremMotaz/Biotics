@@ -1,6 +1,7 @@
 import 'package:biocode/core/routing/routes.dart';
 import 'package:biocode/core/theming/app_colors.dart';
 import 'package:biocode/core/theming/styles.dart';
+import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -14,7 +15,7 @@ class DontHaveAnAccount extends StatelessWidget {
       textAlign: TextAlign.center,
       TextSpan(
         children: [
-          TextSpan(text: "Don't have an account? ", style: TextStyles.medium16),
+          TextSpan(text: S.of(context).signup_prompt, style: TextStyles.medium16),
           const TextSpan(
             text: " ",
           ),
@@ -23,7 +24,7 @@ class DontHaveAnAccount extends StatelessWidget {
               ..onTap = () {
                 GoRouter.of(context).push(Routes.signUpView);
               },
-            text: "Sign up",
+            text: S.of(context).signup_title,
             style: TextStyles.medium16.copyWith(
               color: AppColors.mainBlue,
             ),
