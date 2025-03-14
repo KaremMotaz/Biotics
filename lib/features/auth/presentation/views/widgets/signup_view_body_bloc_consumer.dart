@@ -1,4 +1,4 @@
-import 'package:biocode/core/helpers/build_error_bar.dart';
+import 'package:biocode/core/helpers/build_snack_bar.dart';
 import 'package:biocode/core/routing/routes.dart';
 import 'package:biocode/features/auth/presentation/manager/signup_cubit/signup_cubit.dart';
 import 'package:biocode/features/auth/presentation/views/widgets/signup_view_body.dart';
@@ -18,7 +18,7 @@ class SignupViewBodyBlocConsumer extends StatelessWidget {
           GoRouter.of(context).pushReplacement(Routes.fillProfileView);
         }
         if (state is SignupFailureState) {
-          showBar(context, state.message);
+          errorSnackBar(context: context, message: state.message);
         }
       },
       builder: (context, state) {

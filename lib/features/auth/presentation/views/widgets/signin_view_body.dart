@@ -1,3 +1,4 @@
+import 'package:biocode/core/helpers/build_snack_bar.dart';
 import 'package:biocode/core/helpers/spacing.dart';
 import 'package:biocode/core/theming/assets_data.dart';
 import 'package:biocode/core/theming/app_colors.dart';
@@ -55,7 +56,11 @@ class SigninViewBody extends StatelessWidget {
                     color: Colors.white,
                   ),
                   onPressed: () {
-                    validateThenSignin(context);
+                    // validateThenSignin(context);
+                    successSnackBar(
+                      context: context,
+                      message: S.of(context).login_success,
+                    );
                   },
                 ),
                 verticalSpace(25.h),

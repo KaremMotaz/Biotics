@@ -39,11 +39,15 @@ class MessageLookup extends MessageLookupByLibrary {
       "يرجى إدخال بريد إلكتروني صحيح",
     ),
     "email_label": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+    "error": MessageLookupByLibrary.simpleMessage("خطأ"),
     "explore_biology": MessageLookupByLibrary.simpleMessage(
       "استكشف\n عجائب علم الأحياء",
     ),
     "forgot_password": MessageLookupByLibrary.simpleMessage(
       "نسيت كلمة المرور؟",
+    ),
+    "login_success": MessageLookupByLibrary.simpleMessage(
+      "تم تسجيل الدخول بنجاح.",
     ),
     "onboarding_title": MessageLookupByLibrary.simpleMessage(
       "تعلم كل شيء من الخلايا إلى النظم البيئية\n مع Biotics",
@@ -98,7 +102,11 @@ class MessageLookup extends MessageLookupByLibrary {
       "قم بالتسجيل الآن وابدأ في استكشاف كل ما يقدمه تطبيقنا. نحن متحمسون للترحيب بك في مجتمعنا!",
     ),
     "signup_prompt": MessageLookupByLibrary.simpleMessage("لا تمتلك حساب؟"),
+    "signup_success": MessageLookupByLibrary.simpleMessage(
+      "تم إنشاء حسابك بنجاح.",
+    ),
     "signup_title": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
+    "success": MessageLookupByLibrary.simpleMessage("نجاح"),
     "welcome_back": MessageLookupByLibrary.simpleMessage("مرحبًا بعودتك"),
     "welcome_back_message": MessageLookupByLibrary.simpleMessage(
       "نحن متحمسون لعودتك، لا يمكننا الانتظار لمعرفة ما كنت تفعله منذ آخر تسجيل دخول لك.",

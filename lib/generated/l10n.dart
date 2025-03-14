@@ -379,6 +379,36 @@ class S {
   String get sign_in {
     return Intl.message('Sign in', name: 'sign_in', desc: '', args: []);
   }
+
+  /// `Your account has been created successfully.`
+  String get signup_success {
+    return Intl.message(
+      'Your account has been created successfully.',
+      name: 'signup_success',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have successfully logged in.`
+  String get login_success {
+    return Intl.message(
+      'You have successfully logged in.',
+      name: 'login_success',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Success`
+  String get success {
+    return Intl.message('Success', name: 'success', desc: '', args: []);
+  }
+
+  /// `Error`
+  String get error {
+    return Intl.message('Error', name: 'error', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

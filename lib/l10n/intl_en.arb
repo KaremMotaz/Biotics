@@ -35,5 +35,9 @@
   "password_length": "At least 8 characters long",
   "create_account_button": "Create Account",
   "already_have_an_account": "Already have an account?",
-  "sign_in": "Sign in"
+  "sign_in": "Sign in",
+  "signup_success": "Your account has been created successfully.",
+  "login_success": "You have successfully logged in.",
+  "success": "Success",
+  "error": "Error"
 }

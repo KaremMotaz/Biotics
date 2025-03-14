@@ -39,10 +39,14 @@ class MessageLookup extends MessageLookupByLibrary {
       "Please enter a valid email",
     ),
     "email_label": MessageLookupByLibrary.simpleMessage("Email"),
+    "error": MessageLookupByLibrary.simpleMessage("Error"),
     "explore_biology": MessageLookupByLibrary.simpleMessage(
       "Explore The\n Wonders Of Biology",
     ),
     "forgot_password": MessageLookupByLibrary.simpleMessage("Forgot Password?"),
+    "login_success": MessageLookupByLibrary.simpleMessage(
+      "You have successfully logged in.",
+    ),
     "onboarding_title": MessageLookupByLibrary.simpleMessage(
       "Learn everything from cells to ecosystems\n with Biotics",
     ),
@@ -100,7 +104,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "signup_prompt": MessageLookupByLibrary.simpleMessage(
       "Don\'t have an account?",
     ),
+    "signup_success": MessageLookupByLibrary.simpleMessage(
+      "Your account has been created successfully.",
+    ),
     "signup_title": MessageLookupByLibrary.simpleMessage("Sign Up"),
+    "success": MessageLookupByLibrary.simpleMessage("Success"),
     "welcome_back": MessageLookupByLibrary.simpleMessage("Welcome back"),
     "welcome_back_message": MessageLookupByLibrary.simpleMessage(
       "We\'re excited to have you back, can\'t wait to see what you\'ve been up to since you last logged in.",

@@ -1,4 +1,4 @@
-import 'package:biocode/core/helpers/build_error_bar.dart';
+import 'package:biocode/core/helpers/build_snack_bar.dart';
 import 'package:biocode/core/routing/routes.dart';
 import 'package:biocode/features/auth/presentation/manager/signin_cubit/signin_cubit.dart';
 import 'package:biocode/features/auth/presentation/views/widgets/signin_view_body.dart';
@@ -12,13 +12,13 @@ class SigninViewBodyBlocConsumer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<SigninCubit,SigninState>(
+    return BlocConsumer<SigninCubit, SigninState>(
       listener: (context, state) {
         if (state is SigninSuccessState) {
           GoRouter.of(context).pushReplacement(Routes.fillProfileView);
         }
         if (state is SigninFailureState) {
-          showBar(context, state.message);
+          errorSnackBar(context:  context, message: state.message);
         }
       },
       builder: (context, state) {
