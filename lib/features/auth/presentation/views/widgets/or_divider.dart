@@ -1,6 +1,7 @@
 import 'package:biocode/core/helpers/spacing.dart';
 import 'package:biocode/core/theming/app_colors.dart';
 import 'package:biocode/core/theming/styles.dart';
+import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class OrDivider extends StatelessWidget {
@@ -17,10 +18,8 @@ class OrDivider extends StatelessWidget {
         ),
         horizontalSpace(10),
         Text(
-          "Or",
-          style: TextStyles.regular14.copyWith(
-            color: AppColors.gray,
-          ),
+          S.of(context).or,
+          style: TextStyles.regular14
         ),
         horizontalSpace(10),
         const Expanded(

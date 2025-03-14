@@ -22,13 +22,15 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "Sign_in_title": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "Sign_in_title": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
     "already_have_an_account": MessageLookupByLibrary.simpleMessage(
-      "هل لديك حساب بالفعل؟",
+      "تمتك حساب بالفعل؟",
     ),
     "begin_learning": MessageLookupByLibrary.simpleMessage("ابدأ التعلم"),
     "create_account": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
-    "create_account_button": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
+    "create_account_button": MessageLookupByLibrary.simpleMessage(
+      "إنشاء حساب جديد",
+    ),
     "email_empty_error": MessageLookupByLibrary.simpleMessage(
       "يرجى إدخال بريدك الإلكتروني",
     ),
@@ -46,6 +48,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "onboarding_title": MessageLookupByLibrary.simpleMessage(
       "تعلم كل شيء من الخلايا إلى النظم البيئية\n مع Biotics",
     ),
+    "or": MessageLookupByLibrary.simpleMessage("أو"),
     "password_empty_error": MessageLookupByLibrary.simpleMessage(
       "يرجى إدخال كلمة المرور",
     ),
@@ -85,18 +88,17 @@ class MessageLookup extends MessageLookupByLibrary {
       "يرجى إدخال كلمة مرور صالحة",
     ),
     "sign_in": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
-    "sign_in_button": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
+    "sign_in_button": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
     "sign_in_facebook": MessageLookupByLibrary.simpleMessage(
-      "تسجيل الدخول باستخدام فيسبوك",
+      "تسجيل بواسطة فيسبوك",
     ),
-    "sign_in_google": MessageLookupByLibrary.simpleMessage(
-      "تسجيل الدخول باستخدام جوجل",
-    ),
+    "sign_in_google": MessageLookupByLibrary.simpleMessage("تسجيل بواسطة جوجل"),
+    "signup_appbar_title": MessageLookupByLibrary.simpleMessage("حساب جديد"),
     "signup_description": MessageLookupByLibrary.simpleMessage(
       "قم بالتسجيل الآن وابدأ في استكشاف كل ما يقدمه تطبيقنا. نحن متحمسون للترحيب بك في مجتمعنا!",
     ),
-    "signup_prompt": MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
-    "signup_title": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
+    "signup_prompt": MessageLookupByLibrary.simpleMessage("لا تمتلك حساب؟"),
+    "signup_title": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
     "welcome_back": MessageLookupByLibrary.simpleMessage("مرحبًا بعودتك"),
     "welcome_back_message": MessageLookupByLibrary.simpleMessage(
       "نحن متحمسون لعودتك، لا يمكننا الانتظار لمعرفة ما كنت تفعله منذ آخر تسجيل دخول لك.",

@@ -46,6 +46,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "onboarding_title": MessageLookupByLibrary.simpleMessage(
       "Learn everything from cells to ecosystems\n with Biotics",
     ),
+    "or": MessageLookupByLibrary.simpleMessage("or"),
     "password_empty_error": MessageLookupByLibrary.simpleMessage(
       "Please enter your password",
     ),
@@ -92,6 +93,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "sign_in_google": MessageLookupByLibrary.simpleMessage(
       "Sign in with Google",
     ),
+    "signup_appbar_title": MessageLookupByLibrary.simpleMessage("Sign up"),
     "signup_description": MessageLookupByLibrary.simpleMessage(
       "Sign up now and start exploring all that our app has to offer. We\'re excited to welcome you to our community!",
     ),

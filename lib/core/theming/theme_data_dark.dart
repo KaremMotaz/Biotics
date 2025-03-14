@@ -13,20 +13,18 @@ ThemeData getThemeDataDark({required String fontFamily}) {
     colorScheme: const ColorScheme.dark(
       onPrimary: AppColors.darkModeGray, // Dark mode alternative for white
     ),
-    textTheme: Typography.whiteCupertino.apply(
-      bodyColor: AppColors.lightGray,
-    ),
     inputDecorationTheme: const InputDecorationTheme(
       fillColor: AppColors.darkModeGray,
       hintStyle: TextStyle(
         color: AppColors.lightGray,
       ),
     ),
-    appBarTheme: const AppBarTheme(
+    appBarTheme: AppBarTheme(
       color: AppColors.darkModeGray,
-      iconTheme: IconThemeData(color: AppColors.lightGray),
+      iconTheme: const IconThemeData(color: AppColors.lightGray),
       titleTextStyle: TextStyle(
         color: AppColors.lightGray,
+        fontFamily: fontFamily,
       ),
     ),
   );

@@ -1,4 +1,4 @@
-import 'package:biocode/core/manager/cubit/language_cubit.dart';
+import 'package:biocode/core/manager/language_cubit/language_cubit.dart';
 import 'package:biocode/core/manager/theme_cubit/theme_cubit.dart';
 import 'package:biocode/core/theming/styles.dart';
 import 'package:flutter/material.dart';

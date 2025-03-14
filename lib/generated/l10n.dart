@@ -170,6 +170,11 @@ class S {
     );
   }
 
+  /// `or`
+  String get or {
+    return Intl.message('or', name: 'or', desc: '', args: []);
+  }
+
   /// `Sign in`
   String get sign_in_button {
     return Intl.message('Sign in', name: 'sign_in_button', desc: '', args: []);
@@ -188,6 +193,16 @@ class S {
   /// `Sign Up`
   String get signup_title {
     return Intl.message('Sign Up', name: 'signup_title', desc: '', args: []);
+  }
+
+  /// `Sign up`
+  String get signup_appbar_title {
+    return Intl.message(
+      'Sign up',
+      name: 'signup_appbar_title',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Sign in with Google`
