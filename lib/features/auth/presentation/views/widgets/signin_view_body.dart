@@ -56,11 +56,7 @@ class SigninViewBody extends StatelessWidget {
                     color: Colors.white,
                   ),
                   onPressed: () {
-                    // validateThenSignin(context);
-                    successSnackBar(
-                      context: context,
-                      message: S.of(context).login_success,
-                    );
+                    validateThenSignin(context);
                   },
                 ),
                 verticalSpace(25.h),
@@ -95,6 +91,10 @@ class SigninViewBody extends StatelessWidget {
     final signinCubit = context.read<SigninCubit>();
     if (signinCubit.formKey.currentState!.validate()) {
       signinCubit.signinWithEmailAndPassword();
+      successSnackBar(
+        context: context,
+        message: S.of(context).login_success,
+      );
     }
   }
 }

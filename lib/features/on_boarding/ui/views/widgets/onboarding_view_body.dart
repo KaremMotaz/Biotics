@@ -1,5 +1,7 @@
+import 'package:biocode/core/helpers/constants.dart';
 import 'package:biocode/core/helpers/spacing.dart';
 import 'package:biocode/core/routing/routes.dart';
+import 'package:biocode/core/services/shared_preferences_singleton.dart';
 import 'package:biocode/core/theming/styles.dart';
 import 'package:biocode/core/widgets/app_text_button.dart';
 import 'package:biocode/features/on_boarding/ui/views/widgets/bio_logo_and_name.dart';
@@ -39,6 +41,7 @@ class OnboardingViewBody extends StatelessWidget {
                       color: Colors.white,
                     ),
                     onPressed: () {
+                      Prefs.setBool(kIsOnBoardingViewSeen, true);
                       GoRouter.of(context).push(Routes.signInView);
                     },
                   )

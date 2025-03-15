@@ -44,10 +44,6 @@ class SignupViewBody extends StatelessWidget {
               ),
               onPressed: () {
                 validateThenSignup(context);
-                successSnackBar(
-                  context: context,
-                  message: S.of(context).signup_success,
-                );
               },
             ),
             verticalSpace(25.h),
@@ -65,6 +61,10 @@ class SignupViewBody extends StatelessWidget {
     final signupCubit = context.read<SignupCubit>();
     if (signupCubit.formKey.currentState!.validate()) {
       signupCubit.signupWithEmailAndPassword();
+      successSnackBar(
+        context: context,
+        message: S.of(context).signup_success,
+      );
     }
   }
 }
