@@ -38,6 +38,12 @@
   "sign_in": "تسجيل الدخول",
   "signup_success": "تم إنشاء حسابك بنجاح.",
   "login_success": "تم تسجيل الدخول بنجاح.",
-  "success": "نجاح",
-  "error": "خطأ"
+  "success": "تم بنجاح",
+  "error": "خطأ",
+  "forgot_password_title": "نسيت كلمة السر",
+  "forgot_password_description": "يرجى إدخال بريدك الإلكتروني لتلقي رابط إعادة تعيين كلمة السر",
+  "enter_email": "أدخل بريدك الإلكتروني",
+  "reset_password_button": "إرسال",
+  "forgot_password_appbar": "نسيت كلمة السر",
+  "reset_password_success_message": "تم ارسال رابط استعادة كلمة السر إلى بريدك الإلكتروني."
 }

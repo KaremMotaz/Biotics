@@ -39,11 +39,21 @@ class MessageLookup extends MessageLookupByLibrary {
       "Please enter a valid email",
     ),
     "email_label": MessageLookupByLibrary.simpleMessage("Email"),
+    "enter_email": MessageLookupByLibrary.simpleMessage("Enter your email"),
     "error": MessageLookupByLibrary.simpleMessage("Error"),
     "explore_biology": MessageLookupByLibrary.simpleMessage(
       "Explore The\n Wonders Of Biology",
     ),
     "forgot_password": MessageLookupByLibrary.simpleMessage("Forgot Password?"),
+    "forgot_password_appbar": MessageLookupByLibrary.simpleMessage(
+      "Forgot Password",
+    ),
+    "forgot_password_description": MessageLookupByLibrary.simpleMessage(
+      "Please enter your email address to receive a link to reset your password",
+    ),
+    "forgot_password_title": MessageLookupByLibrary.simpleMessage(
+      "Forgot Password",
+    ),
     "login_success": MessageLookupByLibrary.simpleMessage(
       "You have successfully logged in.",
     ),
@@ -88,6 +98,10 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "please_enter_valid_password": MessageLookupByLibrary.simpleMessage(
       "Please enter a valid password",
+    ),
+    "reset_password_button": MessageLookupByLibrary.simpleMessage("Send"),
+    "reset_password_success_message": MessageLookupByLibrary.simpleMessage(
+      "A password reset link has been sent to your email.",
     ),
     "sign_in": MessageLookupByLibrary.simpleMessage("Sign in"),
     "sign_in_button": MessageLookupByLibrary.simpleMessage("Sign in"),

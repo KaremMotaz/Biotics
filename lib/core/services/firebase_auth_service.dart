@@ -86,9 +86,22 @@ class FirebaseAuthService {
         FacebookAuthProvider.credential(loginResult.accessToken!.tokenString);
 
     // Once signed in, return the UserCredential
-    return (await FirebaseAuth.instance.signInWithCredential(facebookAuthCredential)).user!;
+    return (await FirebaseAuth.instance
+            .signInWithCredential(facebookAuthCredential))
+        .user!;
   }
-    bool isLoggedIn() {
+
+  Future<void> sendLinkToResetPassword({required String email}) async {
+    await FirebaseAuth.instance.sendPasswordResetEmail(email: email);
+  }
+
+  Future<void> signOut() async {
+    await GoogleSignIn().signOut();
+    await FacebookAuth.instance.logOut();
+    await FirebaseAuth.instance.signOut();
+  }
+
+  bool isLoggedIn() {
     return FirebaseAuth.instance.currentUser != null;
   }
 }

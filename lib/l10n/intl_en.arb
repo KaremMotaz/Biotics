@@ -39,5 +39,11 @@
   "signup_success": "Your account has been created successfully.",
   "login_success": "You have successfully logged in.",
   "success": "Success",
-  "error": "Error"
+  "error": "Error",
+  "forgot_password_title": "Forgot Password",
+  "forgot_password_description": "Please enter your email address to receive a link to reset your password",
+  "enter_email": "Enter your email",
+  "reset_password_button": "Send",
+  "forgot_password_appbar": "Forgot Password",
+  "reset_password_success_message": "A password reset link has been sent to your email."
 }

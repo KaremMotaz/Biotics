@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:biocode/core/errors/failure.dart';
 import 'package:biocode/core/services/firebase_auth_service.dart';
 import 'package:biocode/features/auth/data/models/user_model.dart';
@@ -72,9 +70,20 @@ class AuthRepoImp extends AuthRepo {
 
       return right(userEntity);
     } catch (e) {
-      log(e.toString());
       return left(
-        ServerFailure(message: "There was an error, please try again later"),
+        ServerFailure(message: e.toString()),
+      );
+    }
+  }
+
+  @override
+  Future<Either<Failure, Unit>> sendLinkToResetPassword({required String email}) async{
+    try {
+      await firebaseAuthService.sendLinkToResetPassword(email: email);
+      return right(unit);
+    } catch (e) {
+      return left(
+        ServerFailure(message: e.toString()),
       );
     }
   }

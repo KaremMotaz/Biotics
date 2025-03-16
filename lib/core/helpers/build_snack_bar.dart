@@ -10,7 +10,7 @@ void successSnackBar({required BuildContext context, required String message}) {
         elevation: 0,
         behavior: SnackBarBehavior.floating,
         duration: const Duration(
-          seconds: 2,
+          seconds: 4,
         ),
         content: customSnackbar(
           message: message,
@@ -29,7 +29,7 @@ void errorSnackBar({required BuildContext context, required String message}) {
         elevation: 0,
         behavior: SnackBarBehavior.floating,
         duration: const Duration(
-          seconds: 2,
+          seconds: 4,
         ),
         content: customSnackbar(
           message: message,
@@ -83,7 +83,7 @@ Widget customSnackbar(
                 verticalSpace(5),
                 Text(
                   message,
-                  overflow: TextOverflow.ellipsis,
+                  // overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
                     color: Colors.black,
                   ),

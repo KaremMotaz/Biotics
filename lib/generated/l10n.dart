@@ -409,6 +409,66 @@ class S {
   String get error {
     return Intl.message('Error', name: 'error', desc: '', args: []);
   }
+
+  /// `Forgot Password`
+  String get forgot_password_title {
+    return Intl.message(
+      'Forgot Password',
+      name: 'forgot_password_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your email address to receive a link to reset your password`
+  String get forgot_password_description {
+    return Intl.message(
+      'Please enter your email address to receive a link to reset your password',
+      name: 'forgot_password_description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your email`
+  String get enter_email {
+    return Intl.message(
+      'Enter your email',
+      name: 'enter_email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send`
+  String get reset_password_button {
+    return Intl.message(
+      'Send',
+      name: 'reset_password_button',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forgot Password`
+  String get forgot_password_appbar {
+    return Intl.message(
+      'Forgot Password',
+      name: 'forgot_password_appbar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A password reset link has been sent to your email.`
+  String get reset_password_success_message {
+    return Intl.message(
+      'A password reset link has been sent to your email.',
+      name: 'reset_password_success_message',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

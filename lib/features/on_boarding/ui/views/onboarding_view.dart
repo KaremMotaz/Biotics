@@ -13,7 +13,8 @@ class OnboardingView extends StatelessWidget {
     if (isOnBoardingViewSeen) {
       bool isLoggedIn = FirebaseAuthService().isLoggedIn();
       if (isLoggedIn) {
-        GoRouter.of(context).pushReplacement(Routes.homeView);
+        print("don't forget to change gorouter to home view");
+        GoRouter.of(context).pushReplacement(Routes.signInView);
       } else {
         GoRouter.of(context).pushReplacement(Routes.signInView);
       }

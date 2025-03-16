@@ -39,12 +39,24 @@ class MessageLookup extends MessageLookupByLibrary {
       "يرجى إدخال بريد إلكتروني صحيح",
     ),
     "email_label": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+    "enter_email": MessageLookupByLibrary.simpleMessage(
+      "أدخل بريدك الإلكتروني",
+    ),
     "error": MessageLookupByLibrary.simpleMessage("خطأ"),
     "explore_biology": MessageLookupByLibrary.simpleMessage(
       "استكشف\n عجائب علم الأحياء",
     ),
     "forgot_password": MessageLookupByLibrary.simpleMessage(
       "نسيت كلمة المرور؟",
+    ),
+    "forgot_password_appbar": MessageLookupByLibrary.simpleMessage(
+      "نسيت كلمة السر",
+    ),
+    "forgot_password_description": MessageLookupByLibrary.simpleMessage(
+      "يرجى إدخال بريدك الإلكتروني لتلقي رابط إعادة تعيين كلمة السر",
+    ),
+    "forgot_password_title": MessageLookupByLibrary.simpleMessage(
+      "نسيت كلمة السر",
     ),
     "login_success": MessageLookupByLibrary.simpleMessage(
       "تم تسجيل الدخول بنجاح.",
@@ -91,6 +103,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "please_enter_valid_password": MessageLookupByLibrary.simpleMessage(
       "يرجى إدخال كلمة مرور صالحة",
     ),
+    "reset_password_button": MessageLookupByLibrary.simpleMessage("إرسال"),
+    "reset_password_success_message": MessageLookupByLibrary.simpleMessage(
+      "تم ارسال رابط استعادة كلمة السر إلى بريدك الإلكتروني.",
+    ),
     "sign_in": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "sign_in_button": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
     "sign_in_facebook": MessageLookupByLibrary.simpleMessage(
@@ -106,7 +122,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "تم إنشاء حسابك بنجاح.",
     ),
     "signup_title": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
-    "success": MessageLookupByLibrary.simpleMessage("نجاح"),
+    "success": MessageLookupByLibrary.simpleMessage("تم بنجاح"),
     "welcome_back": MessageLookupByLibrary.simpleMessage("مرحبًا بعودتك"),
     "welcome_back_message": MessageLookupByLibrary.simpleMessage(
       "نحن متحمسون لعودتك، لا يمكننا الانتظار لمعرفة ما كنت تفعله منذ آخر تسجيل دخول لك.",

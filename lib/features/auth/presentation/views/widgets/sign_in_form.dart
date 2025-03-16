@@ -76,7 +76,7 @@ class _SignInFormState extends State<SignInForm> {
               return null;
             },
           ),
-          verticalSpace(24),
+          verticalSpace(5),
         ],
       ),
     );
