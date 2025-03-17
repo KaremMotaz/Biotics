@@ -60,7 +60,7 @@ class SignupViewBody extends StatelessWidget {
   void validateThenSignup(BuildContext context) {
     final signupCubit = context.read<SignupCubit>();
     if (signupCubit.formKey.currentState!.validate()) {
-      signupCubit.signupWithEmailAndPassword();
+      signupCubit.signupWithEmailAndPassword(locale: S.of(context));
       successSnackBar(
         context: context,
         message: S.of(context).signup_success,

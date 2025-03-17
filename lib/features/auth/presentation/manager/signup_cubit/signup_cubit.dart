@@ -1,5 +1,6 @@
 import 'package:biocode/features/auth/domain/auth_repo.dart';
 import 'package:biocode/features/auth/domain/user_entity.dart';
+import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -13,19 +14,22 @@ class SignupCubit extends Cubit<SignupState> {
   TextEditingController emailController = TextEditingController();
   final formKey = GlobalKey<FormState>();
 
-  Future<void> signupWithEmailAndPassword() async {
+  Future<void> signupWithEmailAndPassword({required S locale}) async {
     emit(SignupLoadingState());
     final result = await authRepo.signupWithEmailAndPassword(
       password: passwordController.text,
       email: emailController.text,
+      locale: locale,
     );
+    await authRepo.sendEmailVerification(locale: locale);
     result.fold((failure) {
-      emit(SignupFailureState(message: failure.message));
+      emit(SignupFailureState(message: failure.errMessage));
     }, (userEntity) {
       emit(SignupSuccessState(userEntity: userEntity));
     });
   }
-    void dispose() {
+
+  void dispose() {
     emailController.dispose();
     passwordController.dispose();
   }

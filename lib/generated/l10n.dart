@@ -469,6 +469,366 @@ class S {
       args: [],
     );
   }
+
+  /// `OTP Verification`
+  String get otp_appbar_title {
+    return Intl.message(
+      'OTP Verification',
+      name: 'otp_appbar_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `OTP Verification`
+  String get otp_verification_title {
+    return Intl.message(
+      'OTP Verification',
+      name: 'otp_verification_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter the verification code sent to you`
+  String get otp_verification_description {
+    return Intl.message(
+      'Please enter the verification code sent to you',
+      name: 'otp_verification_description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue`
+  String get otp_verification_button {
+    return Intl.message(
+      'Continue',
+      name: 'otp_verification_button',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please verify your email first.`
+  String get otp_verification_error_message {
+    return Intl.message(
+      'Please verify your email first.',
+      name: 'otp_verification_error_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The email address is badly formatted.`
+  String get invalidEmail {
+    return Intl.message(
+      'The email address is badly formatted.',
+      name: 'invalidEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The password is incorrect.`
+  String get wrongPassword {
+    return Intl.message(
+      'The password is incorrect.',
+      name: 'wrongPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No user found with this email.`
+  String get userNotFound {
+    return Intl.message(
+      'No user found with this email.',
+      name: 'userNotFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This email is already in use by another account.`
+  String get emailAlreadyInUse {
+    return Intl.message(
+      'This email is already in use by another account.',
+      name: 'emailAlreadyInUse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The password is too weak. Try a stronger password.`
+  String get weakPassword {
+    return Intl.message(
+      'The password is too weak. Try a stronger password.',
+      name: 'weakPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This user account has been disabled.`
+  String get userDisabled {
+    return Intl.message(
+      'This user account has been disabled.',
+      name: 'userDisabled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Too many login attempts. Try again later.`
+  String get tooManyRequests {
+    return Intl.message(
+      'Too many login attempts. Try again later.',
+      name: 'tooManyRequests',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This authentication method is not enabled.`
+  String get operationNotAllowed {
+    return Intl.message(
+      'This authentication method is not enabled.',
+      name: 'operationNotAllowed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A network error occurred. Check your connection.`
+  String get networkRequestFailed {
+    return Intl.message(
+      'A network error occurred. Check your connection.',
+      name: 'networkRequestFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The credential provided is invalid or expired.`
+  String get invalidCredential {
+    return Intl.message(
+      'The credential provided is invalid or expired.',
+      name: 'invalidCredential',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An account already exists with a different sign-in method.`
+  String get accountExistsWithDifferentCredential {
+    return Intl.message(
+      'An account already exists with a different sign-in method.',
+      name: 'accountExistsWithDifferentCredential',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This action requires recent authentication. Please log in again.`
+  String get requiresRecentLogin {
+    return Intl.message(
+      'This action requires recent authentication. Please log in again.',
+      name: 'requiresRecentLogin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This provider is already linked to the account.`
+  String get providerAlreadyLinked {
+    return Intl.message(
+      'This provider is already linked to the account.',
+      name: 'providerAlreadyLinked',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This credential is already associated with another account.`
+  String get credentialAlreadyInUse {
+    return Intl.message(
+      'This credential is already associated with another account.',
+      name: 'credentialAlreadyInUse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The verification code entered is invalid.`
+  String get invalidVerificationCode {
+    return Intl.message(
+      'The verification code entered is invalid.',
+      name: 'invalidVerificationCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The verification ID is invalid.`
+  String get invalidVerificationId {
+    return Intl.message(
+      'The verification ID is invalid.',
+      name: 'invalidVerificationId',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An unknown authentication error occurred.`
+  String get unknownAuthError {
+    return Intl.message(
+      'An unknown authentication error occurred.',
+      name: 'unknownAuthError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You do not have permission to perform this action.`
+  String get permissionDenied {
+    return Intl.message(
+      'You do not have permission to perform this action.',
+      name: 'permissionDenied',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The service is temporarily unavailable. Please try again later.`
+  String get serviceUnavailable {
+    return Intl.message(
+      'The service is temporarily unavailable. Please try again later.',
+      name: 'serviceUnavailable',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The request took too long. Please try again.`
+  String get deadlineExceeded {
+    return Intl.message(
+      'The request took too long. Please try again.',
+      name: 'deadlineExceeded',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The requested document was not found.`
+  String get documentNotFound {
+    return Intl.message(
+      'The requested document was not found.',
+      name: 'documentNotFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This document already exists.`
+  String get documentAlreadyExists {
+    return Intl.message(
+      'This document already exists.',
+      name: 'documentAlreadyExists',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The operation was cancelled.`
+  String get operationCancelled {
+    return Intl.message(
+      'The operation was cancelled.',
+      name: 'operationCancelled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The provided argument is invalid.`
+  String get invalidArgument {
+    return Intl.message(
+      'The provided argument is invalid.',
+      name: 'invalidArgument',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Too many requests. Please try again later.`
+  String get resourceExhausted {
+    return Intl.message(
+      'Too many requests. Please try again later.',
+      name: 'resourceExhausted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The request cannot be processed due to a failed condition.`
+  String get failedPrecondition {
+    return Intl.message(
+      'The request cannot be processed due to a failed condition.',
+      name: 'failedPrecondition',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The operation was aborted.`
+  String get operationAborted {
+    return Intl.message(
+      'The operation was aborted.',
+      name: 'operationAborted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The value provided is out of range.`
+  String get outOfRange {
+    return Intl.message(
+      'The value provided is out of range.',
+      name: 'outOfRange',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Data loss has occurred.`
+  String get dataLoss {
+    return Intl.message(
+      'Data loss has occurred.',
+      name: 'dataLoss',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You need to be signed in to perform this action.`
+  String get unauthenticated {
+    return Intl.message(
+      'You need to be signed in to perform this action.',
+      name: 'unauthenticated',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An unexpected error occurred. Please try again later.`
+  String get unknownFirestoreError {
+    return Intl.message(
+      'An unexpected error occurred. Please try again later.',
+      name: 'unknownFirestoreError',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

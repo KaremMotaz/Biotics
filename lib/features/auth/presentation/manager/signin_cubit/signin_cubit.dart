@@ -1,5 +1,6 @@
 import 'package:biocode/features/auth/domain/auth_repo.dart';
 import 'package:biocode/features/auth/domain/user_entity.dart';
+import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 part 'signin_state.dart';
@@ -12,14 +13,15 @@ class SigninCubit extends Cubit<SigninState> {
   TextEditingController passwordController = TextEditingController();
   final formKey = GlobalKey<FormState>();
 
-  Future<void> signinWithEmailAndPassword() async {
+  Future<void> signinWithEmailAndPassword({required S locale}) async {
     emit(SigninLoadingState());
     final result = await authRepo.signinWithEmailAndPassword(
       password: passwordController.text,
       email: emailController.text,
+      locale: locale,
     );
     result.fold((failure) {
-      emit(SigninFailureState(message: failure.message));
+      emit(SigninFailureState(message: failure.errMessage));
     }, (userEntity) {
       emit(SigninSuccessState(userEntity: userEntity));
     });
@@ -30,21 +32,21 @@ class SigninCubit extends Cubit<SigninState> {
     passwordController.dispose();
   }
 
-  Future<void> signinWithGoogle() async {
+  Future<void> signinWithGoogle({required S locale}) async {
     emit(SigninLoadingState());
-    final result = await authRepo.signinWithGoogle();
+    final result = await authRepo.signinWithGoogle(locale: locale);
     result.fold((failure) {
-      emit(SigninFailureState(message: failure.message));
+      emit(SigninFailureState(message: failure.errMessage));
     }, (userEntity) {
       emit(SigninSuccessState(userEntity: userEntity));
     });
   }
 
-  Future<void> signinWithFacebook() async {
+  Future<void> signinWithFacebook({required S locale}) async {
     emit(SigninLoadingState());
-    final result = await authRepo.signinWithFacebook();
+    final result = await authRepo.signinWithFacebook(locale: locale);
     result.fold((failure) {
-      emit(SigninFailureState(message: failure.message));
+      emit(SigninFailureState(message: failure.errMessage));
     }, (userEntity) {
       emit(SigninSuccessState(userEntity: userEntity));
     });

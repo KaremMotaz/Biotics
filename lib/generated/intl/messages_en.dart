@@ -23,6 +23,10 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "Sign_in_title": MessageLookupByLibrary.simpleMessage("Sign in"),
+    "accountExistsWithDifferentCredential":
+        MessageLookupByLibrary.simpleMessage(
+          "An account already exists with a different sign-in method.",
+        ),
     "already_have_an_account": MessageLookupByLibrary.simpleMessage(
       "Already have an account?",
     ),
@@ -30,6 +34,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "create_account": MessageLookupByLibrary.simpleMessage("Create Account"),
     "create_account_button": MessageLookupByLibrary.simpleMessage(
       "Create Account",
+    ),
+    "credentialAlreadyInUse": MessageLookupByLibrary.simpleMessage(
+      "This credential is already associated with another account.",
+    ),
+    "dataLoss": MessageLookupByLibrary.simpleMessage("Data loss has occurred."),
+    "deadlineExceeded": MessageLookupByLibrary.simpleMessage(
+      "The request took too long. Please try again.",
+    ),
+    "documentAlreadyExists": MessageLookupByLibrary.simpleMessage(
+      "This document already exists.",
+    ),
+    "documentNotFound": MessageLookupByLibrary.simpleMessage(
+      "The requested document was not found.",
+    ),
+    "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
+      "This email is already in use by another account.",
     ),
     "email_empty_error": MessageLookupByLibrary.simpleMessage(
       "Please enter your email",
@@ -44,6 +64,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "explore_biology": MessageLookupByLibrary.simpleMessage(
       "Explore The\n Wonders Of Biology",
     ),
+    "failedPrecondition": MessageLookupByLibrary.simpleMessage(
+      "The request cannot be processed due to a failed condition.",
+    ),
     "forgot_password": MessageLookupByLibrary.simpleMessage("Forgot Password?"),
     "forgot_password_appbar": MessageLookupByLibrary.simpleMessage(
       "Forgot Password",
@@ -54,13 +77,56 @@ class MessageLookup extends MessageLookupByLibrary {
     "forgot_password_title": MessageLookupByLibrary.simpleMessage(
       "Forgot Password",
     ),
+    "invalidArgument": MessageLookupByLibrary.simpleMessage(
+      "The provided argument is invalid.",
+    ),
+    "invalidCredential": MessageLookupByLibrary.simpleMessage(
+      "The credential provided is invalid or expired.",
+    ),
+    "invalidEmail": MessageLookupByLibrary.simpleMessage(
+      "The email address is badly formatted.",
+    ),
+    "invalidVerificationCode": MessageLookupByLibrary.simpleMessage(
+      "The verification code entered is invalid.",
+    ),
+    "invalidVerificationId": MessageLookupByLibrary.simpleMessage(
+      "The verification ID is invalid.",
+    ),
     "login_success": MessageLookupByLibrary.simpleMessage(
       "You have successfully logged in.",
+    ),
+    "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
+      "A network error occurred. Check your connection.",
     ),
     "onboarding_title": MessageLookupByLibrary.simpleMessage(
       "Learn everything from cells to ecosystems\n with Biotics",
     ),
+    "operationAborted": MessageLookupByLibrary.simpleMessage(
+      "The operation was aborted.",
+    ),
+    "operationCancelled": MessageLookupByLibrary.simpleMessage(
+      "The operation was cancelled.",
+    ),
+    "operationNotAllowed": MessageLookupByLibrary.simpleMessage(
+      "This authentication method is not enabled.",
+    ),
     "or": MessageLookupByLibrary.simpleMessage("or"),
+    "otp_appbar_title": MessageLookupByLibrary.simpleMessage(
+      "OTP Verification",
+    ),
+    "otp_verification_button": MessageLookupByLibrary.simpleMessage("Continue"),
+    "otp_verification_description": MessageLookupByLibrary.simpleMessage(
+      "Please enter the verification code sent to you",
+    ),
+    "otp_verification_error_message": MessageLookupByLibrary.simpleMessage(
+      "Please verify your email first.",
+    ),
+    "otp_verification_title": MessageLookupByLibrary.simpleMessage(
+      "OTP Verification",
+    ),
+    "outOfRange": MessageLookupByLibrary.simpleMessage(
+      "The value provided is out of range.",
+    ),
     "password_empty_error": MessageLookupByLibrary.simpleMessage(
       "Please enter your password",
     ),
@@ -87,6 +153,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "password_uppercase": MessageLookupByLibrary.simpleMessage(
       "At least 1 uppercase letter",
     ),
+    "permissionDenied": MessageLookupByLibrary.simpleMessage(
+      "You do not have permission to perform this action.",
+    ),
     "please_enter_email": MessageLookupByLibrary.simpleMessage(
       "Please enter your email",
     ),
@@ -99,9 +168,21 @@ class MessageLookup extends MessageLookupByLibrary {
     "please_enter_valid_password": MessageLookupByLibrary.simpleMessage(
       "Please enter a valid password",
     ),
+    "providerAlreadyLinked": MessageLookupByLibrary.simpleMessage(
+      "This provider is already linked to the account.",
+    ),
+    "requiresRecentLogin": MessageLookupByLibrary.simpleMessage(
+      "This action requires recent authentication. Please log in again.",
+    ),
     "reset_password_button": MessageLookupByLibrary.simpleMessage("Send"),
     "reset_password_success_message": MessageLookupByLibrary.simpleMessage(
       "A password reset link has been sent to your email.",
+    ),
+    "resourceExhausted": MessageLookupByLibrary.simpleMessage(
+      "Too many requests. Please try again later.",
+    ),
+    "serviceUnavailable": MessageLookupByLibrary.simpleMessage(
+      "The service is temporarily unavailable. Please try again later.",
     ),
     "sign_in": MessageLookupByLibrary.simpleMessage("Sign in"),
     "sign_in_button": MessageLookupByLibrary.simpleMessage("Sign in"),
@@ -123,9 +204,33 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "signup_title": MessageLookupByLibrary.simpleMessage("Sign Up"),
     "success": MessageLookupByLibrary.simpleMessage("Success"),
+    "tooManyRequests": MessageLookupByLibrary.simpleMessage(
+      "Too many login attempts. Try again later.",
+    ),
+    "unauthenticated": MessageLookupByLibrary.simpleMessage(
+      "You need to be signed in to perform this action.",
+    ),
+    "unknownAuthError": MessageLookupByLibrary.simpleMessage(
+      "An unknown authentication error occurred.",
+    ),
+    "unknownFirestoreError": MessageLookupByLibrary.simpleMessage(
+      "An unexpected error occurred. Please try again later.",
+    ),
+    "userDisabled": MessageLookupByLibrary.simpleMessage(
+      "This user account has been disabled.",
+    ),
+    "userNotFound": MessageLookupByLibrary.simpleMessage(
+      "No user found with this email.",
+    ),
+    "weakPassword": MessageLookupByLibrary.simpleMessage(
+      "The password is too weak. Try a stronger password.",
+    ),
     "welcome_back": MessageLookupByLibrary.simpleMessage("Welcome back"),
     "welcome_back_message": MessageLookupByLibrary.simpleMessage(
       "We\'re excited to have you back, can\'t wait to see what you\'ve been up to since you last logged in.",
+    ),
+    "wrongPassword": MessageLookupByLibrary.simpleMessage(
+      "The password is incorrect.",
     ),
   };
 }

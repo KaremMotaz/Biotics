@@ -73,7 +73,7 @@ class SigninViewBody extends StatelessWidget {
               title: S.of(context).sign_in_google,
               imageLink: AssetsData.googleIcon,
               onPressed: () {
-                context.read<SigninCubit>().signinWithGoogle();
+                context.read<SigninCubit>().signinWithGoogle(locale: S.of(context));
                 successSnackBar(
                   context: context,
                   message: S.of(context).login_success,
@@ -85,7 +85,7 @@ class SigninViewBody extends StatelessWidget {
               title: S.of(context).sign_in_facebook,
               imageLink: AssetsData.faceBookIcon,
               onPressed: () {
-                context.read<SigninCubit>().signinWithFacebook();
+                context.read<SigninCubit>().signinWithFacebook(locale: S.of(context));
                 successSnackBar(
                   context: context,
                   message: S.of(context).login_success,
@@ -101,7 +101,7 @@ class SigninViewBody extends StatelessWidget {
   void validateThenSignin(BuildContext context) {
     final signinCubit = context.read<SigninCubit>();
     if (signinCubit.formKey.currentState!.validate()) {
-      signinCubit.signinWithEmailAndPassword();
+      signinCubit.signinWithEmailAndPassword(locale: S.of(context));
       successSnackBar(
         context: context,
         message: S.of(context).login_success,

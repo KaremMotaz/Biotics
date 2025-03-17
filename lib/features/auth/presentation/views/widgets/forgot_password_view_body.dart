@@ -67,7 +67,7 @@ class ForgotPasswordViewBody extends StatelessWidget {
   void validateThenSendLinkToResetPassword(BuildContext context) {
     final forgotPasswordCubit = context.read<ForgotPasswordCubit>();
     if (forgotPasswordCubit.formKey.currentState!.validate()) {
-      forgotPasswordCubit.sendLinkToResetPassword();
+      forgotPasswordCubit.sendLinkToResetPassword(locale: S.of(context));
       successSnackBar(
         context: context,
         message: S.of(context).reset_password_success_message,
