@@ -23,6 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "Sign_in_title": MessageLookupByLibrary.simpleMessage("Sign in"),
+    "academicYear": MessageLookupByLibrary.simpleMessage("Academic Year"),
     "accountExistsWithDifferentCredential":
         MessageLookupByLibrary.simpleMessage(
           "An account already exists with a different sign-in method.",
@@ -31,6 +32,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Already have an account?",
     ),
     "begin_learning": MessageLookupByLibrary.simpleMessage("Begin Learning"),
+    "bioChemistry": MessageLookupByLibrary.simpleMessage("BioChemistry"),
     "create_account": MessageLookupByLibrary.simpleMessage("Create Account"),
     "create_account_button": MessageLookupByLibrary.simpleMessage(
       "Create Account",
@@ -67,6 +69,27 @@ class MessageLookup extends MessageLookupByLibrary {
     "failedPrecondition": MessageLookupByLibrary.simpleMessage(
       "The request cannot be processed due to a failed condition.",
     ),
+    "fifthPrimary": MessageLookupByLibrary.simpleMessage("Fifth primary grade"),
+    "fillProfileAppBar": MessageLookupByLibrary.simpleMessage(
+      "Fill Your Profile",
+    ),
+    "fillProfileDescription": MessageLookupByLibrary.simpleMessage(
+      "Please take a few minutes to fill out your profile with as much detail as possible.",
+    ),
+    "fillProfileSubmitButton": MessageLookupByLibrary.simpleMessage("Submit"),
+    "fillProfileTitle": MessageLookupByLibrary.simpleMessage(
+      "Fill Your Profile",
+    ),
+    "fill_profile_success_message": MessageLookupByLibrary.simpleMessage(
+      "Your profile has been filled successfully.",
+    ),
+    "firstName": MessageLookupByLibrary.simpleMessage("First Name"),
+    "firstPreparatory": MessageLookupByLibrary.simpleMessage(
+      "First preparatory grade",
+    ),
+    "firstSecondary": MessageLookupByLibrary.simpleMessage(
+      "First secondary grade",
+    ),
     "forgot_password": MessageLookupByLibrary.simpleMessage("Forgot Password?"),
     "forgot_password_appbar": MessageLookupByLibrary.simpleMessage(
       "Forgot Password",
@@ -76,6 +99,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "forgot_password_title": MessageLookupByLibrary.simpleMessage(
       "Forgot Password",
+    ),
+    "fourthPrimary": MessageLookupByLibrary.simpleMessage(
+      "Fourth primary grade",
     ),
     "invalidArgument": MessageLookupByLibrary.simpleMessage(
       "The provided argument is invalid.",
@@ -92,6 +118,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "invalidVerificationId": MessageLookupByLibrary.simpleMessage(
       "The verification ID is invalid.",
     ),
+    "lastName": MessageLookupByLibrary.simpleMessage("Last Name"),
     "login_success": MessageLookupByLibrary.simpleMessage(
       "You have successfully logged in.",
     ),
@@ -116,13 +143,16 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "otp_verification_button": MessageLookupByLibrary.simpleMessage("Continue"),
     "otp_verification_description": MessageLookupByLibrary.simpleMessage(
-      "Please enter the verification code sent to you",
+      "We have just send email verification link on your email. Please check email and click on that link to verify your Email address.",
+    ),
+    "otp_verification_description2": MessageLookupByLibrary.simpleMessage(
+      "After verification, click on the Continue button then Signin.",
     ),
     "otp_verification_error_message": MessageLookupByLibrary.simpleMessage(
       "Please verify your email first.",
     ),
     "otp_verification_title": MessageLookupByLibrary.simpleMessage(
-      "OTP Verification",
+      "Verify your email address",
     ),
     "outOfRange": MessageLookupByLibrary.simpleMessage(
       "The value provided is out of range.",
@@ -156,6 +186,21 @@ class MessageLookup extends MessageLookupByLibrary {
     "permissionDenied": MessageLookupByLibrary.simpleMessage(
       "You do not have permission to perform this action.",
     ),
+    "pleaseEnterFirstName": MessageLookupByLibrary.simpleMessage(
+      "Please enter your first name",
+    ),
+    "pleaseEnterLastName": MessageLookupByLibrary.simpleMessage(
+      "Please enter your last name",
+    ),
+    "pleaseEnterValidPhoneNumber": MessageLookupByLibrary.simpleMessage(
+      "Please enter a valid phone number",
+    ),
+    "pleaseEnterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
+      "Please enter your phone number",
+    ),
+    "pleaseSelectGrade": MessageLookupByLibrary.simpleMessage(
+      "Please select a grade",
+    ),
     "please_enter_email": MessageLookupByLibrary.simpleMessage(
       "Please enter your email",
     ),
@@ -181,6 +226,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "resourceExhausted": MessageLookupByLibrary.simpleMessage(
       "Too many requests. Please try again later.",
     ),
+    "secondPreparatory": MessageLookupByLibrary.simpleMessage(
+      "Second preparatory grade",
+    ),
+    "secondSecondary": MessageLookupByLibrary.simpleMessage(
+      "Second secondary grade",
+    ),
+    "selectGrade": MessageLookupByLibrary.simpleMessage("Select your grade"),
     "serviceUnavailable": MessageLookupByLibrary.simpleMessage(
       "The service is temporarily unavailable. Please try again later.",
     ),
@@ -203,7 +255,14 @@ class MessageLookup extends MessageLookupByLibrary {
       "Your account has been created successfully.",
     ),
     "signup_title": MessageLookupByLibrary.simpleMessage("Sign Up"),
+    "sixthPrimary": MessageLookupByLibrary.simpleMessage("Sixth primary grade"),
     "success": MessageLookupByLibrary.simpleMessage("Success"),
+    "thirdPreparatory": MessageLookupByLibrary.simpleMessage(
+      "Third preparatory grade",
+    ),
+    "thirdSecondary": MessageLookupByLibrary.simpleMessage(
+      "Third secondary grade",
+    ),
     "tooManyRequests": MessageLookupByLibrary.simpleMessage(
       "Too many login attempts. Try again later.",
     ),
@@ -231,6 +290,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "wrongPassword": MessageLookupByLibrary.simpleMessage(
       "The password is incorrect.",
+    ),
+    "yourPhoneNumber": MessageLookupByLibrary.simpleMessage(
+      "Your Phone Number",
     ),
   };
 }

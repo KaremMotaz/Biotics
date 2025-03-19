@@ -2,6 +2,7 @@ import 'package:biocode/core/helpers/app_regex.dart';
 import 'package:biocode/core/helpers/build_snack_bar.dart';
 import 'package:biocode/core/helpers/spacing.dart';
 import 'package:biocode/core/theming/app_colors.dart';
+import 'package:biocode/core/theming/assets_data.dart';
 import 'package:biocode/core/theming/styles.dart';
 import 'package:biocode/core/widgets/app_text_button.dart';
 import 'package:biocode/core/widgets/app_text_form_field.dart';
@@ -23,7 +24,7 @@ class ForgotPasswordViewBody extends StatelessWidget {
         children: [
           Text(
             S.of(context).forgot_password_title,
-            style: TextStyles.bold24.copyWith(
+            style: TextStyles.bold20.copyWith(
               color: AppColors.mainBlue,
             ),
           ),
@@ -32,7 +33,7 @@ class ForgotPasswordViewBody extends StatelessWidget {
             S.of(context).forgot_password_description,
             style: TextStyles.regular14,
           ),
-          verticalSpace(32),
+          Image.asset(AssetsData.forgotPassword),
           Form(
               key: context.read<ForgotPasswordCubit>().formKey,
             child: AppTextFormField(
@@ -49,7 +50,7 @@ class ForgotPasswordViewBody extends StatelessWidget {
               },
             ),
           ),
-          verticalSpace(32),
+          verticalSpace(24),
           AppTextButton(
             buttonText: S.of(context).reset_password_button,
             textStyle: TextStyles.semiBold16.copyWith(

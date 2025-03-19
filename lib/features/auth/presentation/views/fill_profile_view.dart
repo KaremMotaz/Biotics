@@ -1,4 +1,6 @@
+import 'package:biocode/core/widgets/custom_app_bar.dart';
 import 'package:biocode/features/auth/presentation/views/widgets/fill_profile_view_body.dart';
+import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class FillProfileView extends StatelessWidget {
@@ -6,9 +8,10 @@ class FillProfileView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return  SafeArea(
       child: Scaffold(
-        body: FillProfileViewBody(),
+        appBar: buildAppBar(title: S.of(context).fillProfileAppBar),
+        body: const FillProfileViewBody(),
       ),
     );
   }

@@ -16,6 +16,7 @@ class AppTextFormField extends StatelessWidget {
     this.isObscureText,
     this.textStyle,
     required this.validator,
+    this.textInputType,
   });
   final TextEditingController? controller;
   final EdgeInsetsGeometry? contentPadding;
@@ -27,10 +28,12 @@ class AppTextFormField extends StatelessWidget {
   final bool? isObscureText;
   final TextStyle? textStyle;
   final Function(String?) validator;
+  final TextInputType? textInputType;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      keyboardType: textInputType ?? TextInputType.name,
       controller: controller,
       decoration: InputDecoration(
         isDense: true,
@@ -57,8 +60,7 @@ class AppTextFormField extends StatelessWidget {
         filled: true,
       ),
       obscureText: isObscureText ?? false,
-      style: textStyle ??
-          TextStyles.medium14,
+      style: textStyle ?? TextStyles.medium14,
       validator: (value) {
         return validator(value);
       },

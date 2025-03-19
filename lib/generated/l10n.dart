@@ -480,21 +480,31 @@ class S {
     );
   }
 
-  /// `OTP Verification`
+  /// `Verify your email address`
   String get otp_verification_title {
     return Intl.message(
-      'OTP Verification',
+      'Verify your email address',
       name: 'otp_verification_title',
       desc: '',
       args: [],
     );
   }
 
-  /// `Please enter the verification code sent to you`
+  /// `We have just send email verification link on your email. Please check email and click on that link to verify your Email address.`
   String get otp_verification_description {
     return Intl.message(
-      'Please enter the verification code sent to you',
+      'We have just send email verification link on your email. Please check email and click on that link to verify your Email address.',
       name: 'otp_verification_description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `After verification, click on the Continue button then Signin.`
+  String get otp_verification_description2 {
+    return Intl.message(
+      'After verification, click on the Continue button then Signin.',
+      name: 'otp_verification_description2',
       desc: '',
       args: [],
     );
@@ -825,6 +835,246 @@ class S {
     return Intl.message(
       'An unexpected error occurred. Please try again later.',
       name: 'unknownFirestoreError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fill Your Profile`
+  String get fillProfileAppBar {
+    return Intl.message(
+      'Fill Your Profile',
+      name: 'fillProfileAppBar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fill Your Profile`
+  String get fillProfileTitle {
+    return Intl.message(
+      'Fill Your Profile',
+      name: 'fillProfileTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please take a few minutes to fill out your profile with as much detail as possible.`
+  String get fillProfileDescription {
+    return Intl.message(
+      'Please take a few minutes to fill out your profile with as much detail as possible.',
+      name: 'fillProfileDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `First Name`
+  String get firstName {
+    return Intl.message('First Name', name: 'firstName', desc: '', args: []);
+  }
+
+  /// `Last Name`
+  String get lastName {
+    return Intl.message('Last Name', name: 'lastName', desc: '', args: []);
+  }
+
+  /// `Academic Year`
+  String get academicYear {
+    return Intl.message(
+      'Academic Year',
+      name: 'academicYear',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your Phone Number`
+  String get yourPhoneNumber {
+    return Intl.message(
+      'Your Phone Number',
+      name: 'yourPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your first name`
+  String get pleaseEnterFirstName {
+    return Intl.message(
+      'Please enter your first name',
+      name: 'pleaseEnterFirstName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your last name`
+  String get pleaseEnterLastName {
+    return Intl.message(
+      'Please enter your last name',
+      name: 'pleaseEnterLastName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your phone number`
+  String get pleaseEnterYourPhoneNumber {
+    return Intl.message(
+      'Please enter your phone number',
+      name: 'pleaseEnterYourPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a valid phone number`
+  String get pleaseEnterValidPhoneNumber {
+    return Intl.message(
+      'Please enter a valid phone number',
+      name: 'pleaseEnterValidPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select your grade`
+  String get selectGrade {
+    return Intl.message(
+      'Select your grade',
+      name: 'selectGrade',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fourth primary grade`
+  String get fourthPrimary {
+    return Intl.message(
+      'Fourth primary grade',
+      name: 'fourthPrimary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fifth primary grade`
+  String get fifthPrimary {
+    return Intl.message(
+      'Fifth primary grade',
+      name: 'fifthPrimary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sixth primary grade`
+  String get sixthPrimary {
+    return Intl.message(
+      'Sixth primary grade',
+      name: 'sixthPrimary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `First preparatory grade`
+  String get firstPreparatory {
+    return Intl.message(
+      'First preparatory grade',
+      name: 'firstPreparatory',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Second preparatory grade`
+  String get secondPreparatory {
+    return Intl.message(
+      'Second preparatory grade',
+      name: 'secondPreparatory',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Third preparatory grade`
+  String get thirdPreparatory {
+    return Intl.message(
+      'Third preparatory grade',
+      name: 'thirdPreparatory',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `First secondary grade`
+  String get firstSecondary {
+    return Intl.message(
+      'First secondary grade',
+      name: 'firstSecondary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Second secondary grade`
+  String get secondSecondary {
+    return Intl.message(
+      'Second secondary grade',
+      name: 'secondSecondary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Third secondary grade`
+  String get thirdSecondary {
+    return Intl.message(
+      'Third secondary grade',
+      name: 'thirdSecondary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `BioChemistry`
+  String get bioChemistry {
+    return Intl.message(
+      'BioChemistry',
+      name: 'bioChemistry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please select a grade`
+  String get pleaseSelectGrade {
+    return Intl.message(
+      'Please select a grade',
+      name: 'pleaseSelectGrade',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Submit`
+  String get fillProfileSubmitButton {
+    return Intl.message(
+      'Submit',
+      name: 'fillProfileSubmitButton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your profile has been filled successfully.`
+  String get fill_profile_success_message {
+    return Intl.message(
+      'Your profile has been filled successfully.',
+      name: 'fill_profile_success_message',
       desc: '',
       args: [],
     );

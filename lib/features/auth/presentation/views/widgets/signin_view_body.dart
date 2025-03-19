@@ -29,7 +29,7 @@ class SigninViewBody extends StatelessWidget {
           children: [
             Text(
               S.of(context).welcome_back,
-              style: TextStyles.bold24.copyWith(
+              style: TextStyles.bold20.copyWith(
                 color: AppColors.mainBlue,
               ),
             ),

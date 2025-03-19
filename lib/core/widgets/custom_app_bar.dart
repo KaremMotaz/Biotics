@@ -8,7 +8,7 @@ AppBar buildAppBar({required String title}) {
   return AppBar(
     title: Text(
       title,
-      style: TextStyles.bold20.copyWith(),
+      style: TextStyles.bold18,
     ),
     centerTitle: true,
     actions: [

@@ -23,6 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "Sign_in_title": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
+    "academicYear": MessageLookupByLibrary.simpleMessage("السنة الدراسية"),
     "accountExistsWithDifferentCredential":
         MessageLookupByLibrary.simpleMessage(
           "يوجد حساب بالفعل باستخدام طريقة تسجيل دخول مختلفة.",
@@ -31,6 +32,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "تمتك حساب بالفعل؟",
     ),
     "begin_learning": MessageLookupByLibrary.simpleMessage("ابدأ التعلم"),
+    "bioChemistry": MessageLookupByLibrary.simpleMessage("كيمياء حيوية"),
     "create_account": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
     "create_account_button": MessageLookupByLibrary.simpleMessage(
       "إنشاء حساب جديد",
@@ -69,6 +71,29 @@ class MessageLookup extends MessageLookupByLibrary {
     "failedPrecondition": MessageLookupByLibrary.simpleMessage(
       "لا يمكن تنفيذ الطلب بسبب عدم استيفاء الشروط المطلوبة.",
     ),
+    "fifthPrimary": MessageLookupByLibrary.simpleMessage(
+      "الصف الخامس الابتدائي",
+    ),
+    "fillProfileAppBar": MessageLookupByLibrary.simpleMessage(
+      "املأ ملفك الشخصي",
+    ),
+    "fillProfileDescription": MessageLookupByLibrary.simpleMessage(
+      "يرجى قضاء بضع دقائق في ملء ملفك الشخصي بأكبر قدر ممكن من التفاصيل.",
+    ),
+    "fillProfileSubmitButton": MessageLookupByLibrary.simpleMessage("تأكيد"),
+    "fillProfileTitle": MessageLookupByLibrary.simpleMessage(
+      "املأ ملفك الشخصي",
+    ),
+    "fill_profile_success_message": MessageLookupByLibrary.simpleMessage(
+      "تم ملء الملف الشخصي بنجاح.",
+    ),
+    "firstName": MessageLookupByLibrary.simpleMessage("الاسم الأول"),
+    "firstPreparatory": MessageLookupByLibrary.simpleMessage(
+      "الصف الأول الإعدادي",
+    ),
+    "firstSecondary": MessageLookupByLibrary.simpleMessage(
+      "الصف الأول الثانوي",
+    ),
     "forgot_password": MessageLookupByLibrary.simpleMessage(
       "نسيت كلمة المرور؟",
     ),
@@ -80,6 +105,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "forgot_password_title": MessageLookupByLibrary.simpleMessage(
       "نسيت كلمة السر",
+    ),
+    "fourthPrimary": MessageLookupByLibrary.simpleMessage(
+      "الصف الرابع الابتدائي",
     ),
     "invalidArgument": MessageLookupByLibrary.simpleMessage(
       "المعطيات المدخلة غير صالحة.",
@@ -96,6 +124,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "invalidVerificationId": MessageLookupByLibrary.simpleMessage(
       "معرّف التحقق غير صالح.",
     ),
+    "lastName": MessageLookupByLibrary.simpleMessage("اسم العائلة"),
     "login_success": MessageLookupByLibrary.simpleMessage(
       "تم تسجيل الدخول بنجاح.",
     ),
@@ -115,16 +144,19 @@ class MessageLookup extends MessageLookupByLibrary {
       "طريقة المصادقة هذه غير مفعلة.",
     ),
     "or": MessageLookupByLibrary.simpleMessage("أو"),
-    "otp_appbar_title": MessageLookupByLibrary.simpleMessage("تحقق من الكود"),
+    "otp_appbar_title": MessageLookupByLibrary.simpleMessage("تحقق من بريدك"),
     "otp_verification_button": MessageLookupByLibrary.simpleMessage("التالي"),
     "otp_verification_description": MessageLookupByLibrary.simpleMessage(
-      "Please enter the verification code sent to you",
+      "لقد ارسلنا رابط التحقق إلي بريدك الإلكتروني. يرجى التحقق من بريدك والضغط على الرابط.",
+    ),
+    "otp_verification_description2": MessageLookupByLibrary.simpleMessage(
+      "بعد التحقق قم بالضغط على الزر التالي ثم تسجيل الدخول.",
     ),
     "otp_verification_error_message": MessageLookupByLibrary.simpleMessage(
       "يرجى التحقق من بريدك الإلكتروني اولا.",
     ),
     "otp_verification_title": MessageLookupByLibrary.simpleMessage(
-      "تحقق من الكود",
+      "تحقق من بريدك",
     ),
     "outOfRange": MessageLookupByLibrary.simpleMessage(
       "القيمة المدخلة خارج النطاق المسموح به.",
@@ -158,6 +190,21 @@ class MessageLookup extends MessageLookupByLibrary {
     "permissionDenied": MessageLookupByLibrary.simpleMessage(
       "ليس لديك الصلاحية لتنفيذ هذا الإجراء.",
     ),
+    "pleaseEnterFirstName": MessageLookupByLibrary.simpleMessage(
+      "يرجى ادخال الاسم الاول",
+    ),
+    "pleaseEnterLastName": MessageLookupByLibrary.simpleMessage(
+      "يرجى ادخال اسم العائلة",
+    ),
+    "pleaseEnterValidPhoneNumber": MessageLookupByLibrary.simpleMessage(
+      "يرجى ادخال رقم هاتف صحيح",
+    ),
+    "pleaseEnterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
+      "يرجى ادخال رقم هاتفك",
+    ),
+    "pleaseSelectGrade": MessageLookupByLibrary.simpleMessage(
+      "يرجى اختيار المرحلة الدراسية",
+    ),
     "please_enter_email": MessageLookupByLibrary.simpleMessage(
       "يرجى إدخال بريدك الإلكتروني",
     ),
@@ -183,6 +230,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "resourceExhausted": MessageLookupByLibrary.simpleMessage(
       "تم تجاوز الحد المسموح للطلبات. يرجى المحاولة لاحقًا.",
     ),
+    "secondPreparatory": MessageLookupByLibrary.simpleMessage(
+      "الصف الثاني الإعدادي",
+    ),
+    "secondSecondary": MessageLookupByLibrary.simpleMessage(
+      "الصف الثاني الثانوي",
+    ),
+    "selectGrade": MessageLookupByLibrary.simpleMessage(
+      "أختر المرحلة الدراسية",
+    ),
     "serviceUnavailable": MessageLookupByLibrary.simpleMessage(
       "الخدمة غير متوفرة حاليًا. يرجى المحاولة لاحقًا.",
     ),
@@ -201,7 +257,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "تم إنشاء حسابك بنجاح.",
     ),
     "signup_title": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
+    "sixthPrimary": MessageLookupByLibrary.simpleMessage(
+      "الصف السادس الابتدائي",
+    ),
     "success": MessageLookupByLibrary.simpleMessage("تم بنجاح"),
+    "thirdPreparatory": MessageLookupByLibrary.simpleMessage(
+      "الصف الثالث الإعدادي",
+    ),
+    "thirdSecondary": MessageLookupByLibrary.simpleMessage(
+      "الصف الثالث الثانوي",
+    ),
     "tooManyRequests": MessageLookupByLibrary.simpleMessage(
       "محاولات تسجيل دخول كثيرة جدًا. حاول مرة أخرى لاحقًا.",
     ),
@@ -230,5 +295,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "wrongPassword": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور غير صحيحة.",
     ),
+    "yourPhoneNumber": MessageLookupByLibrary.simpleMessage("رقم هاتفك"),
   };
 }

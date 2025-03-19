@@ -1,8 +1,12 @@
+import 'package:biocode/core/helpers/spacing.dart';
 import 'package:biocode/core/routing/routes.dart';
+import 'package:biocode/core/theming/app_colors.dart';
+import 'package:biocode/core/theming/assets_data.dart';
 import 'package:biocode/core/theming/styles.dart';
 import 'package:biocode/core/widgets/app_text_button.dart';
 import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
 class OTPVerificationViewBody extends StatelessWidget {
@@ -10,18 +14,49 @@ class OTPVerificationViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        AppTextButton(
-          buttonText: S.of(context).otp_verification_button,
-          textStyle: TextStyles.semiBold16.copyWith(
-            color: Colors.white,
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
+      child: Column(
+        children: [
+          Image.asset(
+            AssetsData.emailNotification,
+            width: 130.w,
           ),
-          onPressed: () {
-            GoRouter.of(context).push(Routes.signInView);
-          },
-        ),
-      ],
+          verticalSpace(8),
+          Align(
+            alignment: AlignmentDirectional.centerStart,
+            child: Text(
+              S.of(context).otp_verification_title,
+              style: TextStyles.bold20.copyWith(
+                color: AppColors.mainBlue,
+              ),
+            ),
+          ),
+          verticalSpace(8),
+          Text(
+            S.of(context).otp_verification_description,
+            style: TextStyles.regular14,
+          ),
+          verticalSpace(16),
+          Align(
+            alignment: AlignmentDirectional.centerStart,
+            child: Text(
+              S.of(context).otp_verification_description2,
+              style: TextStyles.regular14,
+            ),
+          ),
+          verticalSpace(32),
+          AppTextButton(
+            buttonText: S.of(context).otp_verification_button,
+            textStyle: TextStyles.semiBold16.copyWith(
+              color: Colors.white,
+            ),
+            onPressed: () {
+              GoRouter.of(context).push(Routes.signInView);
+            },
+          ),
+        ],
+      ),
     );
   }
 }
