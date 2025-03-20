@@ -1,13 +1,20 @@
 import 'package:biocode/core/helpers/app_regex.dart';
 import 'package:biocode/core/helpers/spacing.dart';
 import 'package:biocode/core/widgets/app_text_form_field.dart';
-import 'package:biocode/features/auth/presentation/manager/signin_cubit/signin_cubit.dart';
 import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SignInForm extends StatefulWidget {
-  const SignInForm({super.key});
+  final TextEditingController emailController;
+  final TextEditingController passwordController;
+  final GlobalKey<FormState> formKey;
+
+  const SignInForm({
+    super.key,
+    required this.emailController,
+    required this.passwordController,
+    required this.formKey,
+  });
 
   @override
   State<SignInForm> createState() => _SignInFormState();
@@ -16,31 +23,23 @@ class SignInForm extends StatefulWidget {
 class _SignInFormState extends State<SignInForm> {
   bool isPasswordObscureText = true;
 
-  // validation booleans
-  bool hasLowercase = false;
-  bool hasUppercase = false;
-  bool hasSpecialCharacters = false;
-  bool hasNumber = false;
-  bool hasMinLength = false;
-
-  late TextEditingController passwordController;
-
   @override
-  void initState() {
-    passwordController = context.read<SigninCubit>().passwordController;
-    setupPasswordControllerListener();
-    super.initState();
+  void dispose() {
+    widget.passwordController.dispose();
+    widget.emailController.dispose();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: context.read<SigninCubit>().formKey,
+      key: widget.formKey,
       child: Column(
         children: [
           AppTextFormField(
+            textInputType: TextInputType.emailAddress,
             hintText: S.of(context).email_label,
-            controller: context.read<SigninCubit>().emailController,
+            controller: widget.emailController,
             validator: (value) {
               if (value == null || value.isEmpty) {
                 return S.of(context).please_enter_email;
@@ -55,7 +54,7 @@ class _SignInFormState extends State<SignInForm> {
           AppTextFormField(
             hintText: S.of(context).password_label,
             isObscureText: isPasswordObscureText,
-            controller: context.read<SigninCubit>().passwordController,
+            controller: widget.passwordController,
             suffixIcon: IconButton(
               onPressed: () {
                 setState(() {
@@ -76,28 +75,8 @@ class _SignInFormState extends State<SignInForm> {
               return null;
             },
           ),
-          verticalSpace(5),
         ],
       ),
     );
-  }
-
-  @override
-  void dispose() {
-    passwordController.dispose();
-    super.dispose();
-  }
-
-  void setupPasswordControllerListener() {
-    passwordController.addListener(() {
-      setState(() {
-        hasLowercase = AppRegex.hasLowerCase(passwordController.text);
-        hasUppercase = AppRegex.hasUpperCase(passwordController.text);
-        hasSpecialCharacters =
-            AppRegex.hasSpecialCharacter(passwordController.text);
-        hasNumber = AppRegex.hasNumber(passwordController.text);
-        hasMinLength = AppRegex.hasMinLength(passwordController.text);
-      });
-    });
   }
 }

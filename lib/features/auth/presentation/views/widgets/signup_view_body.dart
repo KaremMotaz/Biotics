@@ -12,9 +12,17 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/theming/styles.dart';
 
-class SignupViewBody extends StatelessWidget {
+class SignupViewBody extends StatefulWidget {
   const SignupViewBody({super.key});
 
+  @override
+  State<SignupViewBody> createState() => _SignupViewBodyState();
+}
+
+class _SignupViewBodyState extends State<SignupViewBody> {
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -35,7 +43,11 @@ class SignupViewBody extends StatelessWidget {
               style: TextStyles.regular14.copyWith(),
             ),
             verticalSpace(36),
-            const SignUpForm(),
+            SignUpForm(
+              emailController: emailController,
+              passwordController: passwordController,
+              formKey: formKey,
+            ),
             verticalSpace(25),
             AppTextButton(
               buttonText: S.of(context).create_account_button,
@@ -58,9 +70,12 @@ class SignupViewBody extends StatelessWidget {
   }
 
   void validateThenSignup(BuildContext context) {
-    final signupCubit = context.read<SignupCubit>();
-    if (signupCubit.formKey.currentState!.validate()) {
-      signupCubit.signupWithEmailAndPassword(locale: S.of(context));
+    if (formKey.currentState!.validate()) {
+      context.read<SignupCubit>().signupWithEmailAndPassword(
+            locale: S.of(context),
+            passwordController: passwordController,
+            emailController: emailController,
+          );
       successSnackBar(
         context: context,
         message: S.of(context).signup_success,

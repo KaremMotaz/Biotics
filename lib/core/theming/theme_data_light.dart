@@ -15,6 +15,11 @@ ThemeData getThemeDataLight({required String fontFamily}) {
     inputDecorationTheme: const InputDecorationTheme(
       fillColor: AppColors.moreLighterGray,
     ),
+    colorScheme: const ColorScheme.light(
+      surface: Colors.white, // Set white for containers
+    ),
+    cardColor: Colors.white,
+
     appBarTheme: AppBarTheme(
       color: Colors.white,
       iconTheme: const IconThemeData(color: AppColors.gray),

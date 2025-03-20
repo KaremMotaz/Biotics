@@ -103,6 +103,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "fourthPrimary": MessageLookupByLibrary.simpleMessage(
       "Fourth primary grade",
     ),
+    "from_avatars": MessageLookupByLibrary.simpleMessage("From Avatars"),
+    "from_gallery": MessageLookupByLibrary.simpleMessage("From Gallery"),
     "invalidArgument": MessageLookupByLibrary.simpleMessage(
       "The provided argument is invalid.",
     ),
@@ -233,6 +235,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Second secondary grade",
     ),
     "selectGrade": MessageLookupByLibrary.simpleMessage("Select your grade"),
+    "select_your_avatar": MessageLookupByLibrary.simpleMessage(
+      "Select your avatar :",
+    ),
     "serviceUnavailable": MessageLookupByLibrary.simpleMessage(
       "The service is temporarily unavailable. Please try again later.",
     ),
@@ -256,6 +261,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "signup_title": MessageLookupByLibrary.simpleMessage("Sign Up"),
     "sixthPrimary": MessageLookupByLibrary.simpleMessage("Sixth primary grade"),
+    "submit": MessageLookupByLibrary.simpleMessage("Submit"),
     "success": MessageLookupByLibrary.simpleMessage("Success"),
     "thirdPreparatory": MessageLookupByLibrary.simpleMessage(
       "Third preparatory grade",

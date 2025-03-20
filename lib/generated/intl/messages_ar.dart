@@ -109,6 +109,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "fourthPrimary": MessageLookupByLibrary.simpleMessage(
       "الصف الرابع الابتدائي",
     ),
+    "from_avatars": MessageLookupByLibrary.simpleMessage("من الأفاتارز"),
+    "from_gallery": MessageLookupByLibrary.simpleMessage("من المعرض"),
     "invalidArgument": MessageLookupByLibrary.simpleMessage(
       "المعطيات المدخلة غير صالحة.",
     ),
@@ -239,6 +241,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "selectGrade": MessageLookupByLibrary.simpleMessage(
       "أختر المرحلة الدراسية",
     ),
+    "select_your_avatar": MessageLookupByLibrary.simpleMessage(
+      "اختر الأفاتار الخاص بك :",
+    ),
     "serviceUnavailable": MessageLookupByLibrary.simpleMessage(
       "الخدمة غير متوفرة حاليًا. يرجى المحاولة لاحقًا.",
     ),
@@ -260,6 +265,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "sixthPrimary": MessageLookupByLibrary.simpleMessage(
       "الصف السادس الابتدائي",
     ),
+    "submit": MessageLookupByLibrary.simpleMessage("إرسال"),
     "success": MessageLookupByLibrary.simpleMessage("تم بنجاح"),
     "thirdPreparatory": MessageLookupByLibrary.simpleMessage(
       "الصف الثالث الإعدادي",

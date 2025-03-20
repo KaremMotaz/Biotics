@@ -107,5 +107,9 @@
   "bioChemistry": "BioChemistry",
   "pleaseSelectGrade": "Please select a grade",
   "fillProfileSubmitButton": "Submit",
-  "fill_profile_success_message": "Your profile has been filled successfully."
+  "fill_profile_success_message": "Your profile has been filled successfully.",
+  "from_avatars": "From Avatars",
+  "from_gallery": "From Gallery",
+  "select_your_avatar": "Select your avatar :",
+  "submit": "Submit"
 }

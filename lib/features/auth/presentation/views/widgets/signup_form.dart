@@ -2,14 +2,21 @@ import 'package:biocode/core/helpers/app_regex.dart';
 import 'package:biocode/core/helpers/spacing.dart';
 import 'package:biocode/core/theming/styles.dart';
 import 'package:biocode/core/widgets/app_text_form_field.dart';
-import 'package:biocode/features/auth/presentation/manager/signup_cubit/signup_cubit.dart';
 import 'package:biocode/features/auth/presentation/views/widgets/password_validations.dart';
 import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SignUpForm extends StatefulWidget {
-  const SignUpForm({super.key});
+  final TextEditingController emailController;
+  final TextEditingController passwordController;
+  final GlobalKey<FormState> formKey;
+
+  const SignUpForm({
+    super.key,
+    required this.emailController,
+    required this.passwordController,
+    required this.formKey,
+  });
 
   @override
   State<SignUpForm> createState() => _SignUpFormState();
@@ -25,22 +32,27 @@ class _SignUpFormState extends State<SignUpForm> {
   bool hasNumber = false;
   bool hasMinLength = false;
 
-  late TextEditingController passwordController;
-
   @override
   void initState() {
-    passwordController = context.read<SignupCubit>().passwordController;
     setupPasswordControllerListener();
     super.initState();
   }
 
   @override
+  void dispose() {
+    widget.emailController.dispose();
+    widget.passwordController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Form(
-      key: context.read<SignupCubit>().formKey,
+      key: widget.formKey,
       child: Column(
         children: [
           AppTextFormField(
+            textInputType: TextInputType.emailAddress,
             hintText: S.of(context).email_hint,
             validator: (value) {
               if (value == null || value.isEmpty) {
@@ -51,13 +63,13 @@ class _SignUpFormState extends State<SignUpForm> {
               }
               return null;
             },
-            controller: context.read<SignupCubit>().emailController,
+            controller: widget.emailController,
           ),
           verticalSpace(18),
           AppTextFormField(
             hintText: S.of(context).password_hint,
             isObscureText: isPasswordObscureText,
-            controller: context.read<SignupCubit>().passwordController,
+            controller: widget.passwordController,
             suffixIcon: IconButton(
               onPressed: () {
                 setState(() {
@@ -82,7 +94,7 @@ class _SignUpFormState extends State<SignUpForm> {
           Align(
             alignment: AlignmentDirectional.centerStart,
             child: Text(
-            S.of(context).password_requirements,
+              S.of(context).password_requirements,
               style: TextStyles.regular14,
             ),
           ),
@@ -99,21 +111,15 @@ class _SignUpFormState extends State<SignUpForm> {
     );
   }
 
-  @override
-  void dispose() {
-    passwordController.dispose();
-    super.dispose();
-  }
-
   void setupPasswordControllerListener() {
-    passwordController.addListener(() {
+    widget.passwordController.addListener(() {
       setState(() {
-        hasLowerCase = AppRegex.hasLowerCase(passwordController.text);
-        hasUpperCase = AppRegex.hasUpperCase(passwordController.text);
+        hasLowerCase = AppRegex.hasLowerCase(widget.passwordController.text);
+        hasUpperCase = AppRegex.hasUpperCase(widget.passwordController.text);
         hasSpecialCharacters =
-            AppRegex.hasSpecialCharacter(passwordController.text);
-        hasNumber = AppRegex.hasNumber(passwordController.text);
-        hasMinLength = AppRegex.hasMinLength(passwordController.text);
+            AppRegex.hasSpecialCharacter(widget.passwordController.text);
+        hasNumber = AppRegex.hasNumber(widget.passwordController.text);
+        hasMinLength = AppRegex.hasMinLength(widget.passwordController.text);
       });
     });
   }

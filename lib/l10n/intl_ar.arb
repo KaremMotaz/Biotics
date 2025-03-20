@@ -107,5 +107,9 @@
   "bioChemistry": "كيمياء حيوية",
   "pleaseSelectGrade": "يرجى اختيار المرحلة الدراسية",
   "fillProfileSubmitButton": "تأكيد",
-  "fill_profile_success_message": "تم ملء الملف الشخصي بنجاح."
+  "fill_profile_success_message": "تم ملء الملف الشخصي بنجاح.",
+  "from_avatars": "من الأفاتارز",
+  "from_gallery": "من المعرض",
+  "select_your_avatar": "اختر الأفاتار الخاص بك :",
+  "submit": "إرسال"
 }

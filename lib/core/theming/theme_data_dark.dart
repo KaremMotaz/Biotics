@@ -19,6 +19,7 @@ ThemeData getThemeDataDark({required String fontFamily}) {
         color: AppColors.lightGray,
       ),
     ),
+    cardColor: AppColors.darkModeGray,
     appBarTheme: AppBarTheme(
       color: AppColors.darkModeGray,
       iconTheme: const IconThemeData(color: AppColors.lightGray),

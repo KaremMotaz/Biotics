@@ -10,11 +10,12 @@ class SignupCubit extends Cubit<SignupState> {
   SignupCubit(this.authRepo) : super(SignupInitialState());
 
   final AuthRepo authRepo;
-  TextEditingController passwordController = TextEditingController();
-  TextEditingController emailController = TextEditingController();
-  final formKey = GlobalKey<FormState>();
 
-  Future<void> signupWithEmailAndPassword({required S locale}) async {
+  Future<void> signupWithEmailAndPassword({
+    required S locale,
+    required TextEditingController passwordController,
+    required TextEditingController emailController,
+  }) async {
     emit(SignupLoadingState());
     final result = await authRepo.signupWithEmailAndPassword(
       password: passwordController.text,
@@ -29,8 +30,4 @@ class SignupCubit extends Cubit<SignupState> {
     });
   }
 
-  void dispose() {
-    emailController.dispose();
-    passwordController.dispose();
-  }
 }

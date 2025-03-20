@@ -2,7 +2,6 @@ import 'package:biocode/core/helpers/app_regex.dart';
 import 'package:biocode/core/helpers/build_snack_bar.dart';
 import 'package:biocode/core/helpers/spacing.dart';
 import 'package:biocode/core/routing/routes.dart';
-import 'package:biocode/core/theming/app_colors.dart';
 import 'package:biocode/core/theming/styles.dart';
 import 'package:biocode/core/widgets/app_text_button.dart';
 import 'package:biocode/core/widgets/app_text_form_field.dart';

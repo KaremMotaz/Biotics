@@ -9,11 +9,12 @@ class SigninCubit extends Cubit<SigninState> {
   SigninCubit(this.authRepo) : super(SigninInitialState());
 
   final AuthRepo authRepo;
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
-  final formKey = GlobalKey<FormState>();
 
-  Future<void> signinWithEmailAndPassword({required S locale}) async {
+  Future<void> signinWithEmailAndPassword({
+    required S locale,
+    required TextEditingController passwordController,
+    required TextEditingController emailController,
+  }) async {
     emit(SigninLoadingState());
     final result = await authRepo.signinWithEmailAndPassword(
       password: passwordController.text,
@@ -25,11 +26,6 @@ class SigninCubit extends Cubit<SigninState> {
     }, (userEntity) {
       emit(SigninSuccessState(userEntity: userEntity));
     });
-  }
-
-  void dispose() {
-    emailController.dispose();
-    passwordController.dispose();
   }
 
   Future<void> signinWithGoogle({required S locale}) async {

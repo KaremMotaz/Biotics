@@ -1079,6 +1079,41 @@ class S {
       args: [],
     );
   }
+
+  /// `From Avatars`
+  String get from_avatars {
+    return Intl.message(
+      'From Avatars',
+      name: 'from_avatars',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `From Gallery`
+  String get from_gallery {
+    return Intl.message(
+      'From Gallery',
+      name: 'from_gallery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select your avatar :`
+  String get select_your_avatar {
+    return Intl.message(
+      'Select your avatar :',
+      name: 'select_your_avatar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Submit`
+  String get submit {
+    return Intl.message('Submit', name: 'submit', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

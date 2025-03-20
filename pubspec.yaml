@@ -60,7 +60,7 @@ flutter:
     - assets/images/
     - assets/svgs/
     - assets/svgs/social_media_icons/
-    - assets/avatars
+    - assets/avatars/
 
   fonts:
     - family: 'Cairo'

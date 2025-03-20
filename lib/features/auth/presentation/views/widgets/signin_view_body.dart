@@ -16,8 +16,17 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
-class SigninViewBody extends StatelessWidget {
+class SigninViewBody extends StatefulWidget {
   const SigninViewBody({super.key});
+
+  @override
+  State<SigninViewBody> createState() => _SigninViewBodyState();
+}
+
+class _SigninViewBodyState extends State<SigninViewBody> {
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +48,12 @@ class SigninViewBody extends StatelessWidget {
               style: TextStyles.regular14,
             ),
             verticalSpace(32),
-            const SignInForm(),
+            SignInForm(
+              emailController: emailController,
+              passwordController: passwordController,
+              formKey: formKey,
+            ),
+            verticalSpace(5),
             Align(
               alignment: AlignmentDirectional.centerEnd,
               child: TextButton(
@@ -73,7 +87,9 @@ class SigninViewBody extends StatelessWidget {
               title: S.of(context).sign_in_google,
               imageLink: AssetsData.googleIcon,
               onPressed: () {
-                context.read<SigninCubit>().signinWithGoogle(locale: S.of(context));
+                context
+                    .read<SigninCubit>()
+                    .signinWithGoogle(locale: S.of(context));
                 successSnackBar(
                   context: context,
                   message: S.of(context).login_success,
@@ -85,7 +101,9 @@ class SigninViewBody extends StatelessWidget {
               title: S.of(context).sign_in_facebook,
               imageLink: AssetsData.faceBookIcon,
               onPressed: () {
-                context.read<SigninCubit>().signinWithFacebook(locale: S.of(context));
+                context
+                    .read<SigninCubit>()
+                    .signinWithFacebook(locale: S.of(context));
                 successSnackBar(
                   context: context,
                   message: S.of(context).login_success,
@@ -99,9 +117,12 @@ class SigninViewBody extends StatelessWidget {
   }
 
   void validateThenSignin(BuildContext context) {
-    final signinCubit = context.read<SigninCubit>();
-    if (signinCubit.formKey.currentState!.validate()) {
-      signinCubit.signinWithEmailAndPassword(locale: S.of(context));
+    if (formKey.currentState!.validate()) {
+      context.read<SigninCubit>().signinWithEmailAndPassword(
+            locale: S.of(context),
+            passwordController: passwordController,
+            emailController: emailController,
+          );
       successSnackBar(
         context: context,
         message: S.of(context).login_success,

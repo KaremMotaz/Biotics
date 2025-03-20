@@ -12,8 +12,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class ForgotPasswordViewBody extends StatelessWidget {
+class ForgotPasswordViewBody extends StatefulWidget {
   const ForgotPasswordViewBody({super.key});
+
+  @override
+  State<ForgotPasswordViewBody> createState() => _ForgotPasswordViewBodyState();
+}
+
+final TextEditingController emailController = TextEditingController();
+final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
+class _ForgotPasswordViewBodyState extends State<ForgotPasswordViewBody> {
+  @override
+  void dispose() {
+    emailController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -35,10 +49,10 @@ class ForgotPasswordViewBody extends StatelessWidget {
           ),
           Image.asset(AssetsData.forgotPassword),
           Form(
-              key: context.read<ForgotPasswordCubit>().formKey,
+            key: _formKey,
             child: AppTextFormField(
               hintText: S.of(context).enter_email,
-              controller: context.read<ForgotPasswordCubit>().emailController,
+              controller: emailController,
               validator: (value) {
                 if (value == null || value.isEmpty) {
                   return S.of(context).please_enter_email;
@@ -66,9 +80,11 @@ class ForgotPasswordViewBody extends StatelessWidget {
   }
 
   void validateThenSendLinkToResetPassword(BuildContext context) {
-    final forgotPasswordCubit = context.read<ForgotPasswordCubit>();
-    if (forgotPasswordCubit.formKey.currentState!.validate()) {
-      forgotPasswordCubit.sendLinkToResetPassword(locale: S.of(context));
+    if (_formKey.currentState!.validate()) {
+      context.read<ForgotPasswordCubit>().sendLinkToResetPassword(
+            locale: S.of(context),
+            emailController: emailController,
+          );
       successSnackBar(
         context: context,
         message: S.of(context).reset_password_success_message,
