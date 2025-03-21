@@ -1114,6 +1114,36 @@ class S {
   String get submit {
     return Intl.message('Submit', name: 'submit', desc: '', args: []);
   }
+
+  /// `Avatar selected successfully`
+  String get avatar_selected_successfully {
+    return Intl.message(
+      'Avatar selected successfully',
+      name: 'avatar_selected_successfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Image selected successfully`
+  String get image_selected_successfully {
+    return Intl.message(
+      'Image selected successfully',
+      name: 'image_selected_successfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please select an avatar`
+  String get please_select_avatar {
+    return Intl.message(
+      'Please select an avatar',
+      name: 'please_select_avatar',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -1,7 +1,7 @@
-import 'package:biocode/core/helpers/build_snack_bar.dart';
+import 'package:biocode/core/functions/build_snack_bar.dart';
 import 'package:biocode/core/routing/routes.dart';
-import 'package:biocode/features/auth/presentation/manager/signup_cubit/signup_cubit.dart';
-import 'package:biocode/features/auth/presentation/views/widgets/signup_view_body.dart';
+import 'package:biocode/features/auth/ui/manager/signup_cubit/signup_cubit.dart';
+import 'package:biocode/features/auth/ui/views/widgets/signup_view_body.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';

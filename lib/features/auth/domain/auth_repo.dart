@@ -4,21 +4,22 @@ import 'package:biocode/generated/l10n.dart';
 import 'package:dartz/dartz.dart';
 
 abstract class AuthRepo {
-  Future<Either<Failure, UserEntity>> signupWithEmailAndPassword({
+  Future<Either<Failure, StudentEntity>> signupWithEmailAndPassword({
     required String email,
     required String password,
     required S locale,
   });
 
-  Future<Either<Failure, UserEntity>> signinWithEmailAndPassword({
+  Future<Either<Failure, StudentEntity>> signinWithEmailAndPassword({
     required String email,
     required String password,
     required S locale,
   });
 
-  Future<Either<Failure, UserEntity>> signinWithGoogle({required S locale});
+  Future<Either<Failure, StudentEntity>> signinWithGoogle({required S locale});
 
-  Future<Either<Failure, UserEntity>> signinWithFacebook({required S locale});
+  Future<Either<Failure, StudentEntity>> signinWithFacebook(
+      {required S locale});
   Future<Either<Failure, Unit>> sendLinkToResetPassword(
       {required String email, required S locale});
   Future<Either<Failure, Unit>> sendEmailVerification({required S locale});

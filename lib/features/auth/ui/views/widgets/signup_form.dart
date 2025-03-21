@@ -2,7 +2,7 @@ import 'package:biocode/core/helpers/app_regex.dart';
 import 'package:biocode/core/helpers/spacing.dart';
 import 'package:biocode/core/theming/styles.dart';
 import 'package:biocode/core/widgets/app_text_form_field.dart';
-import 'package:biocode/features/auth/presentation/views/widgets/password_validations.dart';
+import 'package:biocode/features/auth/ui/views/widgets/password_validations.dart';
 import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
 

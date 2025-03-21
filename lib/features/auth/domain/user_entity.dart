@@ -1,11 +1,19 @@
-class UserEntity {
+class StudentEntity {
   final String email;
-  final String password;
+  // final String firstName;
+  // final String lastName;
+  // final int phoneNumber;
+  // final String grade;
+  // final bool newStudent;
   final String uid;
 
-  UserEntity({
+  StudentEntity({
     required this.email,
-    required this.password,
+    // required this.firstName,
+    // required this.lastName,
+    // required this.phoneNumber,
+    // required this.grade,
+    // required this.newStudent,
     required this.uid,
   });
 }

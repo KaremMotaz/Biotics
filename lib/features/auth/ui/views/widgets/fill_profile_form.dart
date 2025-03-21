@@ -1,12 +1,12 @@
 import 'package:biocode/core/helpers/app_regex.dart';
-import 'package:biocode/core/helpers/build_snack_bar.dart';
+import 'package:biocode/core/functions/build_snack_bar.dart';
 import 'package:biocode/core/helpers/spacing.dart';
 import 'package:biocode/core/routing/routes.dart';
 import 'package:biocode/core/theming/styles.dart';
 import 'package:biocode/core/widgets/app_text_button.dart';
 import 'package:biocode/core/widgets/app_text_form_field.dart';
 import 'package:biocode/core/widgets/custom_circle_avatar.dart';
-import 'package:biocode/features/auth/presentation/views/widgets/custom_drop_down_button.dart';
+import 'package:biocode/features/auth/ui/views/widgets/custom_drop_down_button.dart';
 import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -19,10 +19,10 @@ class FillProfileForm extends StatefulWidget {
 }
 
 class _FillProfileFormState extends State<FillProfileForm> {
-  final formKey = GlobalKey<FormState>();
   final TextEditingController firstNameController = TextEditingController();
   final TextEditingController lastNameController = TextEditingController();
   final TextEditingController phoneController = TextEditingController();
+  final formKey = GlobalKey<FormState>();
 
   @override
   void dispose() {
@@ -37,7 +37,7 @@ class _FillProfileFormState extends State<FillProfileForm> {
     return Form(
       key: formKey,
       child: Column(children: [
-      const CustomCircleAvatar(),
+        const CustomCircleAvatar(),
         verticalSpace(30),
         AppTextFormField(
           hintText: S.of(context).firstName,
@@ -107,7 +107,6 @@ class _FillProfileFormState extends State<FillProfileForm> {
               );
               GoRouter.of(context).pushReplacement(Routes.homeView);
             }
-            
           },
         ),
       ]),

@@ -1,6 +1,6 @@
-import 'package:biocode/core/helpers/build_snack_bar.dart';
-import 'package:biocode/features/auth/presentation/manager/signin_cubit/signin_cubit.dart';
-import 'package:biocode/features/auth/presentation/views/widgets/signin_view_body.dart';
+import 'package:biocode/core/functions/build_snack_bar.dart';
+import 'package:biocode/features/auth/ui/manager/signin_cubit/signin_cubit.dart';
+import 'package:biocode/features/auth/ui/views/widgets/signin_view_body.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';

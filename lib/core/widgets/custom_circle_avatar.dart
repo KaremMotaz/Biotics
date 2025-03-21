@@ -1,4 +1,6 @@
-import 'package:biocode/core/functions/choose_image_dialog.dart';
+
+import 'package:biocode/core/functions/choose_image_source_dialog.dart';
+import 'package:biocode/core/theming/assets_data.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
@@ -11,6 +13,7 @@ class CustomCircleAvatar extends StatefulWidget {
 }
 
 class _CustomCircleAvatarState extends State<CustomCircleAvatar> {
+  String selectedAvatarPath = AssetsData.dummyUserImage;
   File? image;
   Future<void> pickImageFromGallery() async {
     ImagePicker imagePicker = ImagePicker();
@@ -25,13 +28,14 @@ class _CustomCircleAvatarState extends State<CustomCircleAvatar> {
 
   @override
   Widget build(BuildContext context) {
+
     return Stack(
       children: [
         CircleAvatar(
           radius: 55,
           backgroundImage: image != null
               ? FileImage(image!)
-              : const AssetImage("assets/images/dummy_image.png"),
+              : AssetImage(selectedAvatarPath),
           backgroundColor: Theme.of(context).cardColor,
         ),
         Positioned(
@@ -40,7 +44,14 @@ class _CustomCircleAvatarState extends State<CustomCircleAvatar> {
           child: GestureDetector(
             onTap: () async {
               chooseImageSourceDialog(
-                  context: context, pickImageFromGallery: pickImageFromGallery);
+                context: context,
+                pickImageFromGallery: pickImageFromGallery,
+                onAvatarSelected: (newPath) {
+                  setState(() {
+                    selectedAvatarPath = newPath;
+                  });
+                },
+              );
             },
             child: Container(
               padding: const EdgeInsets.all(5),
@@ -50,7 +61,7 @@ class _CustomCircleAvatarState extends State<CustomCircleAvatar> {
                 border: Border.all(color: Colors.white, width: 3),
               ),
               child: Image.asset(
-                "assets/images/edit.png",
+                AssetsData.editIcon,
                 width: 15,
                 height: 15,
               ),

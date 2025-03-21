@@ -1,10 +1,10 @@
-import 'package:biocode/core/helpers/build_snack_bar.dart';
+import 'package:biocode/core/functions/build_snack_bar.dart';
 import 'package:biocode/core/helpers/spacing.dart';
 import 'package:biocode/core/theming/app_colors.dart';
 import 'package:biocode/core/widgets/app_text_button.dart';
-import 'package:biocode/features/auth/presentation/manager/signup_cubit/signup_cubit.dart';
-import 'package:biocode/features/auth/presentation/views/widgets/already_have_an_account.dart';
-import 'package:biocode/features/auth/presentation/views/widgets/signup_form.dart';
+import 'package:biocode/features/auth/ui/manager/signup_cubit/signup_cubit.dart';
+import 'package:biocode/features/auth/ui/views/widgets/already_have_an_account.dart';
+import 'package:biocode/features/auth/ui/views/widgets/signup_form.dart';
 import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

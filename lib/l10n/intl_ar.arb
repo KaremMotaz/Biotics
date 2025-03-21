@@ -111,5 +111,9 @@
   "from_avatars": "من الأفاتارز",
   "from_gallery": "من المعرض",
   "select_your_avatar": "اختر الأفاتار الخاص بك :",
-  "submit": "إرسال"
+  "submit": "إرسال",
+  "avatar_selected_successfully": "تم اختيار الافاتار بنجاح",
+  "please_select_avatar": "يرجي اختيار افاتار من فضلك",
+  "image_selected_successfully": "تم اختيار الصورة بنجاح"
+
 }

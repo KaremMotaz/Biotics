@@ -1,4 +1,4 @@
-import 'package:biocode/features/auth/presentation/views/widgets/otp_verification_view_body.dart';
+import 'package:biocode/features/auth/ui/views/widgets/otp_verification_view_body.dart';
 import 'package:flutter/material.dart';
 
 class OtpViewBodyBlocConsumer extends StatelessWidget {

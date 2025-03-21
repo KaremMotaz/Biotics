@@ -1,7 +1,7 @@
 import 'package:biocode/core/errors/auth_failure.dart';
 import 'package:biocode/core/errors/failure.dart';
 import 'package:biocode/core/services/firebase_auth_service.dart';
-import 'package:biocode/features/auth/data/models/user_model.dart';
+import 'package:biocode/features/auth/data/models/student_model.dart';
 import 'package:biocode/features/auth/domain/auth_repo.dart';
 import 'package:biocode/features/auth/domain/user_entity.dart';
 import 'package:biocode/generated/l10n.dart';
@@ -14,7 +14,7 @@ class AuthRepoImp extends AuthRepo {
   AuthRepoImp({required this.firebaseAuthService});
 
   @override
-  Future<Either<Failure, UserEntity>> signupWithEmailAndPassword(
+  Future<Either<Failure, StudentEntity>> signupWithEmailAndPassword(
       {required String email,
       required String password,
       required S locale}) async {
@@ -24,7 +24,7 @@ class AuthRepoImp extends AuthRepo {
           email: email, password: password);
 
       return right(
-          UserEntity(email: email, password: password, uid: user!.uid));
+          StudentEntity(email: email, uid: user!.uid));
     } on FirebaseAuthException catch (e) {
       return left(
         AuthFailure.fromCode(e.code, locale),
@@ -35,7 +35,7 @@ class AuthRepoImp extends AuthRepo {
   }
 
   @override
-  Future<Either<Failure, UserEntity>> signinWithEmailAndPassword({
+  Future<Either<Failure, StudentEntity>> signinWithEmailAndPassword({
     required String email,
     required String password,
     required S locale,
@@ -46,10 +46,10 @@ class AuthRepoImp extends AuthRepo {
           email: email, password: password);
 
       return right(
-          UserEntity(email: email, password: password, uid: user!.uid));
+          StudentEntity(email: email, uid: user!.uid));
     } on FirebaseAuthException catch (e) {
       return left(
-          AuthFailure.fromCode(e.code, locale),
+        AuthFailure.fromCode(e.code, locale),
       );
     } catch (e) {
       return left(AuthFailure(locale.unknownAuthError));
@@ -57,11 +57,12 @@ class AuthRepoImp extends AuthRepo {
   }
 
   @override
-  Future<Either<Failure, UserEntity>> signinWithGoogle({required S locale}) async {
+  Future<Either<Failure, StudentEntity>> signinWithGoogle(
+      {required S locale}) async {
     User? user;
     try {
       user = await firebaseAuthService.signinWithGoogle();
-      UserEntity userEntity = UserModel.fromFirebaseUser(user);
+      StudentEntity userEntity = StudentModel.fromFirebaseUser(user);
 
       return right(userEntity);
     } on FirebaseAuthException catch (e) {
@@ -74,11 +75,12 @@ class AuthRepoImp extends AuthRepo {
   }
 
   @override
-  Future<Either<Failure, UserEntity>> signinWithFacebook({required S locale}) async {
+  Future<Either<Failure, StudentEntity>> signinWithFacebook(
+      {required S locale}) async {
     User? user;
     try {
       user = await firebaseAuthService.signinWithFacebook();
-      UserEntity userEntity = UserModel.fromFirebaseUser(user);
+      StudentEntity userEntity = StudentModel.fromFirebaseUser(user);
 
       return right(userEntity);
     } on FirebaseAuthException catch (e) {
@@ -92,7 +94,7 @@ class AuthRepoImp extends AuthRepo {
 
   @override
   Future<Either<Failure, Unit>> sendLinkToResetPassword(
-      {required String email,required S locale}) async {
+      {required String email, required S locale}) async {
     try {
       await firebaseAuthService.sendLinkToResetPassword(email: email);
       return right(unit);
@@ -106,7 +108,8 @@ class AuthRepoImp extends AuthRepo {
   }
 
   @override
-  Future<Either<Failure, Unit>> sendEmailVerification({required S locale}) async {
+  Future<Either<Failure, Unit>> sendEmailVerification(
+      {required S locale}) async {
     try {
       await firebaseAuthService.sendEmailVerification();
       return right(unit);

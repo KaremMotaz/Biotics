@@ -1,12 +1,12 @@
 import 'package:biocode/core/helpers/app_regex.dart';
-import 'package:biocode/core/helpers/build_snack_bar.dart';
+import 'package:biocode/core/functions/build_snack_bar.dart';
 import 'package:biocode/core/helpers/spacing.dart';
 import 'package:biocode/core/theming/app_colors.dart';
 import 'package:biocode/core/theming/assets_data.dart';
 import 'package:biocode/core/theming/styles.dart';
 import 'package:biocode/core/widgets/app_text_button.dart';
 import 'package:biocode/core/widgets/app_text_form_field.dart';
-import 'package:biocode/features/auth/presentation/manager/forgot_password_cubit/forgot_password_cubit.dart';
+import 'package:biocode/features/auth/ui/manager/forgot_password_cubit/forgot_password_cubit.dart';
 import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

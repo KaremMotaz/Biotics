@@ -31,6 +31,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "already_have_an_account": MessageLookupByLibrary.simpleMessage(
       "Already have an account?",
     ),
+    "avatar_selected_successfully": MessageLookupByLibrary.simpleMessage(
+      "Avatar selected successfully",
+    ),
     "begin_learning": MessageLookupByLibrary.simpleMessage("Begin Learning"),
     "bioChemistry": MessageLookupByLibrary.simpleMessage("BioChemistry"),
     "create_account": MessageLookupByLibrary.simpleMessage("Create Account"),
@@ -105,6 +108,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "from_avatars": MessageLookupByLibrary.simpleMessage("From Avatars"),
     "from_gallery": MessageLookupByLibrary.simpleMessage("From Gallery"),
+    "image_selected_successfully": MessageLookupByLibrary.simpleMessage(
+      "Image selected successfully",
+    ),
     "invalidArgument": MessageLookupByLibrary.simpleMessage(
       "The provided argument is invalid.",
     ),
@@ -214,6 +220,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "please_enter_valid_password": MessageLookupByLibrary.simpleMessage(
       "Please enter a valid password",
+    ),
+    "please_select_avatar": MessageLookupByLibrary.simpleMessage(
+      "Please select an avatar",
     ),
     "providerAlreadyLinked": MessageLookupByLibrary.simpleMessage(
       "This provider is already linked to the account.",

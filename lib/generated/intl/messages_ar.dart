@@ -31,6 +31,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "already_have_an_account": MessageLookupByLibrary.simpleMessage(
       "تمتك حساب بالفعل؟",
     ),
+    "avatar_selected_successfully": MessageLookupByLibrary.simpleMessage(
+      "تم اختيار الافاتار بنجاح",
+    ),
     "begin_learning": MessageLookupByLibrary.simpleMessage("ابدأ التعلم"),
     "bioChemistry": MessageLookupByLibrary.simpleMessage("كيمياء حيوية"),
     "create_account": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
@@ -111,6 +114,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "from_avatars": MessageLookupByLibrary.simpleMessage("من الأفاتارز"),
     "from_gallery": MessageLookupByLibrary.simpleMessage("من المعرض"),
+    "image_selected_successfully": MessageLookupByLibrary.simpleMessage(
+      "تم اختيار الصورة بنجاح",
+    ),
     "invalidArgument": MessageLookupByLibrary.simpleMessage(
       "المعطيات المدخلة غير صالحة.",
     ),
@@ -218,6 +224,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "please_enter_valid_password": MessageLookupByLibrary.simpleMessage(
       "يرجى إدخال كلمة مرور صالحة",
+    ),
+    "please_select_avatar": MessageLookupByLibrary.simpleMessage(
+      "يرجي اختيار افاتار من فضلك",
     ),
     "providerAlreadyLinked": MessageLookupByLibrary.simpleMessage(
       "تم ربط هذا المزود بالفعل بالحساب.",
