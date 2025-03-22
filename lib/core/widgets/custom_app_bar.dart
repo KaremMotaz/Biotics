@@ -40,12 +40,6 @@ AppBar buildAppBar({required String title}) {
       //     );
       //   },
       // ),
-      // IconButton(
-      //   onPressed: () {},
-      //   icon: const Icon(
-      //     Icons.settings_rounded,
-      //   ),
-      // )
     ],
   );
 }

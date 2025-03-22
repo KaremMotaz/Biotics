@@ -1,5 +1,6 @@
-import 'package:biocode/core/widgets/custom_app_bar.dart';
+import 'package:biocode/features/home/ui/views/widgets/custom_home_appbar.dart';
 import 'package:biocode/features/home/ui/views/widgets/home_view_body.dart';
+import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
@@ -7,9 +8,12 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  SafeArea(
+    return SafeArea(
       child: Scaffold(
-        appBar: buildAppBar(title: "Home"),
+        appBar: buildHomeAppBar(
+          title: S.of(context).homeAppbarTitle,
+          context: context,
+        ),
         body: const HomeViewBody(),
       ),
     );

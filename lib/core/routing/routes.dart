@@ -11,4 +11,5 @@ class Routes {
   static const String oTPVerificationView = '/oTPVerificationView';
   // static const String homeView = '/';
   static const String homeView = '/homeView';
+  static const String settingsView = '/settingsView';
 }

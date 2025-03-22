@@ -119,5 +119,7 @@
   "preferredLanguage": "What is your preferred language?",
   "arabic": "Arabic",
   "english": "English",
-  "continueButton": "Continue"
+  "continueButton": "Continue",
+  "homeAppbarTitle": "Home",
+  "settingsAppbarTitle": "Settings"
 }

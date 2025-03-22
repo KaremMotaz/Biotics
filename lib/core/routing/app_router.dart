@@ -6,6 +6,7 @@ import 'package:biocode/features/auth/ui/views/signin_view.dart';
 import 'package:biocode/features/auth/ui/views/signup_view.dart';
 import 'package:biocode/features/choose_language/ui/views/choose_language_view.dart';
 import 'package:biocode/features/home/ui/views/home_view.dart';
+import 'package:biocode/features/home/ui/views/settings_view.dart';
 import 'package:biocode/features/on_boarding/ui/views/onboarding_view.dart';
 import 'package:go_router/go_router.dart';
 
@@ -43,6 +44,10 @@ abstract class AppRouter {
       GoRoute(
         path: Routes.homeView,
         builder: (context, state) => const HomeView(),
+      ),
+      GoRoute(
+        path: Routes.settingsView,
+        builder: (context, state) => const SettingsView(),
       ),
     ],
   );

@@ -114,6 +114,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "from_avatars": MessageLookupByLibrary.simpleMessage("From Avatars"),
     "from_gallery": MessageLookupByLibrary.simpleMessage("From Gallery"),
+    "homeAppbarTitle": MessageLookupByLibrary.simpleMessage("Home"),
     "image_selected_successfully": MessageLookupByLibrary.simpleMessage(
       "Image selected successfully",
     ),
@@ -259,6 +260,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "serviceUnavailable": MessageLookupByLibrary.simpleMessage(
       "The service is temporarily unavailable. Please try again later.",
     ),
+    "settingsAppbarTitle": MessageLookupByLibrary.simpleMessage("Settings"),
     "sign_in": MessageLookupByLibrary.simpleMessage("Sign in"),
     "sign_in_button": MessageLookupByLibrary.simpleMessage("Sign in"),
     "sign_in_facebook": MessageLookupByLibrary.simpleMessage(

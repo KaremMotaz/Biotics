@@ -1179,6 +1179,21 @@ class S {
   String get continueButton {
     return Intl.message('Continue', name: 'continueButton', desc: '', args: []);
   }
+
+  /// `Home`
+  String get homeAppbarTitle {
+    return Intl.message('Home', name: 'homeAppbarTitle', desc: '', args: []);
+  }
+
+  /// `Settings`
+  String get settingsAppbarTitle {
+    return Intl.message(
+      'Settings',
+      name: 'settingsAppbarTitle',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -120,6 +120,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "from_avatars": MessageLookupByLibrary.simpleMessage("من الأفاتارز"),
     "from_gallery": MessageLookupByLibrary.simpleMessage("من المعرض"),
+    "homeAppbarTitle": MessageLookupByLibrary.simpleMessage("الرئيسية"),
     "image_selected_successfully": MessageLookupByLibrary.simpleMessage(
       "تم اختيار الصورة بنجاح",
     ),
@@ -265,6 +266,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "serviceUnavailable": MessageLookupByLibrary.simpleMessage(
       "الخدمة غير متوفرة حاليًا. يرجى المحاولة لاحقًا.",
     ),
+    "settingsAppbarTitle": MessageLookupByLibrary.simpleMessage("الأعدادات"),
     "sign_in": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "sign_in_button": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
     "sign_in_facebook": MessageLookupByLibrary.simpleMessage(
