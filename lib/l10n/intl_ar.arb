@@ -114,6 +114,10 @@
   "submit": "إرسال",
   "avatar_selected_successfully": "تم اختيار الافاتار بنجاح",
   "please_select_avatar": "يرجي اختيار افاتار من فضلك",
-  "image_selected_successfully": "تم اختيار الصورة بنجاح"
-
+  "image_selected_successfully": "تم اختيار الصورة بنجاح",
+  "biologyJourney": "رحلتك مع علم الأحياء تبدأ من هنا",
+  "preferredLanguage": "ما هي لغتك المفضلة؟",
+  "arabic": "العربية",
+  "english": "الإنجليزية",
+  "continueButton": "أستمر"
 }

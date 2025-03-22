@@ -31,11 +31,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "already_have_an_account": MessageLookupByLibrary.simpleMessage(
       "Already have an account?",
     ),
+    "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
     "avatar_selected_successfully": MessageLookupByLibrary.simpleMessage(
       "Avatar selected successfully",
     ),
     "begin_learning": MessageLookupByLibrary.simpleMessage("Begin Learning"),
     "bioChemistry": MessageLookupByLibrary.simpleMessage("BioChemistry"),
+    "biologyJourney": MessageLookupByLibrary.simpleMessage(
+      "Your Biology Journey Starts Here",
+    ),
+    "continueButton": MessageLookupByLibrary.simpleMessage("Continue"),
     "create_account": MessageLookupByLibrary.simpleMessage("Create Account"),
     "create_account_button": MessageLookupByLibrary.simpleMessage(
       "Create Account",
@@ -64,6 +69,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Please enter a valid email",
     ),
     "email_label": MessageLookupByLibrary.simpleMessage("Email"),
+    "english": MessageLookupByLibrary.simpleMessage("English"),
     "enter_email": MessageLookupByLibrary.simpleMessage("Enter your email"),
     "error": MessageLookupByLibrary.simpleMessage("Error"),
     "explore_biology": MessageLookupByLibrary.simpleMessage(
@@ -223,6 +229,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "please_select_avatar": MessageLookupByLibrary.simpleMessage(
       "Please select an avatar",
+    ),
+    "preferredLanguage": MessageLookupByLibrary.simpleMessage(
+      "What is your preferred language?",
     ),
     "providerAlreadyLinked": MessageLookupByLibrary.simpleMessage(
       "This provider is already linked to the account.",

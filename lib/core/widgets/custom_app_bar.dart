@@ -1,4 +1,3 @@
-import 'package:biocode/core/manager/language_cubit/language_cubit.dart';
 import 'package:biocode/core/manager/theme_cubit/theme_cubit.dart';
 import 'package:biocode/core/theming/styles.dart';
 import 'package:flutter/material.dart';
@@ -26,21 +25,21 @@ AppBar buildAppBar({required String title}) {
           );
         },
       ),
-      BlocBuilder<LanguageCubit, Locale>(
-        builder: (context, state) {
-          return IconButton(
-            onPressed: () {
-              final currentLang =
-                  context.read<LanguageCubit>().state.languageCode;
-              final newLang = currentLang == "en" ? "ar" : "en";
-              context.read<LanguageCubit>().changeLanguage(newLang);
-            },
-            icon: const Icon(
-              Icons.translate_rounded,
-            ),
-          );
-        },
-      ),
+      // BlocBuilder<LanguageCubit, Locale>(
+      //   builder: (context, state) {
+      //     return IconButton(
+      //       onPressed: () {
+      //         final currentLang =
+      //             context.read<LanguageCubit>().state.languageCode;
+      //         final newLang = currentLang == "en" ? "ar" : "en";
+      //         context.read<LanguageCubit>().changeLanguage(newLang);
+      //       },
+      //       icon: const Icon(
+      //         Icons.translate_rounded,
+      //       ),
+      //     );
+      //   },
+      // ),
       // IconButton(
       //   onPressed: () {},
       //   icon: const Icon(

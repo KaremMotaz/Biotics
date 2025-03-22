@@ -31,11 +31,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "already_have_an_account": MessageLookupByLibrary.simpleMessage(
       "تمتك حساب بالفعل؟",
     ),
+    "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
     "avatar_selected_successfully": MessageLookupByLibrary.simpleMessage(
       "تم اختيار الافاتار بنجاح",
     ),
     "begin_learning": MessageLookupByLibrary.simpleMessage("ابدأ التعلم"),
     "bioChemistry": MessageLookupByLibrary.simpleMessage("كيمياء حيوية"),
+    "biologyJourney": MessageLookupByLibrary.simpleMessage(
+      "رحلتك مع علم الأحياء تبدأ من هنا",
+    ),
+    "continueButton": MessageLookupByLibrary.simpleMessage("أستمر"),
     "create_account": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
     "create_account_button": MessageLookupByLibrary.simpleMessage(
       "إنشاء حساب جديد",
@@ -64,6 +69,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "يرجى إدخال بريد إلكتروني صحيح",
     ),
     "email_label": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+    "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
     "enter_email": MessageLookupByLibrary.simpleMessage(
       "أدخل بريدك الإلكتروني",
     ),
@@ -227,6 +233,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "please_select_avatar": MessageLookupByLibrary.simpleMessage(
       "يرجي اختيار افاتار من فضلك",
+    ),
+    "preferredLanguage": MessageLookupByLibrary.simpleMessage(
+      "ما هي لغتك المفضلة؟",
     ),
     "providerAlreadyLinked": MessageLookupByLibrary.simpleMessage(
       "تم ربط هذا المزود بالفعل بالحساب.",

@@ -114,5 +114,10 @@
   "submit": "Submit",
   "avatar_selected_successfully": "Avatar selected successfully",
   "image_selected_successfully": "Image selected successfully",
-  "please_select_avatar": "Please select an avatar"
+  "please_select_avatar": "Please select an avatar",
+  "biologyJourney": "Your Biology Journey Starts Here",
+  "preferredLanguage": "What is your preferred language?",
+  "arabic": "Arabic",
+  "english": "English",
+  "continueButton": "Continue"
 }

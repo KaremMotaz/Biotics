@@ -1,5 +1,8 @@
 import 'package:biocode/core/helpers/spacing.dart';
 import 'package:biocode/core/theming/assets_data.dart';
+import 'package:biocode/core/theming/styles.dart';
+import 'package:biocode/features/choose_language/ui/views/widgets/change_language_section.dart';
+import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -11,9 +14,8 @@ class ChooseLanguageView extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 60.w, vertical: 60.h),
+          padding: EdgeInsets.symmetric(horizontal: 20.w),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Center(
@@ -23,14 +25,16 @@ class ChooseLanguageView extends StatelessWidget {
                 ),
               ),
               verticalSpace(10),
-              const Text("Biotics"),
+              Text("Biotics", style: TextStyles.bold20),
               verticalSpace(10),
-              const Text("Your Biology Journey Starts Here"),
+              Text(S.of(context).biologyJourney, style: TextStyles.medium16),
               verticalSpace(120),
-              const Text("What is your preferred language?"),
-              verticalSpace(20),
-              const Text("Arabic"),
-              const Text("English"),
+              Text(
+                S.of(context).preferredLanguage,
+                style: TextStyles.bold18,
+              ),
+              verticalSpace(30),
+              const ChangeLanguageSection(),
             ],
           ),
         ),

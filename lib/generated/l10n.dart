@@ -1144,6 +1144,41 @@ class S {
       args: [],
     );
   }
+
+  /// `Your Biology Journey Starts Here`
+  String get biologyJourney {
+    return Intl.message(
+      'Your Biology Journey Starts Here',
+      name: 'biologyJourney',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is your preferred language?`
+  String get preferredLanguage {
+    return Intl.message(
+      'What is your preferred language?',
+      name: 'preferredLanguage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Arabic`
+  String get arabic {
+    return Intl.message('Arabic', name: 'arabic', desc: '', args: []);
+  }
+
+  /// `English`
+  String get english {
+    return Intl.message('English', name: 'english', desc: '', args: []);
+  }
+
+  /// `Continue`
+  String get continueButton {
+    return Intl.message('Continue', name: 'continueButton', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
