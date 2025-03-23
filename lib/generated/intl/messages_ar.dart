@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "Sign_in_title": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
     "academicYear": MessageLookupByLibrary.simpleMessage("السنة الدراسية"),
+    "account": MessageLookupByLibrary.simpleMessage("الحساب"),
     "accountExistsWithDifferentCredential":
         MessageLookupByLibrary.simpleMessage(
           "يوجد حساب بالفعل باستخدام طريقة تسجيل دخول مختلفة.",
@@ -40,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "biologyJourney": MessageLookupByLibrary.simpleMessage(
       "رحلتك مع علم الأحياء تبدأ من هنا",
     ),
+    "cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
     "continueButton": MessageLookupByLibrary.simpleMessage("أستمر"),
     "create_account": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
     "create_account_button": MessageLookupByLibrary.simpleMessage(
@@ -48,6 +50,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "credentialAlreadyInUse": MessageLookupByLibrary.simpleMessage(
       "بيانات الاعتماد هذه مستخدمة بالفعل في حساب آخر.",
     ),
+    "dark_mode": MessageLookupByLibrary.simpleMessage("الوضع الداكن"),
     "dataLoss": MessageLookupByLibrary.simpleMessage("حدث فقدان للبيانات."),
     "deadlineExceeded": MessageLookupByLibrary.simpleMessage(
       "استغرق الطلب وقتًا أطول من المتوقع. يرجى المحاولة مرة أخرى.",
@@ -139,10 +142,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "invalidVerificationId": MessageLookupByLibrary.simpleMessage(
       "معرّف التحقق غير صالح.",
     ),
+    "language": MessageLookupByLibrary.simpleMessage("اللغة"),
     "lastName": MessageLookupByLibrary.simpleMessage("اسم العائلة"),
     "login_success": MessageLookupByLibrary.simpleMessage(
       "تم تسجيل الدخول بنجاح.",
     ),
+    "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
+    "logout_button": MessageLookupByLibrary.simpleMessage("خروج"),
+    "logout_confirmation": MessageLookupByLibrary.simpleMessage(
+      "هل أنت متأكد أنك تريد تسجيل الخروج؟",
+    ),
+    "logout_title": MessageLookupByLibrary.simpleMessage("تسجيل الخروج؟"),
     "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
       "حدث خطأ في الشبكة. تحقق من اتصالك.",
     ),
@@ -266,6 +276,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "serviceUnavailable": MessageLookupByLibrary.simpleMessage(
       "الخدمة غير متوفرة حاليًا. يرجى المحاولة لاحقًا.",
     ),
+    "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
     "settingsAppbarTitle": MessageLookupByLibrary.simpleMessage("الأعدادات"),
     "sign_in": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "sign_in_button": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),

@@ -46,7 +46,7 @@ class CustomLanguageCheckBox extends StatelessWidget {
                     Icons.check,
                     size: 18,
                     color: Theme.of(context).brightness == Brightness.dark
-                        ? AppColors.gray
+                        ? Colors.white
                         : AppColors.lighterGray,
                   ),
                 )

@@ -13,10 +13,12 @@ class CustomDropDownButton extends StatefulWidget {
   final FormFieldValidator<String> validator;
 
   @override
-  State<CustomDropDownButton> createState() => _CustomDropDownButtonState();
+  State<CustomDropDownButton> createState() =>
+      _CustomDropDownMenuSettingsState();
 }
 
-class _CustomDropDownButtonState extends State<CustomDropDownButton> {
+class _CustomDropDownMenuSettingsState
+    extends State<CustomDropDownButton> {
   String? selectedGrade;
   @override
   Widget build(BuildContext context) {

@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "Sign_in_title": MessageLookupByLibrary.simpleMessage("Sign in"),
     "academicYear": MessageLookupByLibrary.simpleMessage("Academic Year"),
+    "account": MessageLookupByLibrary.simpleMessage("Account"),
     "accountExistsWithDifferentCredential":
         MessageLookupByLibrary.simpleMessage(
           "An account already exists with a different sign-in method.",
@@ -40,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "biologyJourney": MessageLookupByLibrary.simpleMessage(
       "Your Biology Journey Starts Here",
     ),
+    "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
     "continueButton": MessageLookupByLibrary.simpleMessage("Continue"),
     "create_account": MessageLookupByLibrary.simpleMessage("Create Account"),
     "create_account_button": MessageLookupByLibrary.simpleMessage(
@@ -48,6 +50,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "credentialAlreadyInUse": MessageLookupByLibrary.simpleMessage(
       "This credential is already associated with another account.",
     ),
+    "dark_mode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
     "dataLoss": MessageLookupByLibrary.simpleMessage("Data loss has occurred."),
     "deadlineExceeded": MessageLookupByLibrary.simpleMessage(
       "The request took too long. Please try again.",
@@ -133,10 +136,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "invalidVerificationId": MessageLookupByLibrary.simpleMessage(
       "The verification ID is invalid.",
     ),
+    "language": MessageLookupByLibrary.simpleMessage("Language"),
     "lastName": MessageLookupByLibrary.simpleMessage("Last Name"),
     "login_success": MessageLookupByLibrary.simpleMessage(
       "You have successfully logged in.",
     ),
+    "logout": MessageLookupByLibrary.simpleMessage("Logout"),
+    "logout_button": MessageLookupByLibrary.simpleMessage("Log Out"),
+    "logout_confirmation": MessageLookupByLibrary.simpleMessage(
+      "Are you sure you want to log out?",
+    ),
+    "logout_title": MessageLookupByLibrary.simpleMessage("Log Out ?"),
     "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
       "A network error occurred. Check your connection.",
     ),
@@ -260,6 +270,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "serviceUnavailable": MessageLookupByLibrary.simpleMessage(
       "The service is temporarily unavailable. Please try again later.",
     ),
+    "settings": MessageLookupByLibrary.simpleMessage("Settings"),
     "settingsAppbarTitle": MessageLookupByLibrary.simpleMessage("Settings"),
     "sign_in": MessageLookupByLibrary.simpleMessage("Sign in"),
     "sign_in_button": MessageLookupByLibrary.simpleMessage("Sign in"),

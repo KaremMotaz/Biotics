@@ -1,5 +1,4 @@
 class Routes {
-  
   static const String chooseLanguageView = '/';
   static const String onBoardingView = '/onBoardingView';
   static const String signInView = '/signInView';
@@ -11,5 +10,7 @@ class Routes {
   static const String oTPVerificationView = '/oTPVerificationView';
   // static const String homeView = '/';
   static const String homeView = '/homeView';
+  // static const String settingsView = '/';
   static const String settingsView = '/settingsView';
+  static const String profileView = '/profileView';
 }

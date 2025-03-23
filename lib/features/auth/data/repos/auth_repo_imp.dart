@@ -121,4 +121,14 @@ class AuthRepoImp extends AuthRepo {
       return left(AuthFailure(locale.unknownAuthError));
     }
   }
+    Future<void> deleteStudent(User? user) async {
+    if (user != null) {
+      await firebaseAuthService.deleteAccount();
+    }
+  }
+    Future<void> logOutStudent(User? user) async {
+    if (user != null) {
+      await firebaseAuthService.logOut();
+    }
+  }
 }

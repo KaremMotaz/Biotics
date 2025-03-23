@@ -121,5 +121,14 @@
   "english": "English",
   "continueButton": "Continue",
   "homeAppbarTitle": "Home",
-  "settingsAppbarTitle": "Settings"
+  "settingsAppbarTitle": "Settings",
+  "account": "Account",
+  "settings": "Settings",
+  "dark_mode": "Dark Mode",
+  "language": "Language",
+  "logout": "Logout",
+  "logout_confirmation": "Are you sure you want to log out?",
+  "logout_title": "Log Out ?",
+  "logout_button": "Log Out",
+  "cancel": "Cancel"
 }

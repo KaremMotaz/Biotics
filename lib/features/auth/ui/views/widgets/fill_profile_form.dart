@@ -6,7 +6,7 @@ import 'package:biocode/core/theming/styles.dart';
 import 'package:biocode/core/widgets/app_text_button.dart';
 import 'package:biocode/core/widgets/app_text_form_field.dart';
 import 'package:biocode/core/widgets/custom_circle_avatar.dart';
-import 'package:biocode/features/auth/ui/views/widgets/custom_drop_down_button.dart';
+import 'package:biocode/features/auth/ui/views/widgets/custom_drop_down_menu.dart';
 import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';

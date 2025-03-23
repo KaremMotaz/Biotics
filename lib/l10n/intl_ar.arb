@@ -121,6 +121,14 @@
   "english": "الإنجليزية",
   "continueButton": "أستمر",
   "homeAppbarTitle": "الرئيسية",
-  "settingsAppbarTitle": "الأعدادات"
-
+  "settingsAppbarTitle": "الأعدادات",
+  "account": "الحساب",
+  "settings": "الإعدادات",
+  "dark_mode": "الوضع الداكن",
+  "language": "اللغة",
+  "logout": "تسجيل الخروج",
+  "logout_confirmation": "هل أنت متأكد أنك تريد تسجيل الخروج؟",
+  "logout_title": "تسجيل الخروج؟",
+  "logout_button": "خروج",
+  "cancel": "إلغاء"
 }

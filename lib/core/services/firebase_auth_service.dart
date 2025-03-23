@@ -61,7 +61,7 @@ class FirebaseAuthService {
     await FirebaseAuth.instance.currentUser!.delete();
   }
 
-  Future<void> signOut() async {
+  Future<void> logOut() async {
     await GoogleSignIn().signOut();
     await FacebookAuth.instance.logOut();
     await FirebaseAuth.instance.signOut();

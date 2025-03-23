@@ -21,13 +21,30 @@ void chooseImageSourceDialog({
         child: Container(
           padding: EdgeInsetsDirectional.symmetric(horizontal: 20.w),
           width: 180.w,
-          height: 180.h,
-          decoration: const BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(20)),
+          height: 200.h,
+          decoration: BoxDecoration(
+            borderRadius: const BorderRadius.all(Radius.circular(20)),
+            color: Theme.of(context).brightness == Brightness.dark
+                ? AppColors.darkModeGray
+                : AppColors.lighterGray,
           ),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
+              Align(
+                alignment: Alignment.topRight,
+                child: IconButton(
+                  onPressed: () {
+                    GoRouter.of(context).pop();
+                  },
+                  icon: Icon(
+                    Icons.close_rounded,
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? AppColors.lighterGray
+                        : AppColors.darkModeGray
+                  ),
+                ),
+              ),
               AppTextButton(
                 buttonText: S.of(context).from_avatars,
                 backgroundColor: AppColors.gray,
