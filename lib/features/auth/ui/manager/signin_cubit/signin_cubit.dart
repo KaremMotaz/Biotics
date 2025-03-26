@@ -1,6 +1,7 @@
 import 'package:biocode/features/auth/domain/auth_repo.dart';
-import 'package:biocode/features/auth/domain/user_entity.dart';
+import 'package:biocode/features/auth/domain/student_entity.dart';
 import 'package:biocode/generated/l10n.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 part 'signin_state.dart';
@@ -9,6 +10,18 @@ class SigninCubit extends Cubit<SigninState> {
   SigninCubit(this.authRepo) : super(SigninInitialState());
 
   final AuthRepo authRepo;
+  Future<bool>? oldStudent;
+  void loadOldStudentStatus() async {
+    oldStudent = showUserIsOldOrNot();
+  }
+  
+
+  Future<bool> showUserIsOldOrNot() async {
+    String uid = FirebaseAuth.instance.currentUser!.uid;
+    StudentEntity studentData = await authRepo.getStudentData(uid: uid);
+    bool oldStudent = studentData.oldStudent;
+    return oldStudent;
+  }
 
   Future<void> signinWithEmailAndPassword({
     required S locale,
@@ -47,4 +60,6 @@ class SigninCubit extends Cubit<SigninState> {
       emit(SigninSuccessState(userEntity: userEntity));
     });
   }
+
+  getUserData() async {}
 }

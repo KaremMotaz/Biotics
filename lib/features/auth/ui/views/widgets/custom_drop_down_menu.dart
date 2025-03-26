@@ -7,19 +7,21 @@ class CustomDropDownButton extends StatefulWidget {
     required this.hintText,
     required this.items,
     required this.validator,
+    required this.selectedGrade,
+    required this.onChanged,
   });
   final String hintText;
   final List<String> items;
   final FormFieldValidator<String> validator;
+  final String? selectedGrade;
+  final void Function(String?)? onChanged;
 
   @override
   State<CustomDropDownButton> createState() =>
       _CustomDropDownMenuSettingsState();
 }
 
-class _CustomDropDownMenuSettingsState
-    extends State<CustomDropDownButton> {
-  String? selectedGrade;
+class _CustomDropDownMenuSettingsState extends State<CustomDropDownButton> {
   @override
   Widget build(BuildContext context) {
     final isDarkMode = Theme.of(context).brightness == Brightness.dark;
@@ -58,13 +60,11 @@ class _CustomDropDownMenuSettingsState
           ),
         );
       }).toList(),
-      onChanged: (value) {
-        setState(() {
-          selectedGrade = value!;
-        });
-      },
-      value: widget.items.contains(selectedGrade) ? selectedGrade : null,
+      value: widget.items.contains(widget.selectedGrade)
+          ? widget.selectedGrade
+          : null,
       validator: widget.validator,
+      onChanged: widget.onChanged,
     );
   }
 }

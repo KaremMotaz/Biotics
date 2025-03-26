@@ -1,4 +1,3 @@
-import 'package:biocode/core/functions/build_snack_bar.dart';
 import 'package:biocode/core/helpers/spacing.dart';
 import 'package:biocode/core/theming/app_colors.dart';
 import 'package:biocode/core/widgets/app_text_button.dart';
@@ -76,10 +75,6 @@ class _SignupViewBodyState extends State<SignupViewBody> {
             passwordController: passwordController,
             emailController: emailController,
           );
-      successSnackBar(
-        context: context,
-        message: S.of(context).signup_success,
-      );
     }
   }
 }

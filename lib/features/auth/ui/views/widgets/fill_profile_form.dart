@@ -1,15 +1,14 @@
 import 'package:biocode/core/helpers/app_regex.dart';
-import 'package:biocode/core/functions/build_snack_bar.dart';
 import 'package:biocode/core/helpers/spacing.dart';
-import 'package:biocode/core/routing/routes.dart';
 import 'package:biocode/core/theming/styles.dart';
 import 'package:biocode/core/widgets/app_text_button.dart';
 import 'package:biocode/core/widgets/app_text_form_field.dart';
 import 'package:biocode/core/widgets/custom_circle_avatar.dart';
+import 'package:biocode/features/auth/ui/manager/fill_profile_cubit/fill_profile_cubit.dart';
 import 'package:biocode/features/auth/ui/views/widgets/custom_drop_down_menu.dart';
 import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class FillProfileForm extends StatefulWidget {
   const FillProfileForm({super.key});
@@ -21,14 +20,15 @@ class FillProfileForm extends StatefulWidget {
 class _FillProfileFormState extends State<FillProfileForm> {
   final TextEditingController firstNameController = TextEditingController();
   final TextEditingController lastNameController = TextEditingController();
-  final TextEditingController phoneController = TextEditingController();
+  final TextEditingController phoneNumberController = TextEditingController();
+  String? selectedGrade; // Store selected grade
   final formKey = GlobalKey<FormState>();
 
   @override
   void dispose() {
     firstNameController.dispose();
     lastNameController.dispose();
-    phoneController.dispose();
+    phoneNumberController.dispose();
     super.dispose();
   }
 
@@ -64,7 +64,7 @@ class _FillProfileFormState extends State<FillProfileForm> {
         AppTextFormField(
           textInputType: TextInputType.phone,
           hintText: S.of(context).yourPhoneNumber,
-          controller: phoneController,
+          controller: phoneNumberController,
           validator: (value) {
             if (value == null || value.isEmpty) {
               return S.of(context).pleaseEnterYourPhoneNumber;
@@ -92,6 +92,12 @@ class _FillProfileFormState extends State<FillProfileForm> {
           ],
           validator: (String? value) =>
               value == null ? S.of(context).pleaseSelectGrade : null,
+          onChanged: (value) {
+            setState(() {
+              selectedGrade = value!;
+            });
+          },
+          selectedGrade: selectedGrade,
         ),
         verticalSpace(32),
         AppTextButton(
@@ -101,11 +107,12 @@ class _FillProfileFormState extends State<FillProfileForm> {
           ),
           onPressed: () {
             if (formKey.currentState!.validate()) {
-              successSnackBar(
-                context: context,
-                message: S.of(context).fill_profile_success_message,
-              );
-              GoRouter.of(context).pushReplacement(Routes.homeView);
+              context.read<FillProfileCubit>().fillProfile(
+                    firstNameController: firstNameController,
+                    lastNameController: lastNameController,
+                    phoneNumberController: phoneNumberController,
+                    grade: selectedGrade!,
+                  );
             }
           },
         ),

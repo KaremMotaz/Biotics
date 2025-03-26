@@ -4,16 +4,21 @@ import 'package:biocode/features/auth/ui/views/forgot_password_view.dart';
 import 'package:biocode/features/auth/ui/views/otp_verification_view.dart';
 import 'package:biocode/features/auth/ui/views/signin_view.dart';
 import 'package:biocode/features/auth/ui/views/signup_view.dart';
-import 'package:biocode/features/choose_language/ui/views/choose_language_view.dart';
+import 'package:biocode/features/splash/ui/views/choose_language_view.dart';
 import 'package:biocode/features/home/ui/views/home_view.dart';
 import 'package:biocode/features/home/ui/views/profile_view.dart';
 import 'package:biocode/features/home/ui/views/settings_view.dart';
 import 'package:biocode/features/on_boarding/ui/views/onboarding_view.dart';
+import 'package:biocode/features/splash/ui/views/splash_view.dart';
 import 'package:go_router/go_router.dart';
 
 abstract class AppRouter {
   static final router = GoRouter(
     routes: [
+      GoRoute(
+        path: Routes.splashView,
+        builder: (context, state) => const SplashView(),
+      ),
       GoRoute(
         path: Routes.chooseLanguageView,
         builder: (context, state) => const ChooseLanguageView(),

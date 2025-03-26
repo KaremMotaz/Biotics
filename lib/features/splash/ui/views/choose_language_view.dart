@@ -1,7 +1,7 @@
 import 'package:biocode/core/helpers/spacing.dart';
 import 'package:biocode/core/theming/assets_data.dart';
 import 'package:biocode/core/theming/styles.dart';
-import 'package:biocode/features/choose_language/ui/views/widgets/change_language_section.dart';
+import 'package:biocode/features/splash/ui/views/widgets/change_language_section.dart';
 import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

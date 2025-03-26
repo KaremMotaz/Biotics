@@ -1,5 +1,5 @@
 import 'package:biocode/features/auth/domain/auth_repo.dart';
-import 'package:biocode/features/auth/domain/user_entity.dart';
+import 'package:biocode/features/auth/domain/student_entity.dart';
 import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

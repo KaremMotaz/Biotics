@@ -1,5 +1,7 @@
 class Routes {
-  static const String chooseLanguageView = '/';
+
+  static const String splashView = '/';
+  static const String chooseLanguageView = '/chooseLanguageView';
   static const String onBoardingView = '/onBoardingView';
   static const String signInView = '/signInView';
   // static const String signInView = '/';
