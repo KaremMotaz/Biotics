@@ -14,7 +14,7 @@ class FillProfileViewBodyBlocConsumer extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocConsumer<FillProfileCubit, FillProfileState>(
       listener: (context, state) {
-        if (State is FillProfileSuccessState) {
+        if (state is FillProfileSuccessState) {
           successSnackBar(
             context: context,
             message: S.of(context).fill_profile_success_message,

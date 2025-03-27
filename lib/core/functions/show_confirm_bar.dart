@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
-void showConfirmDialog({
+showConfirmDialog({
   required BuildContext context,
   required String buttonText,
   required String bodyContent,

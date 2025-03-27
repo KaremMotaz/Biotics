@@ -84,7 +84,7 @@ class AuthRepoImp extends AuthRepo {
     try {
       user = await firebaseAuthService.signinWithGoogle();
       StudentEntity studentEntity = StudentModel.fromFirebaseUser(user);
-
+      await addStudentData(studentEntity: studentEntity);
       return right(studentEntity);
     } on FirebaseAuthException catch (e) {
       return left(
@@ -101,9 +101,9 @@ class AuthRepoImp extends AuthRepo {
     User? user;
     try {
       user = await firebaseAuthService.signinWithFacebook();
-      StudentEntity userEntity = StudentModel.fromFirebaseUser(user);
-
-      return right(userEntity);
+      StudentEntity studentEntity = StudentModel.fromFirebaseUser(user);
+      await addStudentData(studentEntity: studentEntity);
+      return right(studentEntity);
     } on FirebaseAuthException catch (e) {
       return left(
         AuthFailure.fromCode(e.code, locale),
@@ -156,12 +156,14 @@ class AuthRepoImp extends AuthRepo {
   }
 
   @override
-  Future addStudentData({required StudentEntity studentEntity}) async {
+  Future<Either<Failure, StudentEntity>> addStudentData(
+      {required StudentEntity studentEntity}) async {
     await databaseService.addData(
       path: BackendEndpoint.addUserData,
       data: StudentModel.fromEntity(studentEntity).toMap(),
       documentId: studentEntity.uid,
     );
+    return right(studentEntity);
   }
 
   @override

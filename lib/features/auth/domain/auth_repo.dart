@@ -24,7 +24,7 @@ abstract class AuthRepo {
       {required String email, required S locale});
   Future<Either<Failure, Unit>> sendEmailVerification({required S locale});
   Future<Either<Failure, Unit>> logOut({required S locale});
-  Future addStudentData({required StudentEntity studentEntity});
+  Future<Either<Failure, StudentEntity>> addStudentData({required StudentEntity studentEntity});
   Future saveStudentData({required StudentEntity studentEntity});
   Future<StudentEntity> getStudentData({required String uid});
 }

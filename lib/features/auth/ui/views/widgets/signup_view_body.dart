@@ -8,7 +8,6 @@ import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../../../../core/theming/styles.dart';
 
 class SignupViewBody extends StatefulWidget {
@@ -55,6 +54,8 @@ class _SignupViewBodyState extends State<SignupViewBody> {
               ),
               onPressed: () {
                 validateThenSignup(context);
+                emailController.clear();
+                passwordController.clear();
               },
             ),
             verticalSpace(25.h),

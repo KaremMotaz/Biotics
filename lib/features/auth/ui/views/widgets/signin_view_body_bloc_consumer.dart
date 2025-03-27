@@ -16,16 +16,31 @@ class SigninViewBodyBlocConsumer extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocConsumer<SigninCubit, SigninState>(
       listener: (context, state) async {
-        final currentUser = FirebaseAuth.instance.currentUser!;
-        final oldStudent =
-            await BlocProvider.of<SigninCubit>(context).oldStudent;
-        if (!context.mounted) return;
         if (state is SigninSuccessState) {
-          if (currentUser.emailVerified && oldStudent == false) {
-            GoRouter.of(context).pushReplacement(Routes.fillProfileView);
-          } else if (FirebaseAuth.instance.currentUser!.emailVerified &&
-              oldStudent == true) {
-            GoRouter.of(context).pushReplacement(Routes.homeView);
+          final currentUser = FirebaseAuth.instance.currentUser!;
+          final oldStudent =
+              await BlocProvider.of<SigninCubit>(context).showUserIsOldOrNot();
+              
+          // Check if user logged in via Facebook (or other providers that don't require email verification)
+          final isSocialLogin = currentUser.providerData
+              .any((userInfo) => userInfo.providerId != 'password');
+
+          if (!context.mounted) return;
+
+          if (isSocialLogin || currentUser.emailVerified) {
+            if (oldStudent == false) {
+              GoRouter.of(context).pushReplacement(Routes.fillProfileView);
+              successSnackBar(
+                context: context,
+                message: S.of(context).login_success,
+              );
+            } else if (oldStudent == true) {
+              GoRouter.of(context).pushReplacement(Routes.homeView);
+              successSnackBar(
+                context: context,
+                message: S.of(context).login_success,
+              );
+            }
           } else {
             errorSnackBar(
               context: context,

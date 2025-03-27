@@ -113,6 +113,10 @@ class _FillProfileFormState extends State<FillProfileForm> {
                     phoneNumberController: phoneNumberController,
                     grade: selectedGrade!,
                   );
+              firstNameController.clear();
+              lastNameController.clear();
+              phoneNumberController.clear();
+              selectedGrade = null;
             }
           },
         ),

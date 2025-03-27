@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:biocode/core/functions/show_confirm_bar.dart';
 import 'package:biocode/core/helpers/spacing.dart';
 import 'package:biocode/core/manager/theme_cubit/theme_cubit.dart';
@@ -100,34 +102,30 @@ class SettingsViewBody extends StatelessWidget {
               icon: Icons.translate_rounded,
               iconcolor: const Color(0xff1da7ef),
             ),
-            verticalSpace(8),
-            BlocListener<LogOutCubit, LogOutState>(
-              listener: (context, state) {
-                if (state is LogOutSuccessState) {
-                  debugPrint("LogOutSuccessState triggered");
-                  GoRouter.of(context).go(Routes.signInView);
-                }
+            CustomSettingsListTile(
+              bgIconcolor: const Color(0xfffee9f0),
+              title: S.of(context).logout,
+              onTap: () {
+                showConfirmDialog(
+                  context: context,
+                  buttonText: S.of(context).logout_button,
+                  bodyContent: S.of(context).logout_confirmation,
+                  title: S.of(context).logout_title,
+                  buttonColor: const Color(0xffdb2323),
+                  onPressed: () async {
+                    await context
+                        .read<LogOutCubit>()
+                        .logOut(locale: S.of(context));
+                    if (!context.mounted) return;
+                    GoRouter.of(context).pushReplacement(Routes.signInView);
+                  },
+                );
               },
-              child: CustomSettingsListTile(
-                bgIconcolor: const Color(0xfffee9f0),
-                title: S.of(context).logout,
-                onTap: () {
-                  showConfirmDialog(
-                    context: context,
-                    buttonText: S.of(context).logout_button,
-                    bodyContent: S.of(context).logout_confirmation,
-                    title: S.of(context).logout_title,
-                    buttonColor: const Color(0xffdb2323),
-                    onPressed: () {
-                      context.read<LogOutCubit>().logOut(locale: S.of(context));
-                    },
-                  );
-                },
-                trailing: const SizedBox.shrink(),
-                icon: Icons.logout_rounded,
-                iconcolor: const Color(0xffd05b75),
-              ),
+              trailing: const SizedBox.shrink(),
+              icon: Icons.logout_rounded,
+              iconcolor: const Color(0xffd05b75),
             ),
+            verticalSpace(8),
           ],
         ),
       ),

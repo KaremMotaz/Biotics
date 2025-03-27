@@ -76,6 +76,8 @@ class _SigninViewBodyState extends State<SigninViewBody> {
               ),
               onPressed: () {
                 validateThenSignin(context);
+                emailController.clear();
+                passwordController.clear();
               },
             ),
             verticalSpace(25.h),
@@ -90,10 +92,6 @@ class _SigninViewBodyState extends State<SigninViewBody> {
                 context
                     .read<SigninCubit>()
                     .signinWithGoogle(locale: S.of(context));
-                successSnackBar(
-                  context: context,
-                  message: S.of(context).login_success,
-                );
               },
             ),
             verticalSpace(15.h),
@@ -104,10 +102,6 @@ class _SigninViewBodyState extends State<SigninViewBody> {
                 context
                     .read<SigninCubit>()
                     .signinWithFacebook(locale: S.of(context));
-                successSnackBar(
-                  context: context,
-                  message: S.of(context).login_success,
-                );
               },
             ),
           ],
@@ -123,10 +117,6 @@ class _SigninViewBodyState extends State<SigninViewBody> {
             passwordController: passwordController,
             emailController: emailController,
           );
-      successSnackBar(
-        context: context,
-        message: S.of(context).login_success,
-      );
     }
   }
 }

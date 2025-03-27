@@ -27,6 +27,7 @@ class FillProfileCubit extends Cubit<FillProfileState> {
       lastName: lastNameController.text,
       phoneNumber: phoneNumberController.text,
       grade: grade,
+      oldStudent: true
       // imageUrl: user.photoURL,
     ));
     result.fold((failure) {
