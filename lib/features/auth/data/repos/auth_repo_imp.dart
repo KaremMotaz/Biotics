@@ -159,7 +159,7 @@ class AuthRepoImp extends AuthRepo {
   Future<Either<Failure, StudentEntity>> addStudentData(
       {required StudentEntity studentEntity}) async {
     await databaseService.addData(
-      path: BackendEndpoint.addUserData,
+      path: BackendEndpoint.addStudentData,
       data: StudentModel.fromEntity(studentEntity).toMap(),
       documentId: studentEntity.uid,
     );
@@ -169,7 +169,7 @@ class AuthRepoImp extends AuthRepo {
   @override
   Future<StudentEntity> getStudentData({required String uid}) async {
     var studentData = await databaseService.getData(
-        path: BackendEndpoint.getUsersData, documentId: uid);
+        path: BackendEndpoint.getStudentData, documentId: uid);
     return StudentModel.fromJson(studentData);
   }
 

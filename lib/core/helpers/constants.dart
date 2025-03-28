@@ -1,4 +1,4 @@
-const kIsChooseLanguageViewSeen = "isChooseLanguageViewSeen";
-const kIsDarkMode = "isDarkMode";
-const kLanguageKey = "isLanguageKey";
-
+const String kIsChooseLanguageViewSeen = "isChooseLanguageViewSeen";
+const String kIsDarkMode = "isDarkMode";
+const String kLanguageKey = "isLanguageKey";
+const String kBucketName = "students-images";

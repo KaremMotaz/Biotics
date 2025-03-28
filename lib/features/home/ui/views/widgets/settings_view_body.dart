@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:biocode/core/functions/show_confirm_bar.dart';
 import 'package:biocode/core/helpers/spacing.dart';

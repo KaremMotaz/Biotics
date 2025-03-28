@@ -1,4 +1,5 @@
 class BackendEndpoint {
-  static const addUserData = 'students';
-  static const getUsersData = 'students';
+  static const addStudentData = 'students';
+  static const getStudentData = 'students';
+  static const studentsImages = 'studentsImages';
 }

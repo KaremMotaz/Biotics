@@ -1,4 +1,3 @@
-import 'package:biocode/core/functions/build_snack_bar.dart';
 import 'package:biocode/core/helpers/spacing.dart';
 import 'package:biocode/core/routing/routes.dart';
 import 'package:biocode/core/theming/assets_data.dart';

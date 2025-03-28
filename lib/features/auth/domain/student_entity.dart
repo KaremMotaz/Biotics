@@ -1,6 +1,6 @@
 class StudentEntity {
-  final String email;
-  final String uid;
+  final String? email;
+  final String? uid;
   final String? imageUrl;
   final String? firstName;
   final String? lastName;
@@ -11,8 +11,8 @@ class StudentEntity {
   final bool isPremiumStudent;
 
   StudentEntity({
-    required this.email,
-    required this.uid,
+    this.email,
+    this.uid,
     this.imageUrl,
     this.firstName,
     this.lastName,

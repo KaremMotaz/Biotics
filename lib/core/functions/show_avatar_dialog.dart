@@ -3,6 +3,7 @@ import 'package:biocode/core/helpers/spacing.dart';
 import 'package:biocode/core/theming/app_colors.dart';
 import 'package:biocode/core/theming/styles.dart';
 import 'package:biocode/core/widgets/app_text_button.dart';
+import 'package:biocode/features/auth/ui/manager/fill_profile_cubit/fill_profile_cubit.dart';
 import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -10,7 +11,7 @@ import 'package:go_router/go_router.dart';
 
 void showAvatarsDialog({
   required BuildContext context,
-  required Function(String) onAvatarSelected, // Pass callback
+  required FillProfileCubit fillProfileCubit,
 }) {
   List<String> avatarPaths = List.generate(8, (index) {
     return "assets/avatars/avatar${index + 1}.png";
@@ -82,9 +83,11 @@ void showAvatarsDialog({
                   textStyle: TextStyles.semiBold16.copyWith(
                     color: Colors.white,
                   ),
-                  onPressed: () {
+                  onPressed: () async {
                     if (selectedIndex != null) {
-                      onAvatarSelected(avatarPaths[selectedIndex!]);
+                      fillProfileCubit.selectImage(
+                          image: null, avatarPath: avatarPaths[selectedIndex!]);
+
                       successSnackBar(
                         context: context,
                         message: S.of(context).avatar_selected_successfully,

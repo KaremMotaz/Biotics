@@ -105,9 +105,9 @@ class _FillProfileFormState extends State<FillProfileForm> {
           textStyle: TextStyles.semiBold16.copyWith(
             color: Colors.white,
           ),
-          onPressed: () {
+          onPressed: () async {
             if (formKey.currentState!.validate()) {
-              context.read<FillProfileCubit>().fillProfile(
+              await context.read<FillProfileCubit>().fillProfile(
                     firstNameController: firstNameController,
                     lastNameController: lastNameController,
                     phoneNumberController: phoneNumberController,

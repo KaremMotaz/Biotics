@@ -4,6 +4,7 @@ import 'package:biocode/core/helpers/spacing.dart';
 import 'package:biocode/core/theming/app_colors.dart';
 import 'package:biocode/core/theming/styles.dart';
 import 'package:biocode/core/widgets/app_text_button.dart';
+import 'package:biocode/features/auth/ui/manager/fill_profile_cubit/fill_profile_cubit.dart';
 import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -12,7 +13,7 @@ import 'package:go_router/go_router.dart';
 void chooseImageSourceDialog({
   required BuildContext context,
   required Future<void> Function() pickImageFromGallery,
-  required Function(String) onAvatarSelected, // Pass callback
+  required FillProfileCubit fillProfileCubit,
 }) {
   showDialog(
     context: context,
@@ -37,12 +38,10 @@ void chooseImageSourceDialog({
                   onPressed: () {
                     GoRouter.of(context).pop();
                   },
-                  icon: Icon(
-                    Icons.close_rounded,
-                    color: Theme.of(context).brightness == Brightness.dark
-                        ? AppColors.lighterGray
-                        : AppColors.darkModeGray
-                  ),
+                  icon: Icon(Icons.close_rounded,
+                      color: Theme.of(context).brightness == Brightness.dark
+                          ? AppColors.lighterGray
+                          : AppColors.darkModeGray),
                 ),
               ),
               AppTextButton(
@@ -55,7 +54,7 @@ void chooseImageSourceDialog({
                   GoRouter.of(context).pop();
                   showAvatarsDialog(
                     context: context,
-                    onAvatarSelected: onAvatarSelected,
+                    fillProfileCubit: fillProfileCubit,
                   );
                 },
               ),
@@ -66,8 +65,8 @@ void chooseImageSourceDialog({
                 textStyle: TextStyles.semiBold16.copyWith(
                   color: Colors.white,
                 ),
-                onPressed: () async {
-                  await pickImageFromGallery();
+                onPressed: () {
+                  pickImageFromGallery;
                   if (context.mounted) {
                     successSnackBar(
                       context: context,
