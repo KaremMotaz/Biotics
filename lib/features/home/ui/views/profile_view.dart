@@ -13,6 +13,7 @@ class ProfileView extends StatelessWidget {
           "Profile",
           style: TextStyles.bold18,
         ),
+        centerTitle: true,
       ),
       body: const ProfileViewBody(),
     );
