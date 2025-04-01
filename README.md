@@ -31,6 +31,7 @@ I developed a fully functional e-learning application focused on biology educati
 - Cached images for faster load times
 
 ## Preview
+#### Splash Screen
 ![Splash Screen](assets/Biotics_app_presentation/1.png)
 ![Change Language Screen](assets/Biotics_app_presentation/2.png)
 ![Onboarding Screen](assets/Biotics_app_presentation/3.png)
