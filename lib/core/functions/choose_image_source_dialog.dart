@@ -22,7 +22,7 @@ void chooseImageSourceDialog({
         child: Container(
           padding: EdgeInsetsDirectional.symmetric(horizontal: 20.w),
           width: 180.w,
-          height: 200.h,
+          height: 220.h,
           decoration: BoxDecoration(
             borderRadius: const BorderRadius.all(Radius.circular(20)),
             color: Theme.of(context).brightness == Brightness.dark
@@ -33,7 +33,7 @@ void chooseImageSourceDialog({
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Align(
-                alignment: Alignment.topRight,
+                alignment: AlignmentDirectional.topEnd,
                 child: IconButton(
                   onPressed: () {
                     GoRouter.of(context).pop();
@@ -44,6 +44,7 @@ void chooseImageSourceDialog({
                           : AppColors.darkModeGray),
                 ),
               ),
+              verticalSpace(10),
               AppTextButton(
                 buttonText: S.of(context).from_avatars,
                 backgroundColor: AppColors.gray,

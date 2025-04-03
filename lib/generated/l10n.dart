@@ -1244,6 +1244,136 @@ class S {
   String get cancel {
     return Intl.message('Cancel', name: 'cancel', desc: '', args: []);
   }
+
+  /// `Profile`
+  String get profile_appbar {
+    return Intl.message('Profile', name: 'profile_appbar', desc: '', args: []);
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message('Save', name: 'save', desc: '', args: []);
+  }
+
+  /// `Name`
+  String get name {
+    return Intl.message('Name', name: 'name', desc: '', args: []);
+  }
+
+  /// `Enter your name :`
+  String get enter_name_title {
+    return Intl.message(
+      'Enter your name :',
+      name: 'enter_name_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your name`
+  String get name_hint {
+    return Intl.message(
+      'Enter your name',
+      name: 'name_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your name`
+  String get name_validation {
+    return Intl.message(
+      'Please enter your name',
+      name: 'name_validation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone`
+  String get phone {
+    return Intl.message('Phone', name: 'phone', desc: '', args: []);
+  }
+
+  /// `Enter your Phone Number :`
+  String get enter_phone_title {
+    return Intl.message(
+      'Enter your Phone Number :',
+      name: 'enter_phone_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your phone number `
+  String get phone_hint {
+    return Intl.message(
+      'Enter your phone number ',
+      name: 'phone_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your phone number`
+  String get phone_validation {
+    return Intl.message(
+      'Please enter your phone number',
+      name: 'phone_validation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message('Password', name: 'password', desc: '', args: []);
+  }
+
+  /// `Enter your current email :`
+  String get enter_email_title {
+    return Intl.message(
+      'Enter your current email :',
+      name: 'enter_email_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter current email`
+  String get email_validation {
+    return Intl.message(
+      'Please enter current email',
+      name: 'email_validation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change Password ?`
+  String get change_password {
+    return Intl.message(
+      'Change Password ?',
+      name: 'change_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to change your password ?`
+  String get confirm_change_password {
+    return Intl.message(
+      'Are you sure you want to change your password ?',
+      name: 'confirm_change_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yes`
+  String get yes {
+    return Intl.message('Yes', name: 'yes', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

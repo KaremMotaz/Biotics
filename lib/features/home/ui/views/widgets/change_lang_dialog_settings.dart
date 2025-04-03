@@ -24,7 +24,7 @@ class ChangeLangDialogSettings extends StatelessWidget {
           child: Column(
             children: [
               Align(
-                alignment: Alignment.topRight,
+                alignment: AlignmentDirectional.centerEnd,
                 child: IconButton(
                   onPressed: () {
                     GoRouter.of(context).pop();

@@ -42,6 +42,12 @@ class MessageLookup extends MessageLookupByLibrary {
       "Your Biology Journey Starts Here",
     ),
     "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
+    "change_password": MessageLookupByLibrary.simpleMessage(
+      "Change Password ?",
+    ),
+    "confirm_change_password": MessageLookupByLibrary.simpleMessage(
+      "Are you sure you want to change your password ?",
+    ),
     "continueButton": MessageLookupByLibrary.simpleMessage("Continue"),
     "create_account": MessageLookupByLibrary.simpleMessage("Create Account"),
     "create_account_button": MessageLookupByLibrary.simpleMessage(
@@ -72,8 +78,20 @@ class MessageLookup extends MessageLookupByLibrary {
       "Please enter a valid email",
     ),
     "email_label": MessageLookupByLibrary.simpleMessage("Email"),
+    "email_validation": MessageLookupByLibrary.simpleMessage(
+      "Please enter current email",
+    ),
     "english": MessageLookupByLibrary.simpleMessage("English"),
     "enter_email": MessageLookupByLibrary.simpleMessage("Enter your email"),
+    "enter_email_title": MessageLookupByLibrary.simpleMessage(
+      "Enter your current email :",
+    ),
+    "enter_name_title": MessageLookupByLibrary.simpleMessage(
+      "Enter your name :",
+    ),
+    "enter_phone_title": MessageLookupByLibrary.simpleMessage(
+      "Enter your Phone Number :",
+    ),
     "error": MessageLookupByLibrary.simpleMessage("Error"),
     "explore_biology": MessageLookupByLibrary.simpleMessage(
       "Explore The\n Wonders Of Biology",
@@ -147,6 +165,11 @@ class MessageLookup extends MessageLookupByLibrary {
       "Are you sure you want to log out?",
     ),
     "logout_title": MessageLookupByLibrary.simpleMessage("Log Out ?"),
+    "name": MessageLookupByLibrary.simpleMessage("Name"),
+    "name_hint": MessageLookupByLibrary.simpleMessage("Enter your name"),
+    "name_validation": MessageLookupByLibrary.simpleMessage(
+      "Please enter your name",
+    ),
     "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
       "A network error occurred. Check your connection.",
     ),
@@ -182,6 +205,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "outOfRange": MessageLookupByLibrary.simpleMessage(
       "The value provided is out of range.",
     ),
+    "password": MessageLookupByLibrary.simpleMessage("Password"),
     "password_empty_error": MessageLookupByLibrary.simpleMessage(
       "Please enter your password",
     ),
@@ -210,6 +234,13 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "permissionDenied": MessageLookupByLibrary.simpleMessage(
       "You do not have permission to perform this action.",
+    ),
+    "phone": MessageLookupByLibrary.simpleMessage("Phone"),
+    "phone_hint": MessageLookupByLibrary.simpleMessage(
+      "Enter your phone number ",
+    ),
+    "phone_validation": MessageLookupByLibrary.simpleMessage(
+      "Please enter your phone number",
     ),
     "pleaseEnterFirstName": MessageLookupByLibrary.simpleMessage(
       "Please enter your first name",
@@ -244,6 +275,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "preferredLanguage": MessageLookupByLibrary.simpleMessage(
       "What is your preferred language?",
     ),
+    "profile_appbar": MessageLookupByLibrary.simpleMessage("Profile"),
     "providerAlreadyLinked": MessageLookupByLibrary.simpleMessage(
       "This provider is already linked to the account.",
     ),
@@ -257,6 +289,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "resourceExhausted": MessageLookupByLibrary.simpleMessage(
       "Too many requests. Please try again later.",
     ),
+    "save": MessageLookupByLibrary.simpleMessage("Save"),
     "secondPreparatory": MessageLookupByLibrary.simpleMessage(
       "Second preparatory grade",
     ),
@@ -328,6 +361,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "wrongPassword": MessageLookupByLibrary.simpleMessage(
       "The password is incorrect.",
     ),
+    "yes": MessageLookupByLibrary.simpleMessage("Yes"),
     "yourPhoneNumber": MessageLookupByLibrary.simpleMessage(
       "Your Phone Number",
     ),

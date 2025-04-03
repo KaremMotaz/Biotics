@@ -130,5 +130,25 @@
   "logout_confirmation": "هل أنت متأكد أنك تريد تسجيل الخروج؟",
   "logout_title": "تسجيل الخروج؟",
   "logout_button": "خروج",
-  "cancel": "إلغاء"
+  "cancel": "إلغاء",
+  "profile_appbar": "الملف الشخصي",
+  "save": "حفظ",
+  "enterYourName": "أدخل اسمك :",
+  "enterYourNameHint": "أدخل اسمك",
+  "enterYourNameValidation": "يرجى إدخال اسمك",
+  "name": "الاسم",
+  "enter_name_title": "ادخل اسمك :",
+  "name_hint": "ادخل اسمك",
+  "name_validation": " يرجى إدخال اسمك",
+  "phone": "الهاتف",
+  "enter_phone_title": "ادخل رقم هاتفك :",
+  "phone_hint": "ادخل رقم هاتفك",
+  "phone_validation": "يرجى إدخال رقم هاتفك",
+  "password": "كلمة المرور",
+  "enter_email_title": "ادخل ايميلك الحالي :",
+  "email_validation": "يرجي ادخال ايميلك",
+  "change_password": "تغيير كلمة المرور ؟",
+  "confirm_change_password": "هل أنت متأكد أنك تريد تغيير كلمة المرور ؟",
+  "yes": "نعم"
+
 }

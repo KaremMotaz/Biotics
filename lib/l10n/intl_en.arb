@@ -130,5 +130,21 @@
   "logout_confirmation": "Are you sure you want to log out?",
   "logout_title": "Log Out ?",
   "logout_button": "Log Out",
-  "cancel": "Cancel"
+  "cancel": "Cancel",
+  "profile_appbar": "Profile",
+  "save": "Save",
+  "name": "Name",
+  "enter_name_title": "Enter your name :",
+  "name_hint": "Enter your name",
+  "name_validation": "Please enter your name",
+  "phone": "Phone",
+  "enter_phone_title": "Enter your Phone Number :",
+  "phone_hint": "Enter your phone number ",
+  "phone_validation": "Please enter your phone number",
+  "password": "Password",
+  "enter_email_title": "Enter your current email :",
+  "email_validation": "Please enter current email",
+  "change_password": "Change Password ?",
+  "confirm_change_password": "Are you sure you want to change your password ?",
+  "yes": "Yes"
 }

@@ -33,7 +33,7 @@ void showAvatarsDialog({
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Align(
-                  alignment: Alignment.topRight,
+                  alignment: AlignmentDirectional.centerEnd,
                   child: IconButton(
                     onPressed: () {
                       GoRouter.of(context).pop();
@@ -41,8 +41,10 @@ void showAvatarsDialog({
                     icon: const Icon(Icons.close_rounded),
                   ),
                 ),
-                Text(S.of(context).select_your_avatar,
-                    style: TextStyles.bold18),
+                Text(
+                  S.of(context).select_your_avatar,
+                  style: TextStyles.bold18,
+                ),
                 verticalSpace(20),
                 Expanded(
                   child: StatefulBuilder(builder: (context, setState) {

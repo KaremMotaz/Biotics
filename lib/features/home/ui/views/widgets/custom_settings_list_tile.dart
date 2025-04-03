@@ -20,19 +20,21 @@ class CustomSettingsListTile extends StatelessWidget {
   final IconData icon;
 
   @override
+
   Widget build(BuildContext context) {
     return ListTile(
       leading: Container(
-          padding: const EdgeInsets.all(9),
-          decoration: BoxDecoration(
-            color: bgIconcolor,
-            shape: BoxShape.circle,
-          ),
-          child: Icon(
-            icon,
-            size: 18.w,
-            color: iconcolor,
-          )),
+        padding: EdgeInsets.symmetric(horizontal: 9.w, vertical: 9.h),
+        decoration: BoxDecoration(
+          color: bgIconcolor,
+          shape: BoxShape.circle,
+        ),
+        child: Icon(
+          icon,
+          size: 18.w,
+          color: iconcolor,
+        ),
+      ),
       title: Text(title, style: TextStyles.bold18),
       trailing: trailing,
       onTap: onTap,

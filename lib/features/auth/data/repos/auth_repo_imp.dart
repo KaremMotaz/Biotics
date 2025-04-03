@@ -1,9 +1,13 @@
+import 'dart:convert';
+
 import 'package:biocode/core/errors/auth_failure.dart';
 import 'package:biocode/core/errors/failure.dart';
 import 'package:biocode/core/errors/firestore_failure.dart';
 import 'package:biocode/core/helpers/backend_endpoint.dart';
+import 'package:biocode/core/helpers/constants.dart';
 import 'package:biocode/core/services/data_service.dart';
 import 'package:biocode/core/services/firebase_auth_service.dart';
+import 'package:biocode/core/services/shared_preferences_singleton.dart';
 import 'package:biocode/features/auth/data/models/student_model.dart';
 import 'package:biocode/features/auth/domain/auth_repo.dart';
 import 'package:biocode/features/auth/domain/student_entity.dart';
@@ -174,7 +178,8 @@ class AuthRepoImp extends AuthRepo {
   }
 
   @override
-  Future saveStudentData({required StudentEntity studentEntity}) {
-    throw UnimplementedError();
+  Future saveStudentData({required StudentEntity studentEntity}) async {
+    var jsonData = jsonEncode(StudentModel.fromEntity(studentEntity).toMap());
+    await Prefs.setString(kStudentData, jsonData);
   }
 }

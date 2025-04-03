@@ -25,7 +25,7 @@ showConfirmDialog({
           padding: EdgeInsetsDirectional.only(
               start: 30.w, end: 30.w, top: 24.h, bottom: 24.h),
           child: SizedBox(
-            height: heightOfDialog ?? 220.h,
+            height: heightOfDialog ?? 210.h,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -59,12 +59,12 @@ showConfirmDialog({
                       child: AppTextButton(
                         buttonText: cancelButtonText ?? S.of(context).cancel,
                         backgroundColor: const Color(0xffeaeaec),
-                        verticalPadding: 17,
-                        buttonHieght: 58,
+                        verticalPadding: 10,
+                        buttonHieght: 30,
                         borderRadius: 12,
                         textStyle: TextStyles.semiBold16.copyWith(
                           color: AppColors.darkModeGray,
-                          fontSize: 18,
+                          fontSize: 16,
                         ),
                         onPressed: () {
                           GoRouter.of(context).pop();
@@ -76,12 +76,12 @@ showConfirmDialog({
                       child: AppTextButton(
                         buttonText: buttonText,
                         backgroundColor: buttonColor,
-                        verticalPadding: 17,
-                        buttonHieght: 58,
+                        verticalPadding: 10,
+                        buttonHieght: 30,
                         borderRadius: 12,
                         textStyle: TextStyles.semiBold16.copyWith(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 16,
                         ),
                         onPressed: onPressed,
                       ),

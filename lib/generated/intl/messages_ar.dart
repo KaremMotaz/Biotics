@@ -42,6 +42,12 @@ class MessageLookup extends MessageLookupByLibrary {
       "رحلتك مع علم الأحياء تبدأ من هنا",
     ),
     "cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
+    "change_password": MessageLookupByLibrary.simpleMessage(
+      "تغيير كلمة المرور ؟",
+    ),
+    "confirm_change_password": MessageLookupByLibrary.simpleMessage(
+      "هل أنت متأكد أنك تريد تغيير كلمة المرور ؟",
+    ),
     "continueButton": MessageLookupByLibrary.simpleMessage("أستمر"),
     "create_account": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
     "create_account_button": MessageLookupByLibrary.simpleMessage(
@@ -72,9 +78,19 @@ class MessageLookup extends MessageLookupByLibrary {
       "يرجى إدخال بريد إلكتروني صحيح",
     ),
     "email_label": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+    "email_validation": MessageLookupByLibrary.simpleMessage(
+      "يرجي ادخال ايميلك",
+    ),
     "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
     "enter_email": MessageLookupByLibrary.simpleMessage(
       "أدخل بريدك الإلكتروني",
+    ),
+    "enter_email_title": MessageLookupByLibrary.simpleMessage(
+      "ادخل ايميلك الحالي :",
+    ),
+    "enter_name_title": MessageLookupByLibrary.simpleMessage("ادخل اسمك :"),
+    "enter_phone_title": MessageLookupByLibrary.simpleMessage(
+      "ادخل رقم هاتفك :",
     ),
     "error": MessageLookupByLibrary.simpleMessage("خطأ"),
     "explore_biology": MessageLookupByLibrary.simpleMessage(
@@ -153,6 +169,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "هل أنت متأكد أنك تريد تسجيل الخروج؟",
     ),
     "logout_title": MessageLookupByLibrary.simpleMessage("تسجيل الخروج؟"),
+    "name": MessageLookupByLibrary.simpleMessage("الاسم"),
+    "name_hint": MessageLookupByLibrary.simpleMessage("ادخل اسمك"),
+    "name_validation": MessageLookupByLibrary.simpleMessage(" يرجى إدخال اسمك"),
     "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
       "حدث خطأ في الشبكة. تحقق من اتصالك.",
     ),
@@ -186,6 +205,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "outOfRange": MessageLookupByLibrary.simpleMessage(
       "القيمة المدخلة خارج النطاق المسموح به.",
     ),
+    "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
     "password_empty_error": MessageLookupByLibrary.simpleMessage(
       "يرجى إدخال كلمة المرور",
     ),
@@ -214,6 +234,11 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "permissionDenied": MessageLookupByLibrary.simpleMessage(
       "ليس لديك الصلاحية لتنفيذ هذا الإجراء.",
+    ),
+    "phone": MessageLookupByLibrary.simpleMessage("الهاتف"),
+    "phone_hint": MessageLookupByLibrary.simpleMessage("ادخل رقم هاتفك"),
+    "phone_validation": MessageLookupByLibrary.simpleMessage(
+      "يرجى إدخال رقم هاتفك",
     ),
     "pleaseEnterFirstName": MessageLookupByLibrary.simpleMessage(
       "يرجى ادخال الاسم الاول",
@@ -248,6 +273,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "preferredLanguage": MessageLookupByLibrary.simpleMessage(
       "ما هي لغتك المفضلة؟",
     ),
+    "profile_appbar": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
     "providerAlreadyLinked": MessageLookupByLibrary.simpleMessage(
       "تم ربط هذا المزود بالفعل بالحساب.",
     ),
@@ -261,6 +287,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "resourceExhausted": MessageLookupByLibrary.simpleMessage(
       "تم تجاوز الحد المسموح للطلبات. يرجى المحاولة لاحقًا.",
     ),
+    "save": MessageLookupByLibrary.simpleMessage("حفظ"),
     "secondPreparatory": MessageLookupByLibrary.simpleMessage(
       "الصف الثاني الإعدادي",
     ),
@@ -332,6 +359,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "wrongPassword": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور غير صحيحة.",
     ),
+    "yes": MessageLookupByLibrary.simpleMessage("نعم"),
     "yourPhoneNumber": MessageLookupByLibrary.simpleMessage("رقم هاتفك"),
   };
 }
