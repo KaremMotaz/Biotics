@@ -12,14 +12,14 @@ class SignInView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: BlocProvider<SigninCubit>(
-        create: (context) => SigninCubit(
-          getIt.get<AuthRepo>(),
-        ),
-        child: Scaffold(
-          appBar: buildAppBar(title: S.of(context).Sign_in_title),
-          body: const SigninViewBodyBlocConsumer(),
+    return BlocProvider<SigninCubit>(
+      create: (context) => SigninCubit(
+        getIt.get<AuthRepo>(),
+      ),
+      child: Scaffold(
+        appBar: buildAppBar(title: S.of(context).Sign_in_title),
+        body: const SafeArea(
+          child: SigninViewBodyBlocConsumer(),
         ),
       ),
     );

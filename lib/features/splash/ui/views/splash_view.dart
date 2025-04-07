@@ -14,29 +14,29 @@ class SplashView extends StatefulWidget {
 }
 
 class _SplashViewState extends State<SplashView> {
-
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: BlocProvider(
-        create: (context) => SigninCubit(
-          getIt.get<AuthRepo>(),
-        ),
-        child: Builder(builder: (context) {
-          WidgetsBinding.instance.addPostFrameCallback((_) async {
-            final isOldStudent = await BlocProvider.of<SigninCubit>(context)
-                .showUserIsOldOrNot();
-            if (!context.mounted) return;
-            excuteNavigation(context: context, isOldStudent: isOldStudent);
-          });
-          return const Scaffold(
-            body: Center(
-                child: CircularProgressIndicator(
-              color: AppColors.mainBlue,
-            )),
-          );
-        }),
+    return BlocProvider(
+      create: (context) => SigninCubit(
+        getIt.get<AuthRepo>(),
       ),
+      child: Builder(builder: (context) {
+        WidgetsBinding.instance.addPostFrameCallback((_) async {
+          final isOldStudent =
+              await BlocProvider.of<SigninCubit>(context).showUserIsOldOrNot();
+          if (!context.mounted) return;
+          excuteNavigation(context: context, isOldStudent: isOldStudent);
+        });
+        return const Scaffold(
+          body: SafeArea(
+            child: Center(
+              child: CircularProgressIndicator(
+                color: AppColors.mainBlue,
+              ),
+            ),
+          ),
+        );
+      }),
     );
   }
 }

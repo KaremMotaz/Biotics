@@ -8,10 +8,10 @@ class OTPVerificationView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        appBar: buildAppBar(title: S.of(context).otp_appbar_title),
-        body: const OtpViewBodyBlocConsumer(),
+    return Scaffold(
+      appBar: buildAppBar(title: S.of(context).otp_appbar_title),
+      body: const SafeArea(
+        child: OtpViewBodyBlocConsumer(),
       ),
     );
   }
