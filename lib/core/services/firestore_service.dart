@@ -1,3 +1,4 @@
+import 'package:biocode/core/helpers/backend_endpoint.dart';
 import 'package:biocode/core/services/data_service.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -33,6 +34,15 @@ class FirestoreService implements DatabaseService {
       }).toList();
     }
   }
+
+  // @override
+  // DocumentSnapshot<Map<String, dynamic>> getStudentData({required String uid}) {
+  //   return     firestore.collection('users').doc(uid).snapshots().listen((snapshot) {
+  //     if (snapshot.exists) {
+  //       emit(UserModel.fromMap(snapshot.data()!));
+  //     }
+  //   });
+  // }
 
   @override
   Future<bool> checkIfDataExists({

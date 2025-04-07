@@ -12,15 +12,15 @@ class FillProfileView extends StatelessWidget {
   const FillProfileView({super.key});
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: BlocProvider<FillProfileCubit>(
-        create: (context) => FillProfileCubit(
-          getIt.get<AuthRepo>(),
-          getIt.get<ImagesRepo>(),
-        ),
-        child: Scaffold(
-          appBar: buildAppBar(title: S.of(context).fillProfileAppBar),
-          body: const FillProfileViewBodyBlocConsumer(),
+    return BlocProvider<FillProfileCubit>(
+      create: (context) => FillProfileCubit(
+        getIt.get<AuthRepo>(),
+        getIt.get<ImagesRepo>(),
+      ),
+      child: Scaffold(
+        appBar: buildAppBar(title: S.of(context).fillProfileAppBar),
+        body: const SafeArea(
+          child: FillProfileViewBodyBlocConsumer(),
         ),
       ),
     );

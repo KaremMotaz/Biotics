@@ -12,20 +12,20 @@ class SettingsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: BlocProvider<LogOutCubit>(
-        create: (context) => LogOutCubit(
-          getIt.get<AuthRepo>(),
-        ),
-        child: Scaffold(
-          appBar: AppBar(
-            title: Text(
-              S.of(context).settingsAppbarTitle,
-              style: TextStyles.bold18,
-            ),
-            centerTitle: true,
+    return BlocProvider<LogOutCubit>(
+      create: (context) => LogOutCubit(
+        getIt.get<AuthRepo>(),
+      ),
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text(
+            S.of(context).settingsAppbarTitle,
+            style: TextStyles.bold18,
           ),
-          body: const SettingsViewBody(),
+          centerTitle: true,
+        ),
+        body: const SafeArea(
+          child: SettingsViewBody(),
         ),
       ),
     );

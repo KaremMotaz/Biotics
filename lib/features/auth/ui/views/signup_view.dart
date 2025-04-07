@@ -12,14 +12,14 @@ class SignUpView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: BlocProvider<SignupCubit>(
-        create: (context) => SignupCubit(
-          getIt.get<AuthRepo>(),
-        ),
-        child: Scaffold(
-          appBar: buildAppBar(title: S.of(context).signup_appbar_title),
-          body: const SignupViewBodyBlocConsumer(),
+    return BlocProvider<SignupCubit>(
+      create: (context) => SignupCubit(
+        getIt.get<AuthRepo>(),
+      ),
+      child: Scaffold(
+        appBar: buildAppBar(title: S.of(context).signup_appbar_title),
+        body: const SafeArea(
+          child: SignupViewBodyBlocConsumer(),
         ),
       ),
     );
