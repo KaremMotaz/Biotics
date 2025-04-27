@@ -1,9 +1,10 @@
-import 'package:biocode/core/theming/assets_data.dart';
-import 'package:biocode/core/theming/app_colors.dart';
-import 'package:biocode/core/theming/styles.dart';
-import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../../core/theming/app_colors.dart';
+import '../../../../../core/theming/assets_data.dart';
+import '../../../../../core/theming/styles.dart';
+import '../../../../../generated/l10n.dart';
 
 class TeacherImageAndText extends StatelessWidget {
   const TeacherImageAndText({super.key});

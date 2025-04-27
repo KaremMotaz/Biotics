@@ -1,9 +1,10 @@
-import 'package:biocode/core/theming/assets_data.dart';
-import 'package:biocode/core/theming/app_colors.dart';
-import 'package:biocode/core/theming/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+
+import '../../../../../core/theming/app_colors.dart';
+import '../../../../../core/theming/assets_data.dart';
+import '../../../../../core/theming/font_weight_helper.dart';
 
 class BioLogoAndName extends StatelessWidget {
   const BioLogoAndName({super.key});

@@ -1,6 +1,6 @@
-import 'package:biocode/core/functions/build_snack_bar.dart';
-import 'package:biocode/features/auth/ui/manager/forgot_password_cubit/forgot_password_cubit.dart';
-import 'package:biocode/features/auth/ui/views/widgets/forgot_password_view_body.dart';
+import '../../../../../core/functions/build_snack_bar.dart';
+import '../../manager/forgot_password_cubit/forgot_password_cubit.dart';
+import 'forgot_password_view_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';

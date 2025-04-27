@@ -1,5 +1,5 @@
-import 'package:biocode/features/auth/domain/auth_repo.dart';
-import 'package:biocode/generated/l10n.dart';
+import '../../../domain/auth_repo.dart';
+import '../../../../../generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

@@ -1,12 +1,13 @@
-import 'package:biocode/core/repos/images_repo/images_repo.dart';
-import 'package:biocode/core/services/get_it_service.dart';
-import 'package:biocode/core/theming/styles.dart';
-import 'package:biocode/features/auth/domain/auth_repo.dart';
-import 'package:biocode/features/auth/ui/manager/fill_profile_cubit/fill_profile_cubit.dart';
-import 'package:biocode/features/home/ui/views/widgets/profile_view_body.dart';
-import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../../core/repos/images_repo/images_repo.dart';
+import '../../../../core/services/get_it_service.dart';
+import '../../../../core/theming/styles.dart';
+import '../../../../generated/l10n.dart';
+import '../../../auth/domain/auth_repo.dart';
+import '../../../auth/ui/manager/fill_profile_cubit/fill_profile_cubit.dart';
+import 'widgets/profile_view_body.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({super.key});

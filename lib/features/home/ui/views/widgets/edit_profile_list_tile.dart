@@ -1,6 +1,7 @@
-import 'package:biocode/core/theming/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../../core/theming/styles.dart';
 
 class EditProfileListTile extends StatelessWidget {
   const EditProfileListTile({

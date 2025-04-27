@@ -1,19 +1,20 @@
 import 'dart:convert';
 
-import 'package:biocode/core/errors/auth_failure.dart';
-import 'package:biocode/core/errors/failure.dart';
-import 'package:biocode/core/errors/firestore_failure.dart';
-import 'package:biocode/core/helpers/backend_endpoint.dart';
-import 'package:biocode/core/helpers/constants.dart';
-import 'package:biocode/core/services/data_service.dart';
-import 'package:biocode/core/services/firebase_auth_service.dart';
-import 'package:biocode/core/services/shared_preferences_singleton.dart';
-import 'package:biocode/features/auth/data/models/student_model.dart';
-import 'package:biocode/features/auth/domain/auth_repo.dart';
-import 'package:biocode/features/auth/domain/student_entity.dart';
-import 'package:biocode/generated/l10n.dart';
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+
+import '../../../../core/errors/auth_failure.dart';
+import '../../../../core/errors/failure.dart';
+import '../../../../core/errors/firestore_failure.dart';
+import '../../../../core/helpers/backend_endpoint.dart';
+import '../../../../core/helpers/constants.dart';
+import '../../../../core/services/data_service.dart';
+import '../../../../core/services/firebase_auth_service.dart';
+import '../../../../core/services/shared_preferences_singleton.dart';
+import '../../../../generated/l10n.dart';
+import '../../domain/auth_repo.dart';
+import '../../domain/student_entity.dart';
+import '../models/student_model.dart';
 
 class AuthRepoImp extends AuthRepo {
   final FirebaseAuthService firebaseAuthService;
@@ -160,8 +161,9 @@ class AuthRepoImp extends AuthRepo {
   }
 
   @override
-  Future<Either<Failure, StudentEntity>> addStudentData(
-      {required StudentEntity studentEntity}) async {
+  Future<Either<Failure, StudentEntity>> addStudentData({
+    required StudentEntity studentEntity,
+  }) async {
     await databaseService.addData(
       path: BackendEndpoint.addStudentData,
       data: StudentModel.fromEntity(studentEntity).toMap(),
@@ -172,14 +174,15 @@ class AuthRepoImp extends AuthRepo {
 
   @override
   Future<StudentEntity> getStudentData({required String uid}) async {
-    var studentData = await databaseService.getData(
+    Map<String, dynamic> studentData = await databaseService.getData(
         path: BackendEndpoint.getStudentData, documentId: uid);
     return StudentModel.fromJson(studentData);
   }
 
   @override
   Future saveStudentData({required StudentEntity studentEntity}) async {
-    var jsonData = jsonEncode(StudentModel.fromEntity(studentEntity).toMap());
+    String jsonData =
+        jsonEncode(StudentModel.fromEntity(studentEntity).toMap());
     await Prefs.setString(kStudentData, jsonData);
   }
 }

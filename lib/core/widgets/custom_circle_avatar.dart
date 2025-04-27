@@ -1,10 +1,12 @@
-import 'package:biocode/core/functions/choose_image_source_dialog.dart';
-import 'package:biocode/core/functions/image_picker_helper.dart';
-import 'package:biocode/core/theming/assets_data.dart';
-import 'package:biocode/features/auth/ui/manager/fill_profile_cubit/fill_profile_cubit.dart';
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'dart:io';
+
+import '../../features/auth/ui/manager/fill_profile_cubit/fill_profile_cubit.dart';
+import '../functions/choose_image_source_dialog.dart';
+import '../functions/image_picker_helper.dart';
+import '../theming/assets_data.dart';
 
 class CustomCircleAvatar extends StatelessWidget {
   const CustomCircleAvatar({super.key});

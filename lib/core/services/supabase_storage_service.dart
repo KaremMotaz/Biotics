@@ -1,10 +1,11 @@
 import 'dart:io';
 
-import 'package:biocode/core/helpers/constants.dart';
-import 'package:biocode/core/helpers/keys.dart';
-import 'package:biocode/core/services/storage_service.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:path/path.dart' as b;
+import 'package:supabase_flutter/supabase_flutter.dart';
+
+import '../helpers/constants.dart';
+import '../helpers/keys.dart';
+import 'storage_service.dart';
 
 class SupabaseStorageService implements StorageService {
   static late Supabase _supabase;

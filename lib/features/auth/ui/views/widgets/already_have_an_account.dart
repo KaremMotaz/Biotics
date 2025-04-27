@@ -1,7 +1,7 @@
-import 'package:biocode/core/routing/routes.dart';
-import 'package:biocode/core/theming/app_colors.dart';
-import 'package:biocode/core/theming/styles.dart';
-import 'package:biocode/generated/l10n.dart';
+import '../../../../../core/routing/routes.dart';
+import '../../../../../core/theming/app_colors.dart';
+import '../../../../../core/theming/styles.dart';
+import '../../../../../generated/l10n.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';

@@ -1,4 +1,4 @@
-import 'package:biocode/features/auth/domain/student_entity.dart';
+import '../../domain/student_entity.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class StudentModel extends StudentEntity {

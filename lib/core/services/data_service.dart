@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 abstract class DatabaseService {
   Future<void> addData({
@@ -11,9 +10,7 @@ abstract class DatabaseService {
     required String path,
     String? documentId,
   });
-  // DocumentSnapshot<Map<String, dynamic>> getStudentData({
-  //   required String uid,
-  // });
+
 
   Future<bool> checkIfDataExists({
     required String path,

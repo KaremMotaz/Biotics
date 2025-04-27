@@ -1,7 +1,8 @@
-import 'package:biocode/core/routing/routes.dart';
-import 'package:biocode/core/theming/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../../../../core/routing/routes.dart';
+import '../../../../../core/theming/styles.dart';
 
 AppBar buildHomeAppBar({required String title, required BuildContext context}) {
   return AppBar(

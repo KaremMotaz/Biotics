@@ -1,6 +1,6 @@
-import 'package:biocode/features/home/ui/views/widgets/custom_home_appbar.dart';
-import 'package:biocode/features/home/ui/views/widgets/home_view_body.dart';
-import 'package:biocode/generated/l10n.dart';
+import 'widgets/custom_home_appbar.dart';
+import 'widgets/home_view_body.dart';
+import '../../../../generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {

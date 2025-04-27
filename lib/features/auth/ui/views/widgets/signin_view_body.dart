@@ -1,19 +1,20 @@
-import 'package:biocode/core/helpers/spacing.dart';
-import 'package:biocode/core/routing/routes.dart';
-import 'package:biocode/core/theming/assets_data.dart';
-import 'package:biocode/core/theming/app_colors.dart';
-import 'package:biocode/core/theming/styles.dart';
-import 'package:biocode/core/widgets/app_text_button.dart';
-import 'package:biocode/features/auth/ui/manager/signin_cubit/signin_cubit.dart';
-import 'package:biocode/features/auth/ui/views/widgets/dont_have_an_account.dart';
-import 'package:biocode/features/auth/ui/views/widgets/sign_in_form.dart';
-import 'package:biocode/features/auth/ui/views/widgets/or_divider.dart';
-import 'package:biocode/features/auth/ui/views/widgets/social_login_button.dart';
-import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../../../../core/helpers/spacing.dart';
+import '../../../../../core/routing/routes.dart';
+import '../../../../../core/theming/app_colors.dart';
+import '../../../../../core/theming/assets_data.dart';
+import '../../../../../core/theming/styles.dart';
+import '../../../../../core/widgets/app_text_button.dart';
+import '../../../../../generated/l10n.dart';
+import '../../manager/signin_cubit/signin_cubit.dart';
+import 'dont_have_an_account.dart';
+import 'or_divider.dart';
+import 'sign_in_form.dart';
+import 'social_login_button.dart';
 
 class SigninViewBody extends StatefulWidget {
   const SigninViewBody({super.key});

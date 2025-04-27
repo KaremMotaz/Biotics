@@ -1,10 +1,12 @@
-import 'package:biocode/core/functions/excute_naviagtion.dart';
-import 'package:biocode/core/services/get_it_service.dart';
-import 'package:biocode/core/theming/app_colors.dart';
-import 'package:biocode/features/auth/domain/auth_repo.dart';
-import 'package:biocode/features/auth/ui/manager/signin_cubit/signin_cubit.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../../core/functions/excute_naviagtion.dart';
+import '../../../../core/services/get_it_service.dart';
+import '../../../../core/theming/app_colors.dart';
+import '../../../auth/domain/auth_repo.dart';
+import '../../../auth/ui/manager/signin_cubit/signin_cubit.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -22,6 +24,7 @@ class _SplashViewState extends State<SplashView> {
       ),
       child: Builder(builder: (context) {
         WidgetsBinding.instance.addPostFrameCallback((_) async {
+    
           final isOldStudent =
               await BlocProvider.of<SigninCubit>(context).showUserIsOldOrNot();
           if (!context.mounted) return;

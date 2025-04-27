@@ -1,10 +1,10 @@
-import 'package:biocode/core/helpers/spacing.dart';
-import 'package:biocode/core/routing/routes.dart';
-import 'package:biocode/core/theming/app_colors.dart';
-import 'package:biocode/core/theming/assets_data.dart';
-import 'package:biocode/core/theming/styles.dart';
-import 'package:biocode/core/widgets/app_text_button.dart';
-import 'package:biocode/generated/l10n.dart';
+import '../../../../../core/helpers/spacing.dart';
+import '../../../../../core/routing/routes.dart';
+import '../../../../../core/theming/app_colors.dart';
+import '../../../../../core/theming/assets_data.dart';
+import '../../../../../core/theming/styles.dart';
+import '../../../../../core/widgets/app_text_button.dart';
+import '../../../../../generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';

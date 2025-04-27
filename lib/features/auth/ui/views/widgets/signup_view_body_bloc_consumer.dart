@@ -1,12 +1,13 @@
-import 'package:biocode/core/functions/build_snack_bar.dart';
-import 'package:biocode/core/routing/routes.dart';
-import 'package:biocode/features/auth/ui/manager/signup_cubit/signup_cubit.dart';
-import 'package:biocode/features/auth/ui/views/widgets/signup_view_body.dart';
-import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
+
+import '../../../../../core/functions/build_snack_bar.dart';
+import '../../../../../core/routing/routes.dart';
+import '../../../../../generated/l10n.dart';
+import '../../manager/signup_cubit/signup_cubit.dart';
+import 'signup_view_body.dart';
 
 class SignupViewBodyBlocConsumer extends StatelessWidget {
   const SignupViewBodyBlocConsumer({super.key});

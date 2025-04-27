@@ -1,7 +1,7 @@
-import 'package:biocode/core/helpers/app_regex.dart';
-import 'package:biocode/core/helpers/spacing.dart';
-import 'package:biocode/core/widgets/app_text_form_field.dart';
-import 'package:biocode/generated/l10n.dart';
+import '../../../../../core/helpers/app_regex.dart';
+import '../../../../../core/helpers/spacing.dart';
+import '../../../../../core/widgets/app_text_form_field.dart';
+import '../../../../../generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class SignInForm extends StatefulWidget {
@@ -66,6 +66,8 @@ class _SignInFormState extends State<SignInForm> {
               ),
             ),
             validator: (value) {
+
+              
               if (value == null || value.isEmpty) {
                 return S.of(context).please_enter_password;
               }

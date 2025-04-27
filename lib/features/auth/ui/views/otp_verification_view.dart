@@ -1,7 +1,8 @@
-import 'package:biocode/core/widgets/custom_app_bar.dart';
-import 'package:biocode/features/auth/ui/views/widgets/otp_view_body_bloc_consumer.dart';
-import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../core/widgets/custom_app_bar.dart';
+import '../../../../generated/l10n.dart';
+import 'widgets/otp_view_body_bloc_consumer.dart';
 
 class OTPVerificationView extends StatelessWidget {
   const OTPVerificationView({super.key});

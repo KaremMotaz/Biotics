@@ -1,13 +1,14 @@
 import 'dart:io';
 
-import 'package:biocode/core/functions/assets_to_file.dart';
-import 'package:biocode/core/repos/images_repo/images_repo.dart';
-import 'package:biocode/core/theming/assets_data.dart';
-import 'package:biocode/features/auth/domain/auth_repo.dart';
-import 'package:biocode/features/auth/domain/student_entity.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../../../core/functions/assets_to_file.dart';
+import '../../../../../core/repos/images_repo/images_repo.dart';
+import '../../../../../core/theming/assets_data.dart';
+import '../../../domain/auth_repo.dart';
+import '../../../domain/student_entity.dart';
 
 part 'fill_profile_state.dart';
 

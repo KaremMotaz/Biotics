@@ -1,16 +1,17 @@
-import 'package:biocode/core/routing/routes.dart';
-import 'package:biocode/features/auth/ui/views/fill_profile_view.dart';
-import 'package:biocode/features/auth/ui/views/forgot_password_view.dart';
-import 'package:biocode/features/auth/ui/views/otp_verification_view.dart';
-import 'package:biocode/features/auth/ui/views/signin_view.dart';
-import 'package:biocode/features/auth/ui/views/signup_view.dart';
-import 'package:biocode/features/splash/ui/views/choose_language_view.dart';
-import 'package:biocode/features/home/ui/views/home_view.dart';
-import 'package:biocode/features/home/ui/views/profile_view.dart';
-import 'package:biocode/features/home/ui/views/settings_view.dart';
-import 'package:biocode/features/on_boarding/ui/views/onboarding_view.dart';
-import 'package:biocode/features/splash/ui/views/splash_view.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../features/auth/ui/views/fill_profile_view.dart';
+import '../../features/auth/ui/views/forgot_password_view.dart';
+import '../../features/auth/ui/views/otp_verification_view.dart';
+import '../../features/auth/ui/views/signin_view.dart';
+import '../../features/auth/ui/views/signup_view.dart';
+import '../../features/home/ui/views/home_view.dart';
+import '../../features/home/ui/views/profile_view.dart';
+import '../../features/home/ui/views/settings_view.dart';
+import '../../features/on_boarding/ui/views/onboarding_view.dart';
+import '../../features/splash/ui/views/choose_language_view.dart';
+import '../../features/splash/ui/views/splash_view.dart';
+import 'routes.dart';
 
 abstract class AppRouter {
   static final router = GoRouter(

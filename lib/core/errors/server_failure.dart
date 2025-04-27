@@ -1,4 +1,4 @@
-import 'package:biocode/core/errors/failure.dart';
+import 'failure.dart';
 
 class ServerFailure extends Failure {
   ServerFailure(super.errMessage);

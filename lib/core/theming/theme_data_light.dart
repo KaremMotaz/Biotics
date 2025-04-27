@@ -1,5 +1,6 @@
-import 'package:biocode/core/theming/app_colors.dart';
 import 'package:flutter/material.dart';
+
+import 'app_colors.dart';
 
 ThemeData getThemeDataLight({required String fontFamily}) {
   return ThemeData(

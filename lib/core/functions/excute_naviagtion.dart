@@ -1,7 +1,7 @@
-import 'package:biocode/core/helpers/constants.dart';
-import 'package:biocode/core/routing/routes.dart';
-import 'package:biocode/core/services/firebase_auth_service.dart';
-import 'package:biocode/core/services/shared_preferences_singleton.dart';
+import '../helpers/constants.dart';
+import '../routing/routes.dart';
+import '../services/firebase_auth_service.dart';
+import '../services/shared_preferences_singleton.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

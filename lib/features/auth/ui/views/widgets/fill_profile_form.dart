@@ -1,14 +1,15 @@
-import 'package:biocode/core/helpers/app_regex.dart';
-import 'package:biocode/core/helpers/spacing.dart';
-import 'package:biocode/core/theming/styles.dart';
-import 'package:biocode/core/widgets/app_text_button.dart';
-import 'package:biocode/core/widgets/app_text_form_field.dart';
-import 'package:biocode/core/widgets/custom_circle_avatar.dart';
-import 'package:biocode/features/auth/ui/manager/fill_profile_cubit/fill_profile_cubit.dart';
-import 'package:biocode/features/auth/ui/views/widgets/custom_drop_down_menu.dart';
-import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../../../core/helpers/app_regex.dart';
+import '../../../../../core/helpers/spacing.dart';
+import '../../../../../core/theming/styles.dart';
+import '../../../../../core/widgets/app_text_button.dart';
+import '../../../../../core/widgets/app_text_form_field.dart';
+import '../../../../../core/widgets/custom_circle_avatar.dart';
+import '../../../../../generated/l10n.dart';
+import '../../manager/fill_profile_cubit/fill_profile_cubit.dart';
+import 'custom_drop_down_menu.dart';
 
 class FillProfileForm extends StatefulWidget {
   const FillProfileForm({super.key});

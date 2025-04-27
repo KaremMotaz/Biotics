@@ -1,19 +1,20 @@
 
-import 'package:biocode/core/functions/show_confirm_bar.dart';
-import 'package:biocode/core/helpers/spacing.dart';
-import 'package:biocode/core/manager/theme_cubit/theme_cubit.dart';
-import 'package:biocode/core/routing/routes.dart';
-import 'package:biocode/core/theming/assets_data.dart';
-import 'package:biocode/core/theming/styles.dart';
-import 'package:biocode/features/auth/ui/manager/cubit/log_out_cubit.dart';
-import 'package:biocode/features/home/ui/views/widgets/change_lang_dialog_settings.dart';
-import 'package:biocode/features/home/ui/views/widgets/custom_settings_list_tile.dart';
-import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../../../../core/functions/show_confirm_bar.dart';
+import '../../../../../core/helpers/spacing.dart';
+import '../../../../../core/manager/theme_cubit/theme_cubit.dart';
+import '../../../../../core/routing/routes.dart';
+import '../../../../../core/theming/assets_data.dart';
+import '../../../../../core/theming/styles.dart';
+import '../../../../../generated/l10n.dart';
+import '../../../../auth/ui/manager/cubit/log_out_cubit.dart';
+import 'change_lang_dialog_settings.dart';
+import 'custom_settings_list_tile.dart';
 
 class SettingsViewBody extends StatelessWidget {
   const SettingsViewBody({super.key});

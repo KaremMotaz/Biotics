@@ -1,12 +1,13 @@
-import 'package:biocode/core/functions/show_confirm_bar.dart';
-import 'package:biocode/core/helpers/spacing.dart';
-import 'package:biocode/core/widgets/custom_circle_avatar.dart';
-import 'package:biocode/features/home/ui/views/widgets/edit_profile_dialog.dart';
-import 'package:biocode/features/home/ui/views/widgets/edit_profile_list_tile.dart';
-import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../../../../core/functions/show_confirm_bar.dart';
+import '../../../../../core/helpers/spacing.dart';
+import '../../../../../core/widgets/custom_circle_avatar.dart';
+import '../../../../../generated/l10n.dart';
+import 'edit_profile_dialog.dart';
+import 'edit_profile_list_tile.dart';
 
 class ProfileViewBody extends StatefulWidget {
   const ProfileViewBody({super.key});

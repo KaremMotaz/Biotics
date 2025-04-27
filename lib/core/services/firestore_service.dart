@@ -1,6 +1,8 @@
-import 'package:biocode/core/helpers/backend_endpoint.dart';
-import 'package:biocode/core/services/data_service.dart';
+import 'dart:developer';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
+
+import 'data_service.dart';
 
 class FirestoreService implements DatabaseService {
   FirebaseFirestore firestore = FirebaseFirestore.instance;
@@ -18,20 +20,21 @@ class FirestoreService implements DatabaseService {
   }
 
   @override
-  Future getData({
+  Future<dynamic> getData({
     required String path,
     String? documentId,
   }) async {
-    if (documentId != null) {
-      DocumentSnapshot<Map<String, dynamic>> data =
-          await firestore.collection(path).doc(documentId).get();
-      return data.data();
-    } else {
-      QuerySnapshot<Map<String, dynamic>> data =
-          await firestore.collection(path).get();
-      return data.docs.map((e) {
-        return e.data();
-      }).toList();
+    try {
+      if (documentId != null) {
+        final data = await firestore.collection(path).doc(documentId).get();
+        return data.data();
+      } else {
+        final data = await firestore.collection(path).get();
+        return data.docs.map((e) => e.data()).toList();
+      }
+    } on FirebaseException catch (e) {
+      log('Firestore getData error: ${e.message}');
+      rethrow;
     }
   }
 

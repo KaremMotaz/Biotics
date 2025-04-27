@@ -1,13 +1,14 @@
-import 'package:biocode/core/repos/images_repo/images_repo.dart';
-import 'package:biocode/core/repos/images_repo/images_repo_impl.dart';
-import 'package:biocode/core/services/data_service.dart';
-import 'package:biocode/core/services/firebase_auth_service.dart';
-import 'package:biocode/core/services/firestore_service.dart';
-import 'package:biocode/core/services/storage_service.dart';
-import 'package:biocode/core/services/supabase_storage_service.dart';
-import 'package:biocode/features/auth/data/repos/auth_repo_imp.dart';
-import 'package:biocode/features/auth/domain/auth_repo.dart';
 import 'package:get_it/get_it.dart';
+
+import '../../features/auth/data/repos/auth_repo_imp.dart';
+import '../../features/auth/domain/auth_repo.dart';
+import '../repos/images_repo/images_repo.dart';
+import '../repos/images_repo/images_repo_impl.dart';
+import 'data_service.dart';
+import 'firebase_auth_service.dart';
+import 'firestore_service.dart';
+import 'storage_service.dart';
+import 'supabase_storage_service.dart';
 
 final getIt = GetIt.instance;
 

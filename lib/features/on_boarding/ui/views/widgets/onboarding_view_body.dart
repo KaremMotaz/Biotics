@@ -1,10 +1,10 @@
-import 'package:biocode/core/helpers/spacing.dart';
-import 'package:biocode/core/routing/routes.dart';
-import 'package:biocode/core/theming/styles.dart';
-import 'package:biocode/core/widgets/app_text_button.dart';
-import 'package:biocode/features/on_boarding/ui/views/widgets/bio_logo_and_name.dart';
-import 'package:biocode/features/on_boarding/ui/views/widgets/teacher_image_and_text.dart';
-import 'package:biocode/generated/l10n.dart';
+import '../../../../../core/helpers/spacing.dart';
+import '../../../../../core/routing/routes.dart';
+import '../../../../../core/theming/styles.dart';
+import '../../../../../core/widgets/app_text_button.dart';
+import 'bio_logo_and_name.dart';
+import 'teacher_image_and_text.dart';
+import '../../../../../generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';

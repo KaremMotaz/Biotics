@@ -1,8 +1,9 @@
-import 'package:biocode/core/helpers/spacing.dart';
-import 'package:biocode/core/theming/app_colors.dart';
-import 'package:biocode/core/theming/styles.dart';
-import 'package:biocode/generated/l10n.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../../core/helpers/spacing.dart';
+import '../../../../../core/theming/app_colors.dart';
+import '../../../../../core/theming/styles.dart';
+import '../../../../../generated/l10n.dart';
 
 class OrDivider extends StatelessWidget {
   const OrDivider({super.key});

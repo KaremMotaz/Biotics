@@ -1,8 +1,8 @@
-import 'package:biocode/core/helpers/spacing.dart';
-import 'package:biocode/core/theming/app_colors.dart';
-import 'package:biocode/core/theming/styles.dart';
-import 'package:biocode/features/auth/ui/views/widgets/fill_profile_form.dart';
-import 'package:biocode/generated/l10n.dart';
+import '../../../../../core/helpers/spacing.dart';
+import '../../../../../core/theming/app_colors.dart';
+import '../../../../../core/theming/styles.dart';
+import 'fill_profile_form.dart';
+import '../../../../../generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

@@ -1,7 +1,8 @@
-import 'package:biocode/core/helpers/constants.dart';
-import 'package:biocode/core/services/shared_preferences_singleton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../helpers/constants.dart';
+import '../../services/shared_preferences_singleton.dart';
 
 class ThemeCubit extends Cubit<ThemeMode> {
   ThemeCubit() : super(ThemeMode.light) {

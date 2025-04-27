@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:biocode/features/auth/ui/manager/fill_profile_cubit/fill_profile_cubit.dart';
+import '../../features/auth/ui/manager/fill_profile_cubit/fill_profile_cubit.dart';
 import 'package:image_picker/image_picker.dart';
 
 Future<void>  pickImageFromGallery(FillProfileCubit cubit) async {

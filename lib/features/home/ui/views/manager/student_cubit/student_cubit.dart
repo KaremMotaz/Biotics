@@ -1,4 +1,4 @@
-import 'package:biocode/features/auth/domain/student_entity.dart';
+import '../../../../../auth/domain/student_entity.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
 

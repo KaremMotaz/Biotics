@@ -1,5 +1,5 @@
-import 'package:biocode/core/errors/failure.dart';
-import 'package:biocode/generated/l10n.dart';
+import '../../generated/l10n.dart';
+import 'failure.dart';
 
 class FirestoreFailure extends Failure {
   FirestoreFailure(super.errMessage);

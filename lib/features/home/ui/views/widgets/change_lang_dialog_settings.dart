@@ -1,8 +1,8 @@
-import 'package:biocode/core/manager/language_cubit/language_cubit.dart';
-import 'package:biocode/core/theming/app_colors.dart';
-import 'package:biocode/core/theming/assets_data.dart';
-import 'package:biocode/features/home/ui/views/widgets/change_language_list_tile.dart';
-import 'package:biocode/generated/l10n.dart';
+import '../../../../../core/manager/language_cubit/language_cubit.dart';
+import '../../../../../core/theming/app_colors.dart';
+import '../../../../../core/theming/assets_data.dart';
+import 'change_language_list_tile.dart';
+import '../../../../../generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

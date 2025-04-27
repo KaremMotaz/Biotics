@@ -1,10 +1,10 @@
 import 'dart:io';
 
-import 'package:biocode/core/errors/failure.dart';
-import 'package:biocode/core/errors/server_failure.dart';
-import 'package:biocode/core/helpers/backend_endpoint.dart';
-import 'package:biocode/core/repos/images_repo/images_repo.dart';
-import 'package:biocode/core/services/storage_service.dart';
+import '../../errors/failure.dart';
+import '../../errors/server_failure.dart';
+import '../../helpers/backend_endpoint.dart';
+import 'images_repo.dart';
+import '../../services/storage_service.dart';
 import 'package:dartz/dartz.dart';
 
 class ImagesRepoImpl implements ImagesRepo {
