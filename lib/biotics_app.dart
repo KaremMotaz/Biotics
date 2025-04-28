@@ -1,4 +1,4 @@
-import 'package:biocode/core/widgets/internet_cubit_handler.dart';
+import 'core/widgets/internet_cubit_handler.dart';
 import 'core/manager/internet_cubit/internet_cubit.dart';
 import 'core/manager/language_cubit/language_cubit.dart';
 import 'core/manager/theme_cubit/theme_cubit.dart';

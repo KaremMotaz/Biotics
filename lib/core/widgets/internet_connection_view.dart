@@ -1,8 +1,8 @@
-import 'package:biocode/core/helpers/spacing.dart';
-import 'package:biocode/core/manager/internet_cubit/internet_cubit.dart';
-import 'package:biocode/core/theming/app_colors.dart';
-import 'package:biocode/core/theming/styles.dart';
-import 'package:biocode/generated/l10n.dart';
+import '../helpers/spacing.dart';
+import '../manager/internet_cubit/internet_cubit.dart';
+import '../theming/app_colors.dart';
+import '../theming/styles.dart';
+import '../../generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';

@@ -1,10 +1,11 @@
+import 'package:flutter/material.dart';
+
 import '../../../../../core/helpers/app_regex.dart';
 import '../../../../../core/helpers/spacing.dart';
 import '../../../../../core/theming/styles.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
-import 'password_validations.dart';
 import '../../../../../generated/l10n.dart';
-import 'package:flutter/material.dart';
+import 'password_validations.dart';
 
 class SignUpForm extends StatefulWidget {
   final TextEditingController emailController;

@@ -1,10 +1,11 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/assets_data.dart';
 import '../../../../core/theming/styles.dart';
-import 'widgets/change_language_section.dart';
 import '../../../../generated/l10n.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'widgets/change_language_section.dart';
 
 class ChooseLanguageView extends StatelessWidget {
   const ChooseLanguageView({super.key});

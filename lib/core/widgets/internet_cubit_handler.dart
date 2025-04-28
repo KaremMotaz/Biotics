@@ -1,5 +1,5 @@
-import 'package:biocode/core/manager/internet_cubit/internet_cubit.dart';
-import 'package:biocode/core/widgets/internet_connection_view.dart';
+import '../manager/internet_cubit/internet_cubit.dart';
+import 'internet_connection_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../helpers/constants.dart';

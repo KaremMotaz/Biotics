@@ -1,7 +1,8 @@
+import 'package:flutter/material.dart';
+
+import '../../generated/l10n.dart';
 import '../helpers/spacing.dart';
 import '../theming/styles.dart';
-import '../../generated/l10n.dart';
-import 'package:flutter/material.dart';
 
 void successSnackBar({required BuildContext context, required String message}) {
   ScaffoldMessenger.of(context).showSnackBar(

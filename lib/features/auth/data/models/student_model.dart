@@ -1,5 +1,6 @@
-import '../../domain/student_entity.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+
+import '../../domain/student_entity.dart';
 
 class StudentModel extends StudentEntity {
   StudentModel({

@@ -1,7 +1,8 @@
+import 'package:flutter/material.dart';
+
+import '../../../../generated/l10n.dart';
 import 'widgets/custom_home_appbar.dart';
 import 'widgets/home_view_body.dart';
-import '../../../../generated/l10n.dart';
-import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});

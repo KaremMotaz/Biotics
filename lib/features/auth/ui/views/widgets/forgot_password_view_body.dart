@@ -1,16 +1,17 @@
-import '../../../../../core/helpers/app_regex.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../../../../../core/functions/build_snack_bar.dart';
+import '../../../../../core/helpers/app_regex.dart';
 import '../../../../../core/helpers/spacing.dart';
 import '../../../../../core/theming/app_colors.dart';
 import '../../../../../core/theming/assets_data.dart';
 import '../../../../../core/theming/styles.dart';
 import '../../../../../core/widgets/app_text_button.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
-import '../../manager/forgot_password_cubit/forgot_password_cubit.dart';
 import '../../../../../generated/l10n.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../manager/forgot_password_cubit/forgot_password_cubit.dart';
 
 class ForgotPasswordViewBody extends StatefulWidget {
   const ForgotPasswordViewBody({super.key});

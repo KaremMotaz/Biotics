@@ -1,13 +1,14 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+
 import '../../../../../core/helpers/spacing.dart';
 import '../../../../../core/routing/routes.dart';
 import '../../../../../core/theming/styles.dart';
 import '../../../../../core/widgets/app_text_button.dart';
+import '../../../../../generated/l10n.dart';
 import 'bio_logo_and_name.dart';
 import 'teacher_image_and_text.dart';
-import '../../../../../generated/l10n.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
 
 class OnboardingViewBody extends StatelessWidget {
   const OnboardingViewBody({super.key});

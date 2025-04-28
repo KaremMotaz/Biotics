@@ -1,14 +1,15 @@
-import 'show_avatar_dialog.dart';
-import 'build_snack_bar.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../features/auth/ui/manager/fill_profile_cubit/fill_profile_cubit.dart';
+import '../../generated/l10n.dart';
 import '../helpers/spacing.dart';
 import '../theming/app_colors.dart';
 import '../theming/styles.dart';
 import '../widgets/app_text_button.dart';
-import '../../features/auth/ui/manager/fill_profile_cubit/fill_profile_cubit.dart';
-import '../../generated/l10n.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
+import 'build_snack_bar.dart';
+import 'show_avatar_dialog.dart';
 
 void chooseImageSourceDialog({
   required BuildContext context,

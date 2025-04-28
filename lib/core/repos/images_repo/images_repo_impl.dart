@@ -1,11 +1,12 @@
 import 'dart:io';
 
+import 'package:dartz/dartz.dart';
+
 import '../../errors/failure.dart';
 import '../../errors/server_failure.dart';
 import '../../helpers/backend_endpoint.dart';
-import 'images_repo.dart';
 import '../../services/storage_service.dart';
-import 'package:dartz/dartz.dart';
+import 'images_repo.dart';
 
 class ImagesRepoImpl implements ImagesRepo {
   final StorageService storageService;
