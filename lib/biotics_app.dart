@@ -1,3 +1,5 @@
+import 'package:biocode/core/widgets/internet_cubit_handler.dart';
+import 'core/manager/internet_cubit/internet_cubit.dart';
 import 'core/manager/language_cubit/language_cubit.dart';
 import 'core/manager/theme_cubit/theme_cubit.dart';
 import 'core/theming/theme_data_dark.dart';
@@ -25,6 +27,9 @@ class BioticsApp extends StatelessWidget {
           BlocProvider(
             create: (_) => LanguageCubit(),
           ),
+          BlocProvider(
+            create: (_) => InternetCubit(),
+          ),
         ],
         child: BlocBuilder<ThemeCubit, ThemeMode>(
           builder: (context, themeMode) {
@@ -48,6 +53,9 @@ class BioticsApp extends StatelessWidget {
                     GlobalCupertinoLocalizations.delegate,
                   ],
                   supportedLocales: S.delegate.supportedLocales,
+                  builder: (context, child) {
+                    return InternetCubitHandler(child: child!);
+                  },
                 );
               },
             );

@@ -121,7 +121,7 @@
   "english": "الإنجليزية",
   "continueButton": "أستمر",
   "homeAppbarTitle": "الرئيسية",
-  "settingsAppbarTitle": "الأعدادات",
+  "settingsAppbarTitle":  "الإعدادات",
   "account": "الحساب",
   "settings": "الإعدادات",
   "dark_mode": "الوضع الداكن",
@@ -149,6 +149,9 @@
   "email_validation": "يرجي ادخال ايميلك",
   "change_password": "تغيير كلمة المرور ؟",
   "confirm_change_password": "هل أنت متأكد أنك تريد تغيير كلمة المرور ؟",
-  "yes": "نعم"
+  "yes": "نعم",
+  "youAreOnline": "أنت متصل بالإنترنت",
+  "noInternetConnection": "لا يوجد اتصال بالإنترنت",
+  "pleaseCheckInternet": "يرجى التحقق من اتصالك بالإنترنت"
 
 }

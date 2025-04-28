@@ -1374,6 +1374,36 @@ class S {
   String get yes {
     return Intl.message('Yes', name: 'yes', desc: '', args: []);
   }
+
+  /// `You are online`
+  String get youAreOnline {
+    return Intl.message(
+      'You are online',
+      name: 'youAreOnline',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No Internet Connection`
+  String get noInternetConnection {
+    return Intl.message(
+      'No Internet Connection',
+      name: 'noInternetConnection',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please check your internet`
+  String get pleaseCheckInternet {
+    return Intl.message(
+      'Please check your internet',
+      name: 'pleaseCheckInternet',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

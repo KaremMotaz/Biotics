@@ -1,7 +1,5 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../../../../core/functions/excute_naviagtion.dart';
 import '../../../../core/services/get_it_service.dart';
 import '../../../../core/theming/app_colors.dart';
@@ -22,24 +20,25 @@ class _SplashViewState extends State<SplashView> {
       create: (context) => SigninCubit(
         getIt.get<AuthRepo>(),
       ),
-      child: Builder(builder: (context) {
-        WidgetsBinding.instance.addPostFrameCallback((_) async {
-    
-          final isOldStudent =
-              await BlocProvider.of<SigninCubit>(context).showUserIsOldOrNot();
-          if (!context.mounted) return;
-          excuteNavigation(context: context, isOldStudent: isOldStudent);
-        });
-        return const Scaffold(
-          body: SafeArea(
-            child: Center(
-              child: CircularProgressIndicator(
-                color: AppColors.mainBlue,
+      child: Builder(
+        builder: (context) {
+          WidgetsBinding.instance.addPostFrameCallback((_) async {
+            final isOldStudent = await BlocProvider.of<SigninCubit>(context)
+                .showUserIsOldOrNot();
+            if (!context.mounted) return;
+            excuteNavigation(context: context, isOldStudent: isOldStudent);
+          });
+          return const Scaffold(
+            body: SafeArea(
+              child: Center(
+                child: CircularProgressIndicator(
+                  color: AppColors.mainBlue,
+                ),
               ),
             ),
-          ),
-        );
-      }),
+          );
+        },
+      ),
     );
   }
 }

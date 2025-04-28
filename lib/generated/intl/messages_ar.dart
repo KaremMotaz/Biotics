@@ -175,6 +175,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
       "حدث خطأ في الشبكة. تحقق من اتصالك.",
     ),
+    "noInternetConnection": MessageLookupByLibrary.simpleMessage(
+      "لا يوجد اتصال بالإنترنت",
+    ),
     "onboarding_title": MessageLookupByLibrary.simpleMessage(
       "تعلم كل شيء من الخلايا إلى النظم البيئية\n مع Biotics",
     ),
@@ -240,6 +243,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "phone_validation": MessageLookupByLibrary.simpleMessage(
       "يرجى إدخال رقم هاتفك",
     ),
+    "pleaseCheckInternet": MessageLookupByLibrary.simpleMessage(
+      "يرجى التحقق من اتصالك بالإنترنت",
+    ),
     "pleaseEnterFirstName": MessageLookupByLibrary.simpleMessage(
       "يرجى ادخال الاسم الاول",
     ),
@@ -304,7 +310,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "الخدمة غير متوفرة حاليًا. يرجى المحاولة لاحقًا.",
     ),
     "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
-    "settingsAppbarTitle": MessageLookupByLibrary.simpleMessage("الأعدادات"),
+    "settingsAppbarTitle": MessageLookupByLibrary.simpleMessage("الإعدادات"),
     "sign_in": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "sign_in_button": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
     "sign_in_facebook": MessageLookupByLibrary.simpleMessage(
@@ -360,6 +366,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "كلمة المرور غير صحيحة.",
     ),
     "yes": MessageLookupByLibrary.simpleMessage("نعم"),
+    "youAreOnline": MessageLookupByLibrary.simpleMessage("أنت متصل بالإنترنت"),
     "yourPhoneNumber": MessageLookupByLibrary.simpleMessage("رقم هاتفك"),
   };
 }

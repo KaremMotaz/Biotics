@@ -11,11 +11,11 @@ void excuteNavigation({required BuildContext context,required bool isOldStudent}
   if (isChooseLanguageViewSeen) {
     bool isLoggedIn = FirebaseAuthService().isLoggedIn();
     if (isLoggedIn && isOldStudent) {
-      GoRouter.of(context).go(Routes.homeView);
+      GoRouter.of(context).pushReplacement(Routes.homeView);
     } else {
-      GoRouter.of(context).go(Routes.signInView);
+      GoRouter.of(context).pushReplacement(Routes.signInView);
     }
   } else {
-    GoRouter.of(context).go(Routes.chooseLanguageView);
+    GoRouter.of(context).pushReplacement(Routes.chooseLanguageView);
   }
 }

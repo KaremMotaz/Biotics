@@ -1,4 +1,3 @@
-import '../../../../../core/routing/routes.dart';
 import '../../../../../core/theming/app_colors.dart';
 import '../../../../../core/theming/styles.dart';
 import '../../../../../generated/l10n.dart';
@@ -25,7 +24,7 @@ class AlreadyHaveAnAccount extends StatelessWidget {
           TextSpan(
             recognizer: TapGestureRecognizer()
               ..onTap = () {
-                GoRouter.of(context).push(Routes.signInView);
+                GoRouter.of(context).pop();
               },
             text: S.of(context).sign_in,
             style: TextStyles.medium16.copyWith(

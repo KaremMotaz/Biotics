@@ -50,7 +50,7 @@ class ChangeLanguageSection extends StatelessWidget {
           ),
           onPressed: () {
             Prefs.setBool(kIsChooseLanguageViewSeen, true);
-            GoRouter.of(context).push(Routes.onBoardingView);
+            GoRouter.of(context).pushReplacement(Routes.onBoardingView);
           },
         )
       ],

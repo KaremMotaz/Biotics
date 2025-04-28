@@ -39,7 +39,7 @@ class OnboardingViewBody extends StatelessWidget {
                       color: Colors.white,
                     ),
                     onPressed: () {
-                      GoRouter.of(context).push(Routes.signInView);
+                      GoRouter.of(context).pushReplacement(Routes.signInView);
                     },
                   )
                 ],

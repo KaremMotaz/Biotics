@@ -146,5 +146,8 @@
   "email_validation": "Please enter current email",
   "change_password": "Change Password ?",
   "confirm_change_password": "Are you sure you want to change your password ?",
-  "yes": "Yes"
+  "yes": "Yes",
+  "youAreOnline": "You are online",
+  "noInternetConnection": "No Internet Connection",
+  "pleaseCheckInternet": "Please check your internet"
 }

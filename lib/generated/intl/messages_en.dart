@@ -173,6 +173,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "networkRequestFailed": MessageLookupByLibrary.simpleMessage(
       "A network error occurred. Check your connection.",
     ),
+    "noInternetConnection": MessageLookupByLibrary.simpleMessage(
+      "No Internet Connection",
+    ),
     "onboarding_title": MessageLookupByLibrary.simpleMessage(
       "Learn everything from cells to ecosystems\n with Biotics",
     ),
@@ -241,6 +244,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "phone_validation": MessageLookupByLibrary.simpleMessage(
       "Please enter your phone number",
+    ),
+    "pleaseCheckInternet": MessageLookupByLibrary.simpleMessage(
+      "Please check your internet",
     ),
     "pleaseEnterFirstName": MessageLookupByLibrary.simpleMessage(
       "Please enter your first name",
@@ -362,6 +368,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "The password is incorrect.",
     ),
     "yes": MessageLookupByLibrary.simpleMessage("Yes"),
+    "youAreOnline": MessageLookupByLibrary.simpleMessage("You are online"),
     "yourPhoneNumber": MessageLookupByLibrary.simpleMessage(
       "Your Phone Number",
     ),
